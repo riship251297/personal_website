@@ -1,0 +1,30 @@
+
+  nav{
+    position: absolute;
+    right: 30px;
+  }
+
+  .names{
+    left: 70px;
+    position: absolute;
+    letter-spacing: 3px;
+    font-family: system-ui;
+    font-size: 25px;
+    color: rgb(19, 18, 18);
+  }
+
+  a{
+    padding: 20px;
+    letter-spacing: 2px;
+    font-size: 25px;
+    font-family: system-ui;
+    color: #050505;
+  }
+  
+  a:link {
+    text-decoration: none;
+  }
+  
+  a:hover{
+    text-decoration: none;
+  }

@@ -1,0 +1,19 @@
+.box{
+    text-align: justify;
+    font-family: system-ui;
+    font-size: 20px;
+    margin-left: 410px;
+    width: 800px;
+    font-family: 300;
+  }
+
+.name{
+  padding: 2px;
+    position: relative;
+    left:660px;
+    font-size: 35px;
+    color: black;
+    font-family: system-ui;
+  }
+
+  

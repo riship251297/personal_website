@@ -1,0 +1,8 @@
+.upperboard{
+    display: flex;
+    width: auto;
+    height: 120px;
+    background-color:#29ab87;
+    align-items: center;
+    justify-content: space-around;
+  }
