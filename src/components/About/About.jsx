@@ -31,18 +31,20 @@ function About (){
       form_d.append("username",name)
       form_d.append("email",email)
 
-      axios.post("http://localhost:3501/send_data",form_d).then((res)=>
-      {
-        console.log(res)
-      if (res)
-      {
-      console.log("data sent")
-      }
-      else
-      {
-        console.log("error")
-      }
-    })
+      axios
+      .post("http://localhost:3501/send_email", form_d, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      })
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+
+      
     }
   
           
