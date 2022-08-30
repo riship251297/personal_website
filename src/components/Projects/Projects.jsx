@@ -1,8 +1,8 @@
 import React from 'react'
 import Navbar from '../Navbar/Navbar'
 import '../Projects/Projects.css';
-import ppovideo from '/Users/rishikesh/Desktop/portfolio/portfolio/src/Video/DQN.mp4'
-import dqnvideo from '/Users/rishikesh/Desktop/portfolio/portfolio/src/Video/DQN.mp4'
+import ppovideo from '../Videos/PPO.mp4'
+import dqnvideo from '../Videos/DQN.mp4'
 // src/Video/DQN.mp4
 const Projects = () => {
   return (
