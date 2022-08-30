@@ -6,7 +6,7 @@ import Box from './components/Box/Box.jsx';
 
 function App() {
   return (
-    <React.Fragment>
+    <>
     <div className='main_container'>
       <div className='upperboard'>
         <Navbar/>
@@ -21,7 +21,7 @@ function App() {
       </div>
      </div>
 
-    </React.Fragment>
+    </>
 
       
    
