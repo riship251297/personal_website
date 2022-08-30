@@ -62,7 +62,7 @@ function About (){
         <h4>You can connect me on : <FaLinkedin size={50}/></h4>
         <h4>Skills : <FaJs size={50}/> <FaReact size={50}/> <FaPython size={50}/> <FaHtml5 size={50}/> <FaCss3Alt size={50}/> <FaNode size={50}/> </h4> */}
         
-        <div className="main">
+        <div className="container">
         <br></br>
 
 
