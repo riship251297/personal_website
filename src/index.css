@@ -13,17 +13,17 @@ code {
 }
 
 body{
-  padding: 0%;
+  width:100px;
 }
 
 .main_container{
   display: block;
-  max-width: 900px;
+  width: 900px;
   height: 1000%;
 }
 
 .middleboard{
-  max-width: 900px;
+  width: 900px;
   height: 750px;
   background-color: #e9e2e1;
   display: block;

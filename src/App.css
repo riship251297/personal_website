@@ -1,15 +1,16 @@
 body{
-  padding: 0%;
+  /* padding: 0%; */
+  width: 90px;
 }
 
 .main_container{
   display: block;
-  max-width: 1550px;
+  width: 1505px;
   height: 1000%;
 }
 
 .middleboard{
-  width: 1500px;
+  width: 1505px;
   height: 750px;
   background-color: #e9e2e1;
   display: block;
@@ -19,7 +20,7 @@ body{
 
 .upperboard{
   display: flex;
-  width: 1550px;
+  width: 1522px;
   height: 120px;
   background-color:#0abd8a;
   align-items: center;

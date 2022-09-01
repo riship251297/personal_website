@@ -1,9 +1,11 @@
 import React from 'react'
+import axios from 'axios'
+import {useState,useEffect} from 'react'
+import Navbar from '../Navbar/Navbar'
 
 function Contact() {
   return (
-    // <div>Contact</div>
-    <h1>RIshikesh</h1>
+    <Navbar/>
   )
 }
 

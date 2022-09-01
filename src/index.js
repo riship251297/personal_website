@@ -9,6 +9,7 @@ import Research from './components/Research/Research';
 import About from './components/About/About';
 import Gallery from './components/Gallery/Gallery';
 import Main from './components/main/Main';
+import Contact from './components/Contact/Contact';
 
 // import {Provider} from 'react-redux';
 // import {createStore,applymiddleware,compose} from 'redux';
@@ -28,6 +29,8 @@ root.render(
       <Route path="/gallery" element={<Gallery />} />
       <Route path="/research" element={<Research />} />
       <Route path="/about" element={<About />} />
+      <Route path="/contact" element={<Contact />} />
+
      
     </Routes>
   </Router>
