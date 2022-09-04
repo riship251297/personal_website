@@ -79,16 +79,17 @@ function Contact() {
     <Navbar/>
     <div className="heading">
       <div className="text">
-        <h2> Get in touch </h2>
-        <h3>You wanna get in touch with me ?</h3>
-        <h3>I would love to hear from you . Here is how you can reach out to me ...</h3>
+        {/* <h2> Get in touch </h2> */}
+        <h3>You plan to contact me ....  ?</h3>
+        <h3>I would love to hear from you ... Here is how you can reach out to me ...</h3>
       </div>
       <div className="group">
-        <h2>Drop me a message !</h2>
+        <h2 className='middle'>DROP ME A MESSAGE !</h2>
 
         <div className="form"id="formdata">
           <form action="/send_email"onSubmit={handle}>
-
+            <div className="first_section">
+            
             <label>Name:
               <input type="text" 
               value={name} 
@@ -96,15 +97,25 @@ function Contact() {
               onChange={(e)=> SetName(e.target.value)} />         
             </label>
 
+            </div>
+
+         
+            <div className="second_section">
+
             <label>Email :
               <input type="email" 
               value={email} 
               placeholder={"Enter your email"}
               onChange={(e)=> SetEmail(e.target.value)}/>
             </label>
+            </div>
+           
+            <div className="submit_section">
 
             <input type="submit"
              value="Submit" />
+
+             </div>
           </form>
         </div>
 
