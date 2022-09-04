@@ -1,0 +1,18 @@
+.heading
+{
+    width: 1500px;
+}
+
+.text
+{
+    margin-top: 100px;
+    margin-left: 10px;
+}
+.group
+{
+    margin-left: 420px;
+    width: 600px;
+    height: 400px;
+    background-color: red;
+}
+
