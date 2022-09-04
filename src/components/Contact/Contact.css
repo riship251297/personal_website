@@ -1,0 +1,43 @@
+.heading
+{
+    width: 1500px;
+}
+
+.middle
+{
+    padding: 20px;
+    margin-left: 60px;
+}
+
+.text
+{
+    margin-top: 100px;
+    margin-left: 10px;
+}
+.group
+{
+    margin-top: 60px;
+    margin-left: 550px;
+    width: 500px;
+    height: 350px;
+    background-color: #0abd8a;
+}
+
+.first_section 
+{
+    margin-top: 10px;
+    margin-left: 100px;
+    padding: 20px;
+}
+
+.second_section
+{
+    margin-left: 100px;
+    padding: 20px;
+} 
+
+.submit_section
+{
+    margin-top:20px;
+    margin-left: 220px;
+}

@@ -6,7 +6,7 @@ function Navbar(){
     return (
         <React.Fragment>
             <div className="upperboard">
-                <div className="names"><a href="http://localhost:3000/">RISHIKESH</a></div>
+                <div className="names"><a href="/">RISHIKESH</a></div>
                 <nav>
                     <Link to ="/projects" >PROJECTS</Link>
                     {/* <Link to ="/gallery" >GALLERY</Link> */}

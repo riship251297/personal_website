@@ -31,18 +31,20 @@ function About (){
       form_d.append("username",name)
       form_d.append("email",email)
 
-      axios.post("http://localhost:3501/send_data",form_d).then((res)=>
-      {
-        console.log(res)
-      if (res)
-      {
-      console.log("data sent")
-      }
-      else
-      {
-        console.log("error")
-      }
-    })
+      axios
+      .post("http://localhost:3501/send_email", form_d, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      })
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+
+      
     }
   
           
@@ -55,12 +57,12 @@ function About (){
         <Box/>
 
 
-        {/* <h4>Check out my Resume : <a href="https:youtube.com"><GoDesktopDownload/></a> </h4>
+        {/* {/* <h4>Check out my Resume : <a href="https:youtube.com"><GoDesktopDownload/></a> </h4> */}
         <h4>Find my work on  : <FaGithub size={50}/></h4>
         <h4>You can connect me on : <FaLinkedin size={50}/></h4>
         <h4>Skills : <FaJs size={50}/> <FaReact size={50}/> <FaPython size={50}/> <FaHtml5 size={50}/> <FaCss3Alt size={50}/> <FaNode size={50}/> </h4> */}
         
-        <div className="main">
+        <div className="container">
         <br></br>
 
 
