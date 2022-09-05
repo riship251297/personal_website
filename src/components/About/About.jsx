@@ -152,6 +152,10 @@ function About (){
             <input type="submit" value="Submit" />
           </form>
         </div> */}
+
+      <div className='footer'>
+      
+      </div>
         
         </>
 
