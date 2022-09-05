@@ -84,15 +84,16 @@ const fetch_image = ()=>
       <Navbar/>
       <div className="title">
         <h3>Welcome to my Gallery section !!!</h3>
+        <h4>Here you will find some of my collections of photographs. </h4>
       </div>
 
       <div className="main">
 
-        <div className="card_section">
+        <div className="card_section1">
           <Card style={{ width: '30rem' ,height:'20rem',textAlign:'left' }}>
             <Card.Img variant="top" src={"images/portfolio.jpg"} />
             <Card.Body>
-              <Card.Title>Savannah, Georgia</Card.Title>
+              <Card.Title>Old Fort Jackson, Savannah, Georgia</Card.Title>
               <Card.Text>
               Savannah, a coastal Georgia city, is separated from South Carolina by the Savannah River. It’s known for manicured parks, horse-drawn carriages and antebellum architecture. Its historic district is filled with cobblestoned squares and parks such as Forsyth Park shaded by oak trees covered with Spanish moss.
               </Card.Text>
@@ -101,7 +102,7 @@ const fetch_image = ()=>
         </Card>
         </div>
 
-        <div className="card_section">
+        <div className="card_section2">
           <Card style={{ width: '35rem' ,height:'20rem',textAlign:'left'}}>
           <Card.Img variant="top" src={"images/FullSizeRender.png"} />
           <Card.Body>
@@ -114,35 +115,33 @@ const fetch_image = ()=>
         </Card>
         </div>
 
-        <div className="card_section">
-          <Card style={{ width: '35rem' }}>
+        <div className="card_section3">
+          <Card style={{ width: '35rem',textAlign:'left' }}>
           <Card.Img variant="top" src={"images/IMG_2001.png"} />
           <Card.Body>
-            <Card.Title></Card.Title>
+            <Card.Title>Kananaskis, Calgary, Canada</Card.Title>
             <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+            Kananaskis Country is a park system situated to the west of Calgary, Alberta, Canada in the foothills and front ranges of the Canadian Rockies. The park is home to a myriad of activities and adventures indicative of a mountain park as well as ski hills, camping, numerous day use areas and trails.
             </Card.Text>
             <Button variant="primary">Go somewhere</Button>
           </Card.Body>
         </Card>
         </div>
 
-        <div className="card_section">
+        <div className="card_section4">
           <Card style={{ width: '35rem' }}>
           <Card.Img variant="top" src={"images/IMG_2121.png"} />
           <Card.Body>
-            <Card.Title></Card.Title>
+            <Card.Title>Coca-Cola World Factory, Atlanta </Card.Title>
             <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+            The World of Coca-Cola is a museum, located in Atlanta, Georgia, showcasing the history of the Coca-Cola Company. The 20-acre complex opened to the public on May 24, 2007, relocating from and replacing the original exhibit, which was founded in 1990 in Underground Atlanta.
             </Card.Text>
             <Button variant="primary">Go somewhere</Button>
           </Card.Body>
         </Card>
         </div>
 
-        <div className="card_section">
+        <div className="card_section5">
           <Card style={{ width: '35rem' }}>
           <Card.Img variant="top" src={"images/IMG_2198.png"} />
           <Card.Body>
@@ -156,7 +155,7 @@ const fetch_image = ()=>
         </Card>
         </div>
 
-        <div className="card_section">
+        <div className="card_section6">
           <Card style={{ width: '35rem' }}>
           <Card.Img variant="top" src={"images/IMG_2500.jpg"} />
           <Card.Body>
@@ -170,7 +169,7 @@ const fetch_image = ()=>
         </Card>
         </div>
 
-        <div className="card_section">
+        <div className="card_section7">
           <Card style={{ width: '35rem' }}>
           <Card.Img variant="top" src={"images/IMG_2619.jpg"} />
             <Card.Body>
