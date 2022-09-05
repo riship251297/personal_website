@@ -4,17 +4,36 @@ import {useState,useEffect} from 'react'
 import Navbar from '../Navbar/Navbar'
 import '../Contact/Contact.css'
 
-function Contact() {
+function Contact() 
+{
 
   const [name,SetName] = useState("");
   const [email,SetEmail] = useState("");
 
-    async function handle(event)
+  async function handle(event)
     {
       event.preventDefault();
-      const contact_form = new FormData();
-      contact_form.append("username",name)
-      contact_form.append("email",email)
+      const form_d = new FormData();
+      form_d.append("username",name)
+      form_d.append("email",email)
+
+      const response = await axios
+      .post("http://localhost:3001/send_email", form_d)
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    }
+  
+
+    // async function handle(event)
+    // {
+    //   event.preventDefault();
+    //   const contact_form = new FormData();
+    //   contact_form.append("username",name)
+    //   contact_form.append("email",email)
 
     //   fetch('http://localhost:3001/send_email', {
     //     method: 'POST',
@@ -32,9 +51,9 @@ function Contact() {
       //   .catch(err => console.log(err.data))
       // }
 
-      axios.post("http://localhost:3001/send_email", contact_form)
-      .then(res=>console.log(res))
-      .then(err=>console.log(err))
+      // axios.put("http://localhost:3001/send_email", contact_form)
+      // .then(res=>console.log(res))
+      // .then(err=>console.log(err))
 
 
       // await axios.post("http://localhost:3501/send_email/", contact_form).then((res)=>{
@@ -73,7 +92,7 @@ function Contact() {
       // });
 
       
-    }
+    
   return (
     <>
     <Navbar/>
@@ -112,6 +131,9 @@ function Contact() {
           </form>
         </div>
       </div>
+    </div>
+    <div className='footer'>
+      
     </div>
     </>
   )
