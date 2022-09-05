@@ -94,9 +94,7 @@ const fetch_image = ()=>
             <Card.Img variant="top" src={"images/portfolio.jpg"} />
             <Card.Body>
               <Card.Title>Old Fort Jackson, Savannah, Georgia</Card.Title>
-              <Card.Text>
-              Savannah, a coastal Georgia city, is separated from South Carolina by the Savannah River. It’s known for manicured parks, horse-drawn carriages and antebellum architecture. Its historic district is filled with cobblestoned squares and parks such as Forsyth Park shaded by oak trees covered with Spanish moss.
-              </Card.Text>
+              <Card.Text>A day well spent to understand the history of the fort and how it participated in the World War II.</Card.Text>
               <Button variant="primary">Checkout more !!! </Button>
             </Card.Body>
         </Card>
@@ -107,9 +105,7 @@ const fetch_image = ()=>
           <Card.Img variant="top" src={"images/FullSizeRender.png"} />
           <Card.Body>
             <Card.Title>Brooklyn Bridge, New York</Card.Title>
-            <Card.Text>
-            The Brooklyn Bridge is a hybrid cable-stayed/suspension bridge in New York City, spanning the East River between the boroughs of Manhattan and Brooklyn. Opened on May 24, 1883, the Brooklyn Bridge was the first fixed crossing of the East River.
-            </Card.Text>
+            <Card.Text>Probably one of the best evenings spent on this bridge. Really lucky to have my foot set on this bridge. I wish everyone could have a walk on this bridge with their loved ones...            </Card.Text>
             <Button variant="primary">Go somewhere</Button>
           </Card.Body>
         </Card>
@@ -190,3 +186,5 @@ const fetch_image = ()=>
 }
 
 export default Gallery;
+
+

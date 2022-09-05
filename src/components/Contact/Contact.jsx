@@ -3,6 +3,7 @@ import axios from 'axios'
 import {useState,useEffect} from 'react'
 import Navbar from '../Navbar/Navbar'
 import '../Contact/Contact.css'
+import { margin } from '@mui/system'
 
 function Contact() 
 {
@@ -13,12 +14,16 @@ function Contact()
   async function handle(event)
     {
       event.preventDefault();
-      const form_d = new FormData();
-      form_d.append("username",name)
-      form_d.append("email",email)
+      // const form_d = new FormData();
+      // form_d.append("username",name)
+      // form_d.append("email",email)
+
+      
+
+      const data = {'username':name,'email':email}
 
       const response = await axios
-      .post("http://localhost:3001/send_email", form_d)
+      .post("http://localhost:3001/send_email", data)
       .then((res) => {
         console.log(res);
       })
