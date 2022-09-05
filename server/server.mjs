@@ -202,13 +202,13 @@ app.get('/email',async function(req,res)
     
 })
 
-app.post('/send_email', urlencodedParser,(req,res) =>
+app.post('/send_email',(req,res) =>
 {
     try 
     {   
         const username = req.body.username;
         console.log(username)
-        res.send("The username is "     +username);
+        res.send("The username is "+username);
     } 
     catch (error) 
     {
@@ -220,5 +220,5 @@ app.post('/send_email', urlencodedParser,(req,res) =>
 
 
 app.listen(3001,function (){
-    console.log("rishikesh");
+    console.log("Server is running !!!!");
 });

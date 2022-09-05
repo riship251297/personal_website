@@ -32,7 +32,7 @@ function About (){
       form_d.append("email",email)
 
       axios
-      .post("http://localhost:3501/send_email", form_d, {
+      .post("http://localhost:3001/send_email", form_d, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
