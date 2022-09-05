@@ -4,25 +4,44 @@ import {useState,useEffect} from 'react'
 import Navbar from '../Navbar/Navbar'
 import '../Contact/Contact.css'
 
-function Contact() {
+function Contact() 
+{
 
   const [name,SetName] = useState("");
   const [email,SetEmail] = useState("");
 
-    async function handle(event)
+  async function handle(event)
     {
       event.preventDefault();
-      const contact_form = new FormData();
-      contact_form.append("username",name)
-      contact_form.append("email",email)
+      const form_d = new FormData();
+      form_d.append("username",name)
+      form_d.append("email",email)
 
-      fetch('http://localhost:3001/send_email', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: contact_form
-    });
+      const response = await axios
+      .post("http://localhost:3001/send_email", form_d)
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    }
+  
+
+    // async function handle(event)
+    // {
+    //   event.preventDefault();
+    //   const contact_form = new FormData();
+    //   contact_form.append("username",name)
+    //   contact_form.append("email",email)
+
+    //   fetch('http://localhost:3001/send_email', {
+    //     method: 'POST',
+    //     headers: {
+    //         'Content-Type': 'application/json'
+    //     },
+    //     body: contact_form
+    // });
 
       // const url = localhost:4000/api/users/register;
 
@@ -32,7 +51,7 @@ function Contact() {
       //   .catch(err => console.log(err.data))
       // }
 
-      // axios.post("http://localhost:3501/send_email", contact_form)
+      // axios.put("http://localhost:3001/send_email", contact_form)
       // .then(res=>console.log(res))
       // .then(err=>console.log(err))
 
@@ -73,58 +92,49 @@ function Contact() {
       // });
 
       
-    }
+    
   return (
     <>
     <Navbar/>
     <div className="heading">
       <div className="text">
-        {/* <h2> Get in touch </h2> */}
         <h3>You plan to contact me ....  ?</h3>
         <h3>I would love to hear from you ... Here is how you can reach out to me ...</h3>
       </div>
       <div className="group">
         <h2 className='middle'>DROP ME A MESSAGE !</h2>
-
         <div className="form"id="formdata">
           <form action="/send_email"onSubmit={handle}>
             <div className="first_section">
-            
-            <label>Name:
-              <input type="text" 
-              value={name} 
-              placeholder={"Enter your name"}
-              onChange={(e)=> SetName(e.target.value)} />         
-            </label>
-
+              <label>Name:
+                <input type="text" 
+                value={name} 
+                placeholder={"Enter your name"}
+                onChange={(e)=> SetName(e.target.value)} />         
+              </label>
             </div>
-
-         
             <div className="second_section">
-
-            <label>Email :
-              <input type="email" 
-              value={email} 
-              placeholder={"Enter your email"}
-              onChange={(e)=> SetEmail(e.target.value)}/>
-            </label>
+              <label>Email :
+                <input type="email" 
+                value={email} 
+                placeholder={"Enter your email"}
+                onChange={(e)=> SetEmail(e.target.value)}/>
+              </label>
             </div>
-           
+            <div className="area">
+
+            </div>
             <div className="submit_section">
-
-            <input type="submit"
-             value="Submit" />
-
+              <input type="submit"
+              value="Submit" />
              </div>
           </form>
         </div>
-
-        
       </div>
     </div>
-   
-
-
+    <div className='footer'>
+      
+    </div>
     </>
   )
 }
@@ -133,4 +143,7 @@ export default Contact
 
 
   
+
+
+
 

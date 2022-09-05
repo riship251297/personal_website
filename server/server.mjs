@@ -28,10 +28,10 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 
-app.use(bodyParser.json({limit:"30mb",extended:true}));
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({limit:"30mb",extended:true}));
 
-var urlencodedParser = bodyParser.urlencoded({ extended: false })
+var urlencodedParser = bodyParser.urlencoded({ extended: true })
 
 
 app.use(cors());
@@ -202,23 +202,27 @@ app.get('/email',async function(req,res)
     
 })
 
-app.post('/send_email', urlencodedParser,(req,res) =>
+app.post('/send_email',urlencodedParser,(req,res) =>
 {
-    try 
-    {   
-        const username = req.body.username;
-        console.log(username)
-        res.send("The username is "     +username);
-    } 
-    catch (error) 
-    {
-        res.sendStatus(404).json({message:error.message});
-    }
+    console.log(req.body.username)
+        
+    res.send(req.body.username)
+    // try 
+    // {   
+    //     console.log(req.body)
+    //     const username = req.body.username;
+    //     console.log(username)
+    //     res.send("The username is "+username);
+    // } 
+    // catch (error) 
+    // {
+    //     res.sendStatus(404).json({message:error.message});
+    // }
 });
 
 
 
 
 app.listen(3001,function (){
-    console.log("rishikesh");
+    console.log("Server is running !!!!");  
 });

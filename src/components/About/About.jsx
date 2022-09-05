@@ -13,7 +13,7 @@ function About (){
 
   const data = () =>
   {
-    axios.get("http://localhost:3501/dat").then((response)=>{
+    axios.get("http://localhost:3001/dat").then((response)=>{
       console.log(response)
     })
   }
@@ -24,15 +24,15 @@ function About (){
     const [name,SetName] = useState("");
     const [email,SetEmail] = useState("");
 
-    function handle(event)
+    async function handle(event)
     {
       event.preventDefault();
       const form_d = new FormData();
       form_d.append("username",name)
       form_d.append("email",email)
 
-      axios
-      .post("http://localhost:3501/send_email", form_d, {
+      const response = await axios
+      .put("http://localhost:3001/send_email", form_d, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
@@ -43,6 +43,8 @@ function About (){
       .catch((err) => {
         console.log(err);
       });
+
+      console.log(response  )
 
       
     }
@@ -58,10 +60,10 @@ function About (){
 
 
         {/* {/* <h4>Check out my Resume : <a href="https:youtube.com"><GoDesktopDownload/></a> </h4> */}
-        <h4>Find my work on  : <FaGithub size={50}/></h4>
+        {/* <h4>Find my work on  : <FaGithub size={50}/></h4>
         <h4>You can connect me on : <FaLinkedin size={50}/></h4>
         <h4>Skills : <FaJs size={50}/> <FaReact size={50}/> <FaPython size={50}/> <FaHtml5 size={50}/> <FaCss3Alt size={50}/> <FaNode size={50}/> </h4> */}
-        
+         
         <div className="container">
         <br></br>
 
@@ -134,7 +136,7 @@ function About (){
           </div>
         </div>
 
-        <div className="pl">
+        {/* <div className="pl">
           <h1>rishikesh</h1>
           <button className='btn btn-primary' onClick={data}>Fetchdata</button>
         </div>
@@ -149,7 +151,11 @@ function About (){
             </label>
             <input type="submit" value="Submit" />
           </form>
-        </div>
+        </div> */}
+
+      <div className='footer'>
+      
+      </div>
         
         </>
 
