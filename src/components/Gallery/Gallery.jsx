@@ -85,30 +85,29 @@ const fetch_image = ()=>
       <div className="title">
         <h3>Welcome to my Gallery section !!!</h3>
       </div>
+
       <div className="main">
 
         <div className="card_section">
-          <Card style={{ width: '30rem' ,height:'20rem', }}>
-          <Card.Img variant="top" src={"images/portfolio.jpg"} />
-          <Card.Body>
-            <Card.Title>Savannah, Georgia</Card.Title>
-            <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </Card.Text>
-            <Button variant="primary">Go somewhere</Button>
-          </Card.Body>
+          <Card style={{ width: '30rem' ,height:'20rem',textAlign:'left' }}>
+            <Card.Img variant="top" src={"images/portfolio.jpg"} />
+            <Card.Body>
+              <Card.Title>Savannah, Georgia</Card.Title>
+              <Card.Text>
+              Savannah, a coastal Georgia city, is separated from South Carolina by the Savannah River. It’s known for manicured parks, horse-drawn carriages and antebellum architecture. Its historic district is filled with cobblestoned squares and parks such as Forsyth Park shaded by oak trees covered with Spanish moss.
+              </Card.Text>
+              <Button variant="primary">Checkout more !!! </Button>
+            </Card.Body>
         </Card>
         </div>
 
         <div className="card_section">
-          <Card style={{ width: '35rem' ,height:'20rem'}}>
+          <Card style={{ width: '35rem' ,height:'20rem',textAlign:'left'}}>
           <Card.Img variant="top" src={"images/FullSizeRender.png"} />
           <Card.Body>
             <Card.Title>Brooklyn Bridge, New York</Card.Title>
             <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+            The Brooklyn Bridge is a hybrid cable-stayed/suspension bridge in New York City, spanning the East River between the boroughs of Manhattan and Brooklyn. Opened on May 24, 1883, the Brooklyn Bridge was the first fixed crossing of the East River.
             </Card.Text>
             <Button variant="primary">Go somewhere</Button>
           </Card.Body>
@@ -174,18 +173,18 @@ const fetch_image = ()=>
         <div className="card_section">
           <Card style={{ width: '35rem' }}>
           <Card.Img variant="top" src={"images/IMG_2619.jpg"} />
-          <Card.Body>
-            <Card.Title></Card.Title>
-            <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </Card.Text>
-            <Button variant="primary">Go somewhere</Button>
-          </Card.Body>
+            <Card.Body>
+              <Card.Title></Card.Title>
+              <Card.Text>
+                Some quick example text to build on the card title and make up the
+                bulk of the card's content.
+              </Card.Text>
+              <Button variant="primary">Go somewhere</Button>
+            </Card.Body>
         </Card>
+        </div>
 
       </div>
-    </div>
      
     </>
   )

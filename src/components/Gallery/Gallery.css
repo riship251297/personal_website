@@ -7,16 +7,18 @@
 
 .card_section
 {
-    background-clip: none;
-    border-radius: 0%;
-    box-sizing: none;
+    
     padding: 10px;
     /* display: flex; */
     margin-left: 200px;
-    width:900px;
+    /* width:900px; */
 }
 
-
+.card
+{
+    background-clip: none;
+    border: 0ch;
+}
 
 
 .footer
