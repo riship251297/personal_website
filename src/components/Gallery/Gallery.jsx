@@ -88,7 +88,7 @@ const fetch_image = ()=>
       <div className="main">
 
         <div className="card_section">
-          <Card style={{ width: '35rem' }}>
+          <Card style={{ width: '30rem' ,height:'20rem', }}>
           <Card.Img variant="top" src={"images/portfolio.jpg"} />
           <Card.Body>
             <Card.Title>Savannah, Georgia</Card.Title>
@@ -102,10 +102,10 @@ const fetch_image = ()=>
         </div>
 
         <div className="card_section">
-          <Card style={{ width: '35rem' }}>
+          <Card style={{ width: '35rem' ,height:'20rem'}}>
           <Card.Img variant="top" src={"images/FullSizeRender.png"} />
           <Card.Body>
-            <Card.Title></Card.Title>
+            <Card.Title>Brooklyn Bridge, New York</Card.Title>
             <Card.Text>
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
@@ -173,7 +173,7 @@ const fetch_image = ()=>
 
         <div className="card_section">
           <Card style={{ width: '35rem' }}>
-          <Card.Img variant="top" src={"images/IMG_2619.png"} />
+          <Card.Img variant="top" src={"images/IMG_2619.jpg"} />
           <Card.Body>
             <Card.Title></Card.Title>
             <Card.Text>
