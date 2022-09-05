@@ -137,8 +137,13 @@ const Projects = () => {
           </div>
         </div>
       </div>
+      <div className='footer'>
+      
+      </div>
       </>
   );
 }
 
 export default Projects;
+
+

@@ -1,8 +1,12 @@
 import axios from 'axios'
 import {useState,useEffect} from 'react'
 import Navbar from '../Navbar/Navbar'
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import '../Gallery/Gallery.css'
 
-// import {useDispatch} from 'react-redux';
+
+
 function Gallery() 
 {
   const [news, setNews] = useState([])
@@ -37,6 +41,9 @@ function Gallery()
       // setGallerypics(response.data.image)
     })
   }
+
+
+  
 
 
 
@@ -74,67 +81,112 @@ const fetch_image = ()=>
 
   return (
     <>
-    <Navbar/>
-    <div className="container my-3">
-        <div className="row">
-          <div className="col-4">
-            <button className='btn btn-primary' onClick={fetchNews}>FetchNews</button>
-            <button className='btn btn-primary' onClick={gallery}>FetchNews</button>
-
-          </div>
-        </div>
+      <Navbar/>
+      <div className="title">
+        <h3>Welcome to my Gallery section !!!</h3>
       </div>
+      <div className="main">
 
-      return <div>{gallery()}</div>
+        <div className="card_section">
+          <Card style={{ width: '30rem' ,height:'20rem', }}>
+          <Card.Img variant="top" src={"images/portfolio.jpg"} />
+          <Card.Body>
+            <Card.Title>Savannah, Georgia</Card.Title>
+            <Card.Text>
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </Card.Text>
+            <Button variant="primary">Go somewhere</Button>
+          </Card.Body>
+        </Card>
+        </div>
 
+        <div className="card_section">
+          <Card style={{ width: '35rem' ,height:'20rem'}}>
+          <Card.Img variant="top" src={"images/FullSizeRender.png"} />
+          <Card.Body>
+            <Card.Title>Brooklyn Bridge, New York</Card.Title>
+            <Card.Text>
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </Card.Text>
+            <Button variant="primary">Go somewhere</Button>
+          </Card.Body>
+        </Card>
+        </div>
 
-      {/* <div className="container">
-        <div className="row">
-          {
-            gallery_pics.map((value,index) => {
-              return (
-                <div key={index} className="col-4">
-                  <div className="card" style={{ width: "18rem" }}>
-                    <img src={value} className="card-img-top" alt="..." />
-                    <div className="card-body">
-                      <h5 className="card-title">{value}</h5>
-                      <p className="card-text">{value}</p>
-                      <a href="#" className="btn btn-primary">Main</a>
-                    </div>
-                  </div>
-                </div>
-              );
-            })
-          }
-        </div> */}
+        <div className="card_section">
+          <Card style={{ width: '35rem' }}>
+          <Card.Img variant="top" src={"images/IMG_2001.png"} />
+          <Card.Body>
+            <Card.Title></Card.Title>
+            <Card.Text>
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </Card.Text>
+            <Button variant="primary">Go somewhere</Button>
+          </Card.Body>
+        </Card>
+        </div>
 
-        {/* <div className='photos'>
-          {/* {fetch_image()} */}
-          {/* {gallery()} */}
-          {/* <img src ={image_path}/>
-        </div> */}
+        <div className="card_section">
+          <Card style={{ width: '35rem' }}>
+          <Card.Img variant="top" src={"images/IMG_2121.png"} />
+          <Card.Body>
+            <Card.Title></Card.Title>
+            <Card.Text>
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </Card.Text>
+            <Button variant="primary">Go somewhere</Button>
+          </Card.Body>
+        </Card>
+        </div>
 
-        {/* <div className='photo'>
-          <div className='row'>
-          {
-            gallery_pics.map((value,index) =>{
-              return (
-                <div key = {index} className="col-4">
-                  <div className='card' style={{width:"18rem"}}>
-                    <img src={value} className="card-img-top"/>
-                    <div className='card-body'>
-                      <h5 className='card-title'>{value}</h5>
-                      <p className='card-text'>{value}</p>
-                    </div>
-                  </div>
-                </div>
-              )
-            })
-          }
-          </div>
-        </div> */} */}
+        <div className="card_section">
+          <Card style={{ width: '35rem' }}>
+          <Card.Img variant="top" src={"images/IMG_2198.png"} />
+          <Card.Body>
+            <Card.Title></Card.Title>
+            <Card.Text>
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </Card.Text>
+            <Button variant="primary">Go somewhere</Button>
+          </Card.Body>
+        </Card>
+        </div>
 
-      {/* </div> */}
+        <div className="card_section">
+          <Card style={{ width: '35rem' }}>
+          <Card.Img variant="top" src={"images/IMG_2500.jpg"} />
+          <Card.Body>
+            <Card.Title></Card.Title>
+            <Card.Text>
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </Card.Text>
+            <Button variant="primary">Go somewhere</Button>
+          </Card.Body>
+        </Card>
+        </div>
+
+        <div className="card_section">
+          <Card style={{ width: '35rem' }}>
+          <Card.Img variant="top" src={"images/IMG_2619.jpg"} />
+          <Card.Body>
+            <Card.Title></Card.Title>
+            <Card.Text>
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </Card.Text>
+            <Button variant="primary">Go somewhere</Button>
+          </Card.Body>
+        </Card>
+
+      </div>
+    </div>
+     
     </>
   )
 }
