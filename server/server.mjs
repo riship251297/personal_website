@@ -106,7 +106,7 @@ app.post('/upload',(req,res)=>
                 name:req.body.name,
                 image :
                 {
-                    data:req.body.name,
+                    data:req.body.testImage,
                     contentType:'image/png'
                 }
             })
@@ -116,29 +116,38 @@ app.post('/upload',(req,res)=>
     })
 })
 
+const s3 = new AWS.S3({
+    accessKeyId: process.env.ACCESS_ID_AWS,
+    secretAccessKey: process.env.ACCESS_KEY_AWS
+});
 
 
-app.post('/send_s3',function(req,res)
+const params = {
+    Bucket: process.env.AWS_BUCKET_NAME,
+    
+};
+
+s3.createBucket(params, function(err, data) {
+    if (err) console.log(err, err.stack);
+    else console.log('Bucket Created Successfully', data.Location);
+});
+
+app.post('/send',function(req,res)
 {
-    const uploadFile = (fileName) => {
-        // Read content from the file
-        const fileContent = fs.readFileSync(fileName);
-    
-        // Setting up S3 upload parameters
-        const params = {
-            Bucket: process.env.AWS_BUCKET_NAME,
-            Key: 'cat.jpg', // File name you want to save as in S3
-            Body: fileContent
-        };
-    
-        // Uploading files to the bucket
-        s3.upload(params, function(err, data) {
-            if (err) {
-                throw err;
-            }
-            console.log(`File uploaded successfully. ${data.Location}`);
-        });
+    filename = req.body.name
+    image = req.body.testImage
+    const fileContent = fs.readFileSync(filename);
+    const params = {
+        Bucket: process.env.AWS_BUCKET_NAME,
+        Key: image, 
+        Body: fileContent
     };
+    s3.upload(params, function(err, data) {
+        if (err) {
+            throw err;
+        }
+        console.log(`File uploaded successfully. ${data.Location}`);
+    });
 })
 
 app.get('/data',function(req,res){
@@ -176,24 +185,7 @@ app.get('/getimages', async function(req,res)
 })
 
 
-const s3 = new AWS.S3({
-    accessKeyId: process.env.ACCESS_ID_AWS,
-    secretAccessKey: process.env.ACCESS_KEY_AWS
-});
 
-
-const params = {
-    Bucket: process.env.AWS_BUCKET_NAME,
-    // CreateBucketConfiguration: {
-    //     // Set your region here
-    //     // LocationConstraint: "us-east-1"
-    // }
-};
-
-s3.createBucket(params, function(err, data) {
-    if (err) console.log(err, err.stack);
-    else console.log('Bucket Created Successfully', data.Location);
-});
 
 
 
