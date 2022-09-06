@@ -24,16 +24,23 @@ function Gallery()
   //     })
     
   // },[])
+  
 
 
   const gallery = ()=>
   {
-    axios.get("http://localhost:3501/getimages")
+    axios.get("http://localhost:3001/getimages")
     .then((response)=>{
       response.data.map(image=>{
-        console.log(image.image.data.data)
+        const base64String = btoa(
+          String.fromCharCode(...new Uint8Array(image.image.data))
+        );
+        return <img src={`data:image/png;base64,${base64String}`} width="300"/>
+        // <img src={`data:image/png;base64,${product.img.data}`} />
+
+        console.log(image.image.data  )
         return <div className="rt">
-          <img src={image.image.data} />
+          <img src={'data:image/png;base64'} />
           </div>
 
       })
@@ -48,32 +55,31 @@ function Gallery()
 
 
 
-  // const dispatch = useDispatch();
 
-  const fetchNews = () => {
-    axios.get("https://newsapi.org/v2/top-headlines?country=in&apiKey=889a2b39120c4636ae66833b27dcac39")
-      .then((response) => {
-        console.log(response);
-        setNews(response.data.articles)
-      })
-  }
+//   const fetchNews = () => {
+//     axios.get("https://newsapi.org/v2/top-headlines?country=in&apiKey=889a2b39120c4636ae66833b27dcac39")
+//       .then((response) => {
+//         console.log(response);
+//         setNews(response.data.articles)
+//       })
+//   }
 
-  const d = ()=>
-  {
-    axios.get("http://localhost:3501/data")
-    .then((response) =>{
-      console.log(response)
-    })
-  }
+//   const d = ()=>
+//   {
+//     axios.get("http://localhost:3501/data")
+//     .then((response) =>{
+//       console.log(response)
+//     })
+//   }
 
-const fetch_image = ()=>
-{
-  axios.get("http://localhost:3501/images_sharing")
-  .then((response)=>{
-    console.log(response.data.image_path)
-    setImagepath(response.data.image_path)
-  })
-}
+// const fetch_image = ()=>
+// {
+//   axios.get("http://localhost:3001/getimages")
+//   .then((response)=>{
+//     console.log(response.data.image_path)
+//     setImagepath(response.data.image_path)
+//   })
+// }
 
 
 
@@ -83,11 +89,28 @@ const fetch_image = ()=>
     <>
       <Navbar/>
       <div className="title">
+
+      <button className='btn btn-primary' onClick={gallery}>FetchNews</button>
+
         <h3>Welcome to my Gallery section !!!</h3>
         <h4>Here you will find some of my collections of photographs. </h4>
+        <div className="card_section1">
+          <Card style={{ width: '30rem' ,height:'20rem',textAlign:'left' }}>
+            <Card.Img variant="top" src={"https://personalprojectriship251297.s3.amazonaws.com/FullSizeRender.png"} />
+            <Card.Body>
+              <Card.Title>Old Fort Jackson, Savannah, Georgia</Card.Title>
+              <Card.Text>A day well spent to understand the history of the fort and how it participated in the World War II.</Card.Text>
+              <Button variant="primary">Checkout more !!! </Button>
+            </Card.Body>
+        </Card>
+        </div>
       </div>
 
-      <div className="main">
+      
+      
+
+
+      {/* <div className="main">
 
         <div className="card_section1">
           <Card style={{ width: '30rem' ,height:'20rem',textAlign:'left' }}>
@@ -179,7 +202,7 @@ const fetch_image = ()=>
         </Card>
         </div>
 
-      </div>
+      </div> */}
      
     </>
   )
