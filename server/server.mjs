@@ -3,9 +3,7 @@ import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from 'dotenv';
 import bodyParser from 'body-parser';
-import axios from "axios";
-
-// import multer from "multer";
+import multer from 'multer';
 
 import postroutes from './routes/posts.js';
 import test from './routes/posts.js';
@@ -79,35 +77,35 @@ app.post('/tests',(req,res)=>
 
 
 
-// const Storage = multer.diskStorage({
-//     destination:'uploads',
-//     filename:(req,file,cb) =>{
-//         cb(null,file.originalname);
-//     },
-// });
+const Storage = multer.diskStorage({
+    destination:'uploads',
+    filename:(req,file,cb) =>{
+        cb(null,file.originalname);
+    },
+});
 
 
-// const upload = multer({
-//     storage:Storage
-// }).single('testImage')
+const upload = multer({
+    storage:Storage
+}).single('testImage')
 
-// app.post('/upload',(req,res)=>{
-//     upload(req,res,(err)=>{
-//         if (err)
-//         {console.log(err)}
-//         else{
-//             const newimage = new images({
-//                 name:req.body.name,
-//                 image :{
-//                     data:req.file.filename,
-//                     contentType:'image/png'
-//                 }
-//             })
-//             newimage.save()
-//             .then(()=>res.send("successfully uploaded")).catch(err=>console.log(err))
-//         }
-//     })
-// })
+app.post('/upload',(req,res)=>{
+    upload(req,res,(err)=>{
+        if (err)
+        {console.log(err)}
+        else{
+            const newimage = new images({
+                name:req.body.name,
+                image :{
+                    data:req.file.filename,
+                    contentType:'image/png'
+                }
+            })
+            newimage.save()
+            .then(()=>res.send("successfully uploaded")).catch(err=>console.log(err))
+        }
+    })
+})
 
 app.get('/data',function(req,res){
 
@@ -170,37 +168,7 @@ app.get('/send_data',async function(req,res)
         console.log(req.body.username)
     })
 
-app.get('/email',async function(req,res)
-{
-    let transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-            user: process.env.EMAIL,
-            pass: process.env.PASSWORD 
-        }
-    });
-    
-    // Step 2
-    let mailOptions = {
-        from: 'rphatan@g.clemson.edu', 
-        to: 'rphatan@g.clemson.edu', 
-        subject: 'Successful Contact submission',
-        text: 'Thanks for your contact information !'
-    };
-    
-    // Step 3
-    transporter.sendMail(mailOptions, (err, data) => {
-        if (err) {
-            console.log(err.message);
 
-        }
-        if (!err)
-        {
-            res.send("Email sent !")
-        }
-    });
-    
-})
 
 app.post('/send_email',(req,res) =>
 {
@@ -224,7 +192,7 @@ app.post('/send_email',(req,res) =>
             from: 'rphatan@g.clemson.edu', 
             to: email, 
             subject: 'Successful Contact submission',
-            text: 'Thanks for your contact information !'
+            text: 'Thanks for your contact information !!!. I will contact you soon .. '
         };
         
         // Step 3
@@ -260,3 +228,5 @@ app.post('/send_email',(req,res) =>
 app.listen(3001,function (){
     console.log("Server is running !!!!");  
 });
+
+
