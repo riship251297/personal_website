@@ -5,12 +5,12 @@ body{
 
 .main_container{
   display: block;
-  width: 1505px;
+  width: 1260px;
   height: 1000%;
 }
 
 .middleboard{
-  width: 1505px;
+  width: 1260px;
   height: 750px;
   background-color: #e9e2e1;
   display: block;
@@ -20,7 +20,7 @@ body{
 
 .upperboard{
   display: flex;
-  width: 1522px;
+  width: 1260px;
   height: 120px;
   background-color:#0abd8a;
   align-items: center;

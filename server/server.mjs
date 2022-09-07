@@ -145,6 +145,7 @@ app.post('/send',function(req,res)
         Key: 'op.png', 
         Body: fileContent
     };
+
     s3.upload(params, function(err, data) 
     {
         if (err) 
@@ -154,10 +155,17 @@ app.post('/send',function(req,res)
         else
         {
             res.send("uploaded successfully ")
-        console.log(`File uploaded successfully. ${data.Location}`);
+            console.log(`File uploaded successfully. ${data.Location}`);
         }
     });
 })
+
+
+app.get('getimages_aws',function(req,res)
+{
+
+})
+
 
 app.get('/data',function(req,res){
 
@@ -195,17 +203,6 @@ app.get('/getimages', async function(req,res)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 // app.get('/download',async function(req,res)
 // {
 //     res.send("rishikesh")
@@ -240,7 +237,7 @@ app.post('/send_email',(req,res) =>
     {
         const username = req.body.username;
         const email = req.body.email;
-        res.send(username);
+        console.log(email)
 
         let transporter = nodemailer.createTransport({
             service: 'gmail',
