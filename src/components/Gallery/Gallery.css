@@ -17,8 +17,6 @@
     padding: 10px;
     margin-left: 200px;
 }
-
-
 .card
 {
     background-clip: none;
@@ -89,28 +87,33 @@
 
 .download
 {
-    color: black;
-    background-color: #0abd8a;
-    margin-right: 5px;
+    color: white;
+    background-color: #000080;
+    margin-right: 10px;
 }
 .share
 {
-    color: black;
+    color: white;
 
-    background-color: #0abd8a;
-    margin-right: 5px;
+    background-color: #000080;
+    margin-right: 10px;
 }
 .like
 {
-    color: black;
+    color: white;
 
-    background-color: #0abd8a;
-    margin-right: 5px;
+    background-color: #000080;
+    margin-right: 10px;
 }
 .read
 {
-    color: black;
+    color: white;
 
-    background-color: #0abd8a;
-    margin-right: 5px;
+    background-color: #000080;
+    margin-right: 10px;
+}
+
+.buttons_section
+{
+    margin-left: 70px;
 }
