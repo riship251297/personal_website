@@ -94,6 +94,8 @@ const upload = multer({
 
 app.post('/upload',(req,res)=>
 {
+    console.log(req.body.name)
+    console.log(req.body.testImage)
     upload(req,res,(err)=>
     {
         if (err)
@@ -134,19 +136,26 @@ s3.createBucket(params, function(err, data) {
 
 app.post('/send',function(req,res)
 {
-    filename = req.body.name
-    image = req.body.testImage
-    const fileContent = fs.readFileSync(filename);
+    const filename = req.body.name
+    const image = req.body.testImage
+   
+    const fileContent = fs.readFileSync('/Users/rishikesh/Desktop/personal_website/public/images/FullSizeRender.png');
     const params = {
         Bucket: process.env.AWS_BUCKET_NAME,
-        Key: image, 
+        Key: 'op.png', 
         Body: fileContent
     };
-    s3.upload(params, function(err, data) {
-        if (err) {
-            throw err;
+    s3.upload(params, function(err, data) 
+    {
+        if (err) 
+        {
+            console.log(err);
         }
+        else
+        {
+            res.send("uploaded successfully ")
         console.log(`File uploaded successfully. ${data.Location}`);
+        }
     });
 })
 
@@ -231,7 +240,6 @@ app.post('/send_email',(req,res) =>
     {
         const username = req.body.username;
         const email = req.body.email;
-        console.log(username);
         res.send(username);
 
         let transporter = nodemailer.createTransport({
@@ -242,7 +250,6 @@ app.post('/send_email',(req,res) =>
             }
         });
         
-        // Step 2
         let mailOptions = {
             from: 'rphatan@g.clemson.edu', 
             to: email, 
@@ -250,7 +257,6 @@ app.post('/send_email',(req,res) =>
             text: 'Thanks for your contact information !!!. I will contact you soon .. '
         };
         
-        // Step 3
         transporter.sendMail(mailOptions, (err, data) => {
             if (err) {
                 console.log(err.message);
@@ -261,10 +267,6 @@ app.post('/send_email',(req,res) =>
                 res.send("Email sent !")
             }
         });
-
-
-
-
 
     }
     catch (error) 
