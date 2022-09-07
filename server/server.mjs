@@ -18,6 +18,9 @@ import download from 'download';
 
 import nodemailer from 'nodemailer';
 
+import AWS from 'aws-sdk';
+import { env } from "process";
+
 
 
 dotenv.config();
@@ -27,7 +30,7 @@ const app = express();
 app.use(express.json());
 
 app.use(bodyParser.json());
-// app.use(bodyParser.urlencoded({limit:"30mb",extended:true}));
+app.use(bodyParser.urlencoded({limit:"30mb",extended    :true}));
 
 // var urlencodedParser = bodyParser.urlencoded({ extended: true })
 
@@ -89,15 +92,23 @@ const upload = multer({
     storage:Storage
 }).single('testImage')
 
-app.post('/upload',(req,res)=>{
-    upload(req,res,(err)=>{
+app.post('/upload',(req,res)=>
+{
+    console.log(req.body.name)
+    console.log(req.body.testImage)
+    upload(req,res,(err)=>
+    {
         if (err)
-        {console.log(err)}
-        else{
+        {
+            console.log(err)
+        }
+        else
+        {
             const newimage = new images({
                 name:req.body.name,
-                image :{
-                    data:req.file.filename,
+                image :
+                {
+                    data:req.body.testImage,
                     contentType:'image/png'
                 }
             })
@@ -105,6 +116,47 @@ app.post('/upload',(req,res)=>{
             .then(()=>res.send("successfully uploaded")).catch(err=>console.log(err))
         }
     })
+})
+
+const s3 = new AWS.S3({
+    accessKeyId: process.env.ACCESS_ID_AWS,
+    secretAccessKey: process.env.ACCESS_KEY_AWS
+});
+
+
+const params = {
+    Bucket: process.env.AWS_BUCKET_NAME,
+    
+};
+
+s3.createBucket(params, function(err, data) {
+    if (err) console.log(err, err.stack);
+    else console.log('Bucket Created Successfully', data.Location);
+});
+
+app.post('/send',function(req,res)
+{
+    const filename = req.body.name
+    const image = req.body.testImage
+   
+    const fileContent = fs.readFileSync('/Users/rishikesh/Desktop/personal_website/public/images/FullSizeRender.png');
+    const params = {
+        Bucket: process.env.AWS_BUCKET_NAME,
+        Key: 'op.png', 
+        Body: fileContent
+    };
+    s3.upload(params, function(err, data) 
+    {
+        if (err) 
+        {
+            console.log(err);
+        }
+        else
+        {
+            res.send("uploaded successfully ")
+        console.log(`File uploaded successfully. ${data.Location}`);
+        }
+    });
 })
 
 app.get('/data',function(req,res){
@@ -124,7 +176,6 @@ app.get('/images_sharing',function(req,res){
     })
 })
 
-const url = 'GFG.jpeg';
   
 
 
@@ -141,6 +192,19 @@ app.get('/getimages', async function(req,res)
         res.status(404).json({message:error.message});
     }
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // app.get('/download',async function(req,res)
 // {
@@ -176,7 +240,6 @@ app.post('/send_email',(req,res) =>
     {
         const username = req.body.username;
         const email = req.body.email;
-        console.log(username);
         res.send(username);
 
         let transporter = nodemailer.createTransport({
@@ -187,7 +250,6 @@ app.post('/send_email',(req,res) =>
             }
         });
         
-        // Step 2
         let mailOptions = {
             from: 'rphatan@g.clemson.edu', 
             to: email, 
@@ -195,7 +257,6 @@ app.post('/send_email',(req,res) =>
             text: 'Thanks for your contact information !!!. I will contact you soon .. '
         };
         
-        // Step 3
         transporter.sendMail(mailOptions, (err, data) => {
             if (err) {
                 console.log(err.message);
@@ -206,10 +267,6 @@ app.post('/send_email',(req,res) =>
                 res.send("Email sent !")
             }
         });
-
-
-
-
 
     }
     catch (error) 
