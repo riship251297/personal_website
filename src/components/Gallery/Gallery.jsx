@@ -121,7 +121,7 @@ function Gallery()
         <div className="first_section">
           <div className="card_section1">
             <Card style={{ width: '30rem' ,height:'20rem',textAlign:'left' }}>
-              <Card.Img variant="top" src={"https://personalprojectriship251297.s3.amazonaws.com/op.png"} />
+              <Card.Img variant="top" src={"images/portfolio.jpg  "} />
               <Card.Body>
                 <Card.Title>Old Fort Jackson, Savannah, Georgia</Card.Title>
                 <Card.Text>A day well spent to understand the history of the fort and how it participated in the World War II.</Card.Text>
