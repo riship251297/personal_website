@@ -15,6 +15,8 @@ function Gallery()
 
   const [gallery_pics ,setGallerypics] = useState([])
 
+  const [download,setDownload] = useState([]);
+
   // useEffect(()=>{
     
   //     axios.get("http://localhost:3501/getimages")
@@ -81,6 +83,11 @@ function Gallery()
 //   })
 // }
 
+// const download_api = () =>
+// {
+//     axios.get("")
+// }
+
 
 
 
@@ -114,12 +121,12 @@ function Gallery()
         <div className="first_section">
           <div className="card_section1">
             <Card style={{ width: '30rem' ,height:'20rem',textAlign:'left' }}>
-              <Card.Img variant="top" src={"images/portfolio.jpg"} />
+              <Card.Img variant="top" src={"https://personalprojectriship251297.s3.amazonaws.com/op.png"} />
               <Card.Body>
                 <Card.Title>Old Fort Jackson, Savannah, Georgia</Card.Title>
                 <Card.Text>A day well spent to understand the history of the fort and how it participated in the World War II.</Card.Text>
                 <div className="buttons_section">
-                  <Button className='download' >Download </Button>
+                  <Button className='download'>Download </Button>
                   <Button className='like' >Like </Button>
                   <Button className='share' >Share </Button>
                   <Button className='read' >Read more </Button>
