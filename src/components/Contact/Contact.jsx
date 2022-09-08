@@ -3,7 +3,6 @@ import axios from 'axios'
 import {useState,useEffect} from 'react'
 import Navbar from '../Navbar/Navbar'
 import '../Contact/Contact.css'
-import { margin } from '@mui/system'
 
 function Contact() 
 {
@@ -14,12 +13,7 @@ function Contact()
   async function handle(event)
     {
       event.preventDefault();
-      // const form_d = new FormData();
-      // form_d.append("username",name)
-      // form_d.append("email",email)
-
       
-
       const data = {'username':name,'email':email}
 
       const response = await axios
@@ -110,7 +104,7 @@ function Contact()
         <h2 className='middle'>DROP ME A MESSAGE !</h2>
         <div className="form"id="formdata">
           <form action="/send_email"onSubmit={handle}>
-            <div className="first_section">
+            <div className="f_section">
               <label>Name:
                 <input type="text" 
                 value={name} 
@@ -118,7 +112,7 @@ function Contact()
                 onChange={(e)=> SetName(e.target.value)} />         
               </label>
             </div>
-            <div className="second_section">
+            <div className="s_section">
               <label>Email :
                 <input type="email" 
                 value={email} 
@@ -127,6 +121,9 @@ function Contact()
               </label>
             </div>
             <div className="area">
+              <textarea id="w3review" name="w3review" rows="5" cols="40"> 
+              </textarea>
+  
 
             </div>
             <div className="submit_section">
