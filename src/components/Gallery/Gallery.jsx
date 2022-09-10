@@ -15,20 +15,18 @@ function Gallery()
 
   const [gallery_pics ,setGallerypics] = useState([])
 
-  const [download,setDownload] = useState([]);
-
   const [timesetting,setTimesetting] = useState([]);
 
 
-  // useEffect(()=>{
+  useEffect(()=>{
     
-  //     axios.get("http://localhost:3501/getimages")
-  //     .then((response)=>{
-  //       console.log(response.data)
-  //       setGallerypics(response.data)
-  //     })
+      axios.get("http://localhost:3501/count")
+      .then((response)=>{
+        console.log(response.data)
+        setCounter(response.data)
+      })
     
-  // },[])
+  },[])
   
 
 
@@ -86,19 +84,31 @@ function Gallery()
 //   })
 // }
 
-// const download_api = () =>
-// {
-//     axios.get("")
-// }
 
-const [counter, setCounter] = useState(1);
+
+const [counterd, setCounterd] = useState(10);
+const incrementCounterd = () => setCounterd(counterd + 1);
+let decrementCounterd = () => setCounterd(counterd - 1);
+
+const [counterl, setCounterl] = useState(5);
+const incrementCounterl = () => setCounterl(counterl + 1);
+let decrementCounterl = () => setCounterl(counterl - 1);
+
+const [counter, setCounter] = useState(3);
 const incrementCounter = () => setCounter(counter + 1);
 let decrementCounter = () => setCounter(counter - 1);
 
-function downloadin()
-{
-  setTimesetting(timesetting+1)
-}
+// function read ()
+
+
+const [data, setData] = useState([]);
+const getData = async () => {
+const { data } = await axios.get(`https://localhost:3001/count`);
+    setData(data);
+  };
+  useEffect(() => {
+    getData();
+  }, []);
 
 
 
@@ -129,10 +139,12 @@ function downloadin()
                 <Card.Title>Old Fort Jackson, Savannah, Georgia</Card.Title>
                 <Card.Text>A day well spent to understand the history of the fort and how it participated in the World War II.</Card.Text>
                 <div className="buttons_section">
-                  <Button className='download' onClick={incrementCounter}>Download | {counter}</Button>
-                  <Button className='like' >Like | {timesetting}</Button>
-                  <Button className='share' >Share | {timesetting}</Button>
-                  <Button className='read' >Read more </Button>
+                  <Button className='download'onClick={incrementCounterd}>Download | {counterd}</Button>
+                  <Button className='like'onClick={incrementCounterl}>Like | {counterl}</Button>
+                  <Button className='share'onClick={incrementCounter}>Share | {counter}</Button>
+                  <a href="https://en.wikipedia.org/wiki/Savannah,_Georgia">
+                    <Button className='read_mo' >Read more </Button>
+                  </a>
                 </div>
               </Card.Body>
           </Card>
@@ -145,11 +157,13 @@ function downloadin()
               <Card.Title>Brooklyn Bridge, New York</Card.Title>
               <Card.Text>Probably one of the best evenings spent on this bridge. Really lucky to have my foot set on this bridge. I wish everyone could have a walk on this bridge with their loved ones...            </Card.Text>
               <div className="buttons_section">
-                  <Button className='download' >Download </Button>
-                  <Button className='like' >Like </Button>
-                  <Button className='share' >Share </Button>
-                  <Button className='read' >Read more </Button>
-              </div>
+                  <Button className='download'onClick={incrementCounterd}>Download | {counterd}</Button>
+                  <Button className='like'onClick={incrementCounterl}>Like | {counterl}</Button>
+                  <Button className='share'onClick={incrementCounter}>Share | {counter}</Button>
+                  <a href="https://en.wikipedia.org/wiki/Brooklyn_Bridge">
+                    <Button className='read' >Read more </Button>
+                  </a>
+                </div>
             </Card.Body>
           </Card>
           </div>
@@ -166,11 +180,13 @@ function downloadin()
               Kananaskis Country is a park system situated to the west of Calgary, Alberta, Canada in the foothills and front ranges of the Canadian Rockies. The park is home to a myriad of activities and adventures indicative of a mountain park as well as ski hills, camping, numerous day use areas and trails.
               </Card.Text>
               <div className="buttons_section">
-                  <Button className='download' >Download{timesetting} </Button>
-                  <Button className='like' >Like </Button>
-                  <Button className='share' >Share </Button>
-                  <Button className='read' >Read more </Button>
-              </div>
+                  <Button className='download'onClick={incrementCounterd}>Download | {counterd}</Button>
+                  <Button className='like'onClick={incrementCounterl}>Like | {counterl}</Button>
+                  <Button className='share'onClick={incrementCounter}>Share | {counter}</Button>
+                  <a href="https://en.wikipedia.org/wiki/Kananaskis_Country">
+                    <Button className='read' >Read more </Button>
+                  </a>
+                </div>
             </Card.Body>
           </Card>
           </div>
@@ -184,11 +200,13 @@ function downloadin()
               The World of Coca-Cola is a museum, located in Atlanta, Georgia, showcasing the history of the Coca-Cola Company. The 20-acre complex opened to the public on May 24, 2007, relocating from and replacing the original exhibit, which was founded in 1990 in Underground Atlanta.
               </Card.Text>
               <div className="buttons_section">
-                  <Button className='download' >Download </Button>
-                  <Button className='like' >Like </Button>
-                  <Button className='share' >Share </Button>
-                  <Button className='read' >Read more </Button>
-              </div>
+                  <Button className='download'onClick={incrementCounterd}>Download | {counterd}</Button>
+                  <Button className='like'onClick={incrementCounterl}>Like | {counterl}</Button>
+                  <Button className='share'onClick={incrementCounter}>Share | {counter}</Button>
+                  <a href="https://en.wikipedia.org/wiki/World_of_Coca-Cola">
+                    <Button className='read' >Read more </Button>
+                  </a>
+                </div>
             </Card.Body>
           </Card>
           </div>
@@ -206,11 +224,13 @@ function downloadin()
                 bulk of the card's content.
               </Card.Text>
               <div className="buttons_section">
-                  <Button className='download' >Download </Button>
-                  <Button className='like' >Like </Button>
-                  <Button className='share' >Share </Button>
-                  <Button className='read' >Read more </Button>
-              </div>
+                  <Button className='download'onClick={incrementCounterd}>Download | {counterd}</Button>
+                  <Button className='like'onClick={incrementCounterl}>Like | {counterl}</Button>
+                  <Button className='share'onClick={incrementCounter}>Share | {counter}</Button>
+                  <a href="https://google.com">
+                    <Button className='read' >Read more </Button>
+                  </a>
+                </div>
             </Card.Body>
           </Card>
           </div>
@@ -225,11 +245,13 @@ function downloadin()
                 bulk of the card's content.
               </Card.Text>
               <div className="buttons_section">
-                  <Button className='download' >Download </Button>
-                  <Button className='like' >Like </Button>
-                  <Button className='share' >Share </Button>
-                  <Button className='read' >Read more </Button>
-              </div>
+                  <Button className='download'onClick={incrementCounterd}>Download | {counterd}</Button>
+                  <Button className='like'onClick={incrementCounterl}>Like | {counterl}</Button>
+                  <Button className='share'onClick={incrementCounter}>Share | {counter}</Button>
+                  <a href="https://google.com">
+                    <Button className='read' >Read more </Button>
+                  </a>
+                </div>
             </Card.Body>
           </Card>
           </div>
@@ -249,10 +271,12 @@ function downloadin()
                   bulk of the card's content.
                 </Card.Text>
                 <div className="buttons_section">
-                  <Button className='download' >Download </Button>
-                  <Button className='like' >Like </Button>
-                  <Button className='share' >Share </Button>
-                  <Button className='read' >Read more </Button>
+                  <Button className='download'onClick={incrementCounterd}>Download | {counterd}</Button>
+                  <Button className='like'onClick={incrementCounterl}>Like | {counterl}</Button>
+                  <Button className='share'onClick={incrementCounter}>Share | {counter}</Button>
+                  <a href="https://google.com">
+                    <Button className='read' >Read more </Button>
+                  </a>
                 </div>
               </Card.Body>
           </Card>
@@ -268,10 +292,12 @@ function downloadin()
                   bulk of the card's content.
                 </Card.Text>
                 <div className="buttons_section">
-                  <Button className='download' >Download </Button>
-                  <Button className='like' >Like </Button>
-                  <Button className='share' >Share </Button>
-                  <Button className='read' >Read more </Button>
+                  <Button className='download'onClick={incrementCounterd}>Download | {counterd}</Button>
+                  <Button className='like'onClick={incrementCounterl}>Like | {counterl}</Button>
+                  <Button className='share'onClick={incrementCounter}>Share | {counter}</Button>
+                  <a href="https://google.com">
+                    <Button className='read' >Read more </Button>
+                  </a>
                 </div>
               </Card.Body>
           </Card>
@@ -280,26 +306,26 @@ function downloadin()
         </div>
 
         <div className="fifth_section">
-
-        <div className="card_section9">
-            <Card style={{ width: '35rem' }}>
-            <Card.Img variant="top" src={"images/321.jpg"} />
-              <Card.Body>
-                <Card.Title></Card.Title>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up the
-                  bulk of the card's content.
-                </Card.Text>
-                <div className="buttons_section">
-                  <Button className='download' >Download </Button>
-                  <Button className='like' >Like </Button>
-                  <Button className='share' >Share </Button>
-                  <Button className='read' >Read more </Button>
-                </div>
-              </Card.Body>
-          </Card>
+          <div className="card_section9">
+              <Card style={{ width: '35rem' }}>
+              <Card.Img variant="top" src={"images/321.jpg"} />
+                <Card.Body>
+                  <Card.Title></Card.Title>
+                  <Card.Text>
+                    Some quick example text to build on the card title and make up the
+                    bulk of the card's content.
+                  </Card.Text>
+                  <div className="buttons_section">
+                    <Button className='download'onClick={incrementCounterd}>Download | {counterd}</Button>
+                    <Button className='like'onClick={incrementCounterl}>Like | {counterl}</Button>
+                    <Button className='share'onClick={incrementCounter}>Share | {counter}</Button>
+                    <a href="https://google.com">
+                      <Button className='read' >Read more </Button>
+                    </a>
+                  </div>
+                </Card.Body>
+            </Card>
           </div>
-
           <div className="card_section10">
             <Card style={{ width: '35rem' }}>
             <Card.Img variant="top" src={"images/456.jpg"} />
@@ -310,20 +336,18 @@ function downloadin()
                   bulk of the card's content.
                 </Card.Text>
                 <div className="buttons_section">
-                  <Button className='download' >Download </Button>
-                  <Button className='like' >Like </Button>
-                  <Button className='share' >Share </Button>
-                  <Button className='read' >Read more </Button>
+                  <Button className='download'onClick={incrementCounterd}>Download | {counterd}</Button>
+                  <Button className='like'onClick={incrementCounterl}>Like | {counterl}</Button>
+                  <Button className='share'onClick={incrementCounter}>Share | {counter}</Button>
+                  <a href="https://google.com">
+                    <Button className='read' >Read more </Button>
+                  </a>
                 </div>
               </Card.Body>
           </Card>
           </div>
-
         </div>
-        
-
       </div>
-     
     </>
   )
 }

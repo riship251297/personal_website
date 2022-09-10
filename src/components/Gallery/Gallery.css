@@ -7,7 +7,7 @@
 
 .card_section1,.card_section3,.card_section5,.card_section7,.card_section9
 {
-    padding: 10px;
+    padding: 5px;
     margin-left: 20px;
 }
 
@@ -94,22 +94,27 @@
 .share
 {
     color: white;
-
     background-color: #000080;
     margin-right: 10px;
 }
 .like
 {
     color: white;
-
     background-color: #000080;
     margin-right: 10px;
 }
+.read_mo
+{
+    margin-top: 3px;
+    color: white;
+    background-color: #000080;
+    margin-left: -20px;
+}
+
 .read
 {
+    margin-top: 2px;
     color: white;
-
     background-color: #000080;
-    margin-right: 10px;
+    margin-left: -15px;
 }
-
