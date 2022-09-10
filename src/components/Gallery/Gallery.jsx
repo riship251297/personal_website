@@ -18,15 +18,15 @@ function Gallery()
   const [timesetting,setTimesetting] = useState([]);
 
 
-  useEffect(()=>{
+  // useEffect(()=>{
     
-      axios.get("http://localhost:3501/count")
-      .then((response)=>{
-        console.log(response.data)
-        setCounter(response.data)
-      })
+  //     axios.get("http://localhost:3501/count")
+  //     .then((response)=>{
+  //       console.log(response.data)
+  //       setCounter(response.data)
+  //     })
     
-  },[])
+  // },[])
   
 
 
@@ -101,17 +101,23 @@ let decrementCounter = () => setCounter(counter - 1);
 // function read ()
 
 
-const [data, setData] = useState([]);
-const getData = async () => {
-const { data } = await axios.get(`https://localhost:3001/count`);
-    setData(data);
-  };
-  useEffect(() => {
-    getData();
-  }, []);
+// const [data, setData] = useState([]);
+// const getData = async () => {
+// const { data } = await axios.get(`https://localhost:3001/count`);
+//     setData(data);
+//   };
+//   useEffect(() => {
+//     getData();
+//   }, []);
 
+const [counterss, setCounterss] = useState([1, 2, 3, 4, 5, 8, 4, 0, 0, 5]);
 
-
+function onIncrement(index) 
+{
+  const countersCopy = [...counterss];
+  countersCopy[index] += 1;
+  setCounterss(countersCopy);
+}
 
 
   return (
@@ -135,9 +141,9 @@ const { data } = await axios.get(`https://localhost:3001/count`);
                 <Card.Title>Old Fort Jackson, Savannah, Georgia</Card.Title>
                 <Card.Text>A day well spent to understand the history of the fort and how it participated in the World War II.</Card.Text>
                 <div className="buttons_section">
-                  <Button className='download'onClick={incrementCounterd}>Download | {counterd}</Button>
-                  <Button className='like'onClick={incrementCounterl}>Like | {counterl}</Button>
-                  <Button className='share'onClick={incrementCounter}>Share | {counter}</Button>
+                  <Button className='download'onClick={() => onIncrement(0)}>Download | {counterss[0]}</Button>
+                  <Button className='like'onClick={() => onIncrement(1)}>Like | {counterss[1]}</Button>
+                  <Button className='share'onClick={() => onIncrement(2)}>Share | {counterss[2]}</Button>
                   <a href="https://en.wikipedia.org/wiki/Savannah,_Georgia">
                     <Button className='read_mo' >Read more </Button>
                   </a>
@@ -344,5 +350,4 @@ const { data } = await axios.get(`https://localhost:3001/count`);
 }
 
 export default Gallery;
-
 
