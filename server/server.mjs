@@ -273,9 +273,18 @@ app.post('/send_email',(req,res) =>
      
 });
 
+const count_value = 56;
+app.get('/count',function (req,res)
+{
+    // const count_value = 30;
+    res.send(count_value)
+})
 
 
+app.post('/update_count',function (req,res)
+{
 
+})
 
 
 

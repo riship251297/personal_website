@@ -17,6 +17,9 @@ function Gallery()
 
   const [download,setDownload] = useState([]);
 
+  const [timesetting,setTimesetting] = useState([]);
+
+
   // useEffect(()=>{
     
   //     axios.get("http://localhost:3501/getimages")
@@ -88,6 +91,15 @@ function Gallery()
 //     axios.get("")
 // }
 
+const [counter, setCounter] = useState(1);
+const incrementCounter = () => setCounter(counter + 1);
+let decrementCounter = () => setCounter(counter - 1);
+
+function downloadin()
+{
+  setTimesetting(timesetting+1)
+}
+
 
 
 
@@ -101,16 +113,7 @@ function Gallery()
 
         <h3>Welcome to my Gallery section !!!</h3>
         <h4>Here you will find some of my collections of photographs. </h4>
-        {/* <div className="card_section1">
-          <Card style={{ width: '30rem' ,height:'20rem',textAlign:'left' }}>
-            <Card.Img variant="top" src={"https://personalprojectriship251297.s3.amazonaws.com/FullSizeRender.png"} />
-            <Card.Body>
-              <Card.Title>Old Fort Jackson, Savannah, Georgia</Card.Title>
-              <Card.Text>A day well spent to understand the history of the fort and how it participated in the World War II.</Card.Text>
-              <Button variant="primary">Checkout more !!! </Button>
-            </Card.Body>
-        </Card>
-        </div>/*/}
+        
       </div> 
 
       
@@ -126,9 +129,9 @@ function Gallery()
                 <Card.Title>Old Fort Jackson, Savannah, Georgia</Card.Title>
                 <Card.Text>A day well spent to understand the history of the fort and how it participated in the World War II.</Card.Text>
                 <div className="buttons_section">
-                  <Button className='download'>Download </Button>
-                  <Button className='like' >Like </Button>
-                  <Button className='share' >Share </Button>
+                  <Button className='download' onClick={incrementCounter}>Download | {counter}</Button>
+                  <Button className='like' >Like | {timesetting}</Button>
+                  <Button className='share' >Share | {timesetting}</Button>
                   <Button className='read' >Read more </Button>
                 </div>
               </Card.Body>
@@ -163,7 +166,7 @@ function Gallery()
               Kananaskis Country is a park system situated to the west of Calgary, Alberta, Canada in the foothills and front ranges of the Canadian Rockies. The park is home to a myriad of activities and adventures indicative of a mountain park as well as ski hills, camping, numerous day use areas and trails.
               </Card.Text>
               <div className="buttons_section">
-                  <Button className='download' >Download </Button>
+                  <Button className='download' >Download{timesetting} </Button>
                   <Button className='like' >Like </Button>
                   <Button className='share' >Share </Button>
                   <Button className='read' >Read more </Button>
