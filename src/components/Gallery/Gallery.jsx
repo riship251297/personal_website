@@ -126,10 +126,6 @@ const { data } = await axios.get(`https://localhost:3001/count`);
         
       </div> 
 
-      
-      
-
-
       <div className="main">
         <div className="first_section">
           <div className="card_section1">
@@ -167,7 +163,6 @@ const { data } = await axios.get(`https://localhost:3001/count`);
             </Card.Body>
           </Card>
           </div>
-
         </div>
        
         <div className="second_section">
@@ -210,7 +205,6 @@ const { data } = await axios.get(`https://localhost:3001/count`);
             </Card.Body>
           </Card>
           </div>
-
         </div>
         
         <div className="third_section">
@@ -255,10 +249,7 @@ const { data } = await axios.get(`https://localhost:3001/count`);
             </Card.Body>
           </Card>
           </div>
-
         </div>
-       
-
        
         <div className="fourth_section">
           <div className="card_section7">
@@ -320,7 +311,7 @@ const { data } = await axios.get(`https://localhost:3001/count`);
                     <Button className='like'onClick={incrementCounterl}>Like | {counterl}</Button>
                     <Button className='share'onClick={incrementCounter}>Share | {counter}</Button>
                     <a href="https://google.com">
-                      <Button className='read' >Read more </Button>
+                      <Button className='read'>Read more </Button>
                     </a>
                   </div>
                 </Card.Body>
