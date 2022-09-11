@@ -9,21 +9,16 @@ import bycrypt from 'bcrypt'
 import cookieParser from "cookie-parser";
 import cookie from 'cookie-parser';
 import jwt from "jsonwebtoken";
-
 import postroutes from './routes/posts.js';
 import test from './routes/posts.js';
 // import firstpage from "./controllers/posts.js";
-
 import contact from './routes/posts.js'
 import friends from './models/friends.js'
 import images from './models/image.js'
 import users from './models/user.js'
 import * as fs from 'fs';
-
 import download from 'download';
-
 import nodemailer from 'nodemailer';
-
 import AWS from 'aws-sdk';
 import { env } from "process";
 import handlebars from 'handlebars'
@@ -62,24 +57,6 @@ app.post('/tests',(req,res)=>
         res.sendStatus(404).json({message:error.message});
     }
 });
-
-// import CryptoJS from 'crypto-js';
-// app.post("/contact",async (req,res)=>{
-//     const newfriend = new friends({
-//         username:req.body.username,
-//         email:req.body.email,
-//         password:CryptoJS.AES.encrypt(req.body.password,process.env.SECRET_KEY).toString(),
-//     });
-//     try
-//     {
-//         const savedfriend = await newfriend.save();
-//         res.sendStatus(200).json(savedfriend);
-//     }
-//     catch(error)
-//     {
-//         res.sendStatus(500).json({message:error.message});
-//     }
-// });
 
 app.post('/register_jwt',async (req,res)=>
 {
@@ -120,7 +97,7 @@ app.post('/register_jwt',async (req,res)=>
             }
             if (!err)
             {
-                res.send("Email sent !")
+                res.send("Verification email is sent to your email address !")
             }
         });
 
@@ -277,27 +254,6 @@ app.get('getimages_aws',function(req,res)
 
 })
 
-
-app.get('/data',function(req,res){
-
-    res.json({
-        number: 1,
-        name: 'John',
-        gender: 'male'
-      });
-    
-})
-
-
-app.get('/images_sharing',function(req,res){
-    res.json({
-        image_path:'images/brain.png',
-    })
-})
-
-  
-
-
 app.get('/getimages', async function(req,res)
 {
     try 
@@ -311,36 +267,6 @@ app.get('/getimages', async function(req,res)
         res.status(404).json({message:error.message});
     }
 })
-
-
-
-// app.get('/download',async function(req,res)
-// {
-//     res.send("rishikesh")
-//     const file = '/rishi_0.2.png'
-//     const path = '/Users/rishikesh/Desktop/project/public/images/';
-//     download(file,path)
-// .then(() => {
-//     console.log('Download Completed');
-// })
-// })
-
-
-app.get('/dat',async function(req,res)
-{
-    let data = {"name":"rishikesh",
-            "email":"rphatan@clemson.edu",
-            "ID ":"251297"
-        }
-        res.json(data)
-})
-
-app.get('/send_data',async function(req,res)
-    {
-        console.log(req.body.username)
-    })
-
-
 
 app.post('/send_email',(req,res) =>
 {
@@ -389,21 +315,6 @@ app.post('/send_email',(req,res) =>
     }
      
 });
-
-const count_value = 56;
-app.get('/count',function (req,res)
-{
-    // const count_value = 30;
-    res.send(count_value)
-})
-
-
-app.post('/update_count',function (req,res)
-{
-
-})
-
-
 
 app.listen(3001,function (){
     console.log("Server is running !!!!");  
