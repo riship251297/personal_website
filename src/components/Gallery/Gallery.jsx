@@ -5,6 +5,8 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import '../Gallery/Gallery.css'
 import Swal from 'sweetalert2'
+import {FacebookShareButton} from 'react-share'
+import {FacebookIcon} from 'react-share'
 
 
 
@@ -157,6 +159,11 @@ function onIncrement(index,type,event)
 
         <h3>Welcome to my Gallery section !!!</h3>
         <h4>Here you will find some of my collections of photographs. </h4>
+        <FacebookShareButton
+          url = "https.facebook.com"
+          >
+          <FacebookIcon logoFillColor="white"></FacebookIcon>
+        </FacebookShareButton>
         
       </div> 
 
