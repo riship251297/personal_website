@@ -11,12 +11,14 @@ function Contact()
 
   const [name,SetName] = useState("");
   const [email,SetEmail] = useState("");
+  const [message,SetMessage] = useState("");
+
 
   async function handle(event)
     {
       event.preventDefault();
       
-      const data = {'username':name,'email':email}
+      const data = {'username':name,'email':email,'message':message}
 
       const response = await axios
       .post("http://localhost:3001/send_email", data)
@@ -62,19 +64,7 @@ function Contact()
 
       
 
-      // await axios({
-      //   method: 'post',
-      //   url: 'http://localhost:3501/send_email',
-      //   data: contact_form,
-      //   header: {
-      //             // 'Accept': 'application/json',
-      //             // 'Content-Type': 'multipart/form-data',
-      //             'Content-Type': 'contact_form.getHeaders()'
 
-      //           },
-      //           transformRequest:contact_form => contact_form,
-
-      //     })
       
        
       
@@ -128,7 +118,13 @@ function Contact()
             <br></br>
             <div className="area">
               <label className='aream'>Message :
-                <textarea id="w3review" name="w3review" rows="6" cols="40"> 
+                <textarea id="w3review"
+                 name="w3review" 
+                 rows="6" 
+                 cols="35"               
+                placeholder={"Enter your message !!"}
+                onChange={(e)=> SetMessage(e.target.value)} 
+                > 
                </textarea>
               </label>
   
