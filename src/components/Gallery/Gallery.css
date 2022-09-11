@@ -45,7 +45,6 @@
 .first_section
 {
     margin-left: 110px;
-
     width:1300px;
     height:800px;
     display: flex;
@@ -116,5 +115,10 @@
     margin-top: 2px;
     color: white;
     background-color: #000080;
-    margin-left: -15px;
+    margin-left: -18px;
+}
+
+.buttons_section
+{
+    width: 900px;
 }
