@@ -4,6 +4,11 @@ import cors from "cors";
 import dotenv from 'dotenv';
 import bodyParser from 'body-parser';
 import multer from 'multer';
+import crypto from 'crypto';
+import bycrypt from 'bcrypt'
+import cookieParser from "cookie-parser";
+import cookie from 'cookie-parser';
+import jwt from "jsonwebtoken";
 
 import postroutes from './routes/posts.js';
 import test from './routes/posts.js';
@@ -12,6 +17,7 @@ import test from './routes/posts.js';
 import contact from './routes/posts.js'
 import friends from './models/friends.js'
 import images from './models/image.js'
+import users from './models/user.js'
 import * as fs from 'fs';
 
 import download from 'download';
@@ -20,7 +26,7 @@ import nodemailer from 'nodemailer';
 
 import AWS from 'aws-sdk';
 import { env } from "process";
-
+import handlebars from 'handlebars'
 
 
 dotenv.config();
@@ -31,10 +37,7 @@ app.use(express.json());
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({limit:"30mb",extended    :true}));
-
-// var urlencodedParser = bodyParser.urlencoded({ extended: true })
-
-
+app.use(cookieParser())
 app.use(cors());
 
 const uri = process.env.ATLAS_URI;
@@ -77,6 +80,114 @@ app.post('/tests',(req,res)=>
 //         res.sendStatus(500).json({message:error.message});
 //     }
 // });
+
+app.post('/register_jwt',async (req,res)=>
+{
+    try 
+    {
+        const {name,email,password} = req.body;
+        const user = new users({
+            name,
+            email,
+            password,
+            emailToken:crypto.randomBytes(64).toString('hex'),
+            isVerified:false,
+        })
+        const salt = await bycrypt.genSalt(10);
+        const hashpassword = await bycrypt.hash(user.password,salt)
+        user.password = hashpassword
+        const newUser = await user.save()
+
+        let transporter = nodemailer.createTransport({
+            service: 'gmail',
+            auth: {
+                user: process.env.EMAIL,
+                pass: process.env.PASSWORD 
+            }
+        });
+
+        let mailOptions = {
+            from: 'rphatan@g.clemson.edu', 
+            to: user.email, 
+            subject: 'Verify your email address',
+            html: htmlsend
+        };
+        
+        transporter.sendMail(mailOptions, (err, data) => {
+            if (err) {
+                console.log(err.message);
+    
+            }
+            if (!err)
+            {
+                res.send("Email sent !")
+            }
+        });
+
+    } 
+    catch (error) 
+    {
+        res.sendStatus(404).json({message:error.message});
+    }
+});
+
+
+const createtoken =(id)=>{
+    return jwt.sign({id},process.env.JWT_SECRET)
+}
+
+const login_required = async(req,res,next)=>
+{
+    const token = req.cookies['access-token']
+    if (token)
+    {
+        const validtoken = await jwt.verify(token,process.env.JWT_SECRET)
+        if (validtoken)
+        {
+            res.user = validtoken.id
+            next()
+        }
+        else
+        {
+            console.log("token expired")
+        }
+    }
+    else
+    {
+        console.log("token not found")
+    }
+}
+app.post('/login_jwt',async function(req,res)
+{
+    try 
+    {
+        const {email,password} = req.body;
+        const finduser = await users.findOne({email:email})
+        if (finduser)
+        {
+            const match = await bycrypt.compare(password,finduser.password)
+            if (match)
+            {
+                token = createtoken(finduser.id);
+                res.cookie('access-token',token)
+            }
+            else
+            {
+                res.send("Invalid password")
+            }
+        }
+        else
+        {
+            res.send("User is not registered")
+        }
+       
+    } 
+    catch (error) 
+    {
+        res.sendStatus(404).json({message:error.message});
+    }
+});
+
 
 
 
@@ -237,7 +348,7 @@ app.post('/send_email',(req,res) =>
     {
         const username = req.body.username;
         const email = req.body.email;
-        console.log(email)
+        const message = req.body.message
 
         let transporter = nodemailer.createTransport({
             service: 'gmail',
@@ -246,12 +357,17 @@ app.post('/send_email',(req,res) =>
                 pass: process.env.PASSWORD 
             }
         });
+
+        const source = fs.readFileSync('../src/template.html', 'utf-8').toString();
+        const template = handlebars.compile(source);
+        const replacements = {username:username}
+        const htmlsend = template(replacements)
         
         let mailOptions = {
             from: 'rphatan@g.clemson.edu', 
             to: email, 
             subject: 'Successful Contact submission',
-            text: 'Thanks for your contact information !!!. I will contact you soon .. '
+            html: htmlsend
         };
         
         transporter.sendMail(mailOptions, (err, data) => {
@@ -268,6 +384,7 @@ app.post('/send_email',(req,res) =>
     }
     catch (error) 
     {
+        console.log(error)
         res.sendStatus(404).json({message:error.message});
     }
      

@@ -3,19 +3,25 @@ import axios from 'axios'
 import {useState,useEffect} from 'react'
 import Navbar from '../Navbar/Navbar'
 import '../Contact/Contact.css'
+import {EmailShareButton,WhatsappShareButton,FacebookShareButton,LinkedinShareButton, LinkedinIcon} from 'react-share'
+import {FacebookIcon} from 'react-share'
+import { Link } from 'react-router-dom'
 
 function Contact() 
 {
 
   const [name,SetName] = useState("");
   const [email,SetEmail] = useState("");
+  const [message,SetMessage] = useState("");
+
+
+
+
 
   async function handle(event)
     {
       event.preventDefault();
-      
-      const data = {'username':name,'email':email}
-
+      const data = {'username':name,'email':email,'message':message}
       const response = await axios
       .post("http://localhost:3001/send_email", data)
       .then((res) => {
@@ -24,6 +30,11 @@ function Contact()
       .catch((err) => {
         console.log(err);
       });
+
+      window.location = '/research';
+
+
+
     }
   
 
@@ -60,19 +71,7 @@ function Contact()
 
       
 
-      // await axios({
-      //   method: 'post',
-      //   url: 'http://localhost:3501/send_email',
-      //   data: contact_form,
-      //   header: {
-      //             // 'Accept': 'application/json',
-      //             // 'Content-Type': 'multipart/form-data',
-      //             'Content-Type': 'contact_form.getHeaders()'
 
-      //           },
-      //           transformRequest:contact_form => contact_form,
-
-      //     })
       
        
       
@@ -104,6 +103,7 @@ function Contact()
         <h2 className='middle'>DROP ME A MESSAGE !</h2>
         <div className="form"id="formdata">
           <form action="/send_email"onSubmit={handle}>
+
             <div className="f_section">
               <label>Name:
                 <input type="text" 
@@ -112,6 +112,7 @@ function Contact()
                 onChange={(e)=> SetName(e.target.value)} />         
               </label>
             </div>
+
             <div className="s_section">
               <label>Email :
                 <input type="email" 
@@ -120,12 +121,23 @@ function Contact()
                 onChange={(e)=> SetEmail(e.target.value)}/>
               </label>
             </div>
+
+            <br></br>
             <div className="area">
-              <textarea id="w3review" name="w3review" rows="5" cols="40"> 
-              </textarea>
+              <label className='aream'>Message :
+                <textarea id="w3review"
+                 name="w3review" 
+                 rows="6" 
+                 cols="35"               
+                placeholder={"Enter your message !!"}
+                onChange={(e)=> SetMessage(e.target.value)} 
+                > 
+               </textarea>
+              </label>
   
 
             </div>
+
             <div className="submit_section">
               <input type="submit"
               value="Submit" />
@@ -133,6 +145,15 @@ function Contact()
           </form>
         </div>
       </div>
+      <FacebookShareButton
+          url = "https://www.facebook.com">
+          <FacebookIcon logoFillColor="white" round={true}></FacebookIcon>
+        </FacebookShareButton>
+        <LinkedinShareButton
+        url="https://www.linkedin.com/in/rishi251297/">
+          <LinkedinIcon round={true}></LinkedinIcon>
+
+        </LinkedinShareButton>
     </div>
     <div className='footer'>
       
