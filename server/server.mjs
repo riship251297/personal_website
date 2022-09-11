@@ -249,13 +249,14 @@ app.post('/send_email',(req,res) =>
 
         const source = fs.readFileSync('/Users/rishikesh/Desktop/personal_website/src/template.html', 'utf-8').toString();
         const template = handlebars.compile(source);
-        console.log(template)
+        const replacements = {username:username}
+        const htmlsend = template(replacements)
         
         let mailOptions = {
             from: 'rphatan@g.clemson.edu', 
             to: email, 
             subject: 'Successful Contact submission',
-            html: { path: '/Users/rishikesh/Desktop/personal_website/src/template.html' }
+            html: htmlsend
         };
         
         transporter.sendMail(mailOptions, (err, data) => {
