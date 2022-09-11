@@ -237,7 +237,8 @@ app.post('/send_email',(req,res) =>
     {
         const username = req.body.username;
         const email = req.body.email;
-        console.log(email)
+        const message = req.body.message
+        console.log(message)
 
         let transporter = nodemailer.createTransport({
             service: 'gmail',
@@ -246,12 +247,20 @@ app.post('/send_email',(req,res) =>
                 pass: process.env.PASSWORD 
             }
         });
+
+        const filePath = path.join(__dirname, '/Users/rishikesh/Desktop/personal_website/src/template.html');
+        const source = fs.readFileSync(filePath, 'utf-8').toString();
+        const template = handlebars.compile(source);
+        const replacements = {
+            username: "Darth Vader"
+        };
+        const htmlToSend = template(replacements);
         
         let mailOptions = {
             from: 'rphatan@g.clemson.edu', 
             to: email, 
             subject: 'Successful Contact submission',
-            text: 'Thanks for your contact information !!!. I will contact you soon .. '
+            text: htmlToSend
         };
         
         transporter.sendMail(mailOptions, (err, data) => {
