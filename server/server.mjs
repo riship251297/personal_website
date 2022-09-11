@@ -20,7 +20,7 @@ import nodemailer from 'nodemailer';
 
 import AWS from 'aws-sdk';
 import { env } from "process";
-
+import handlebars from 'handlebars'
 
 
 dotenv.config();
@@ -238,7 +238,6 @@ app.post('/send_email',(req,res) =>
         const username = req.body.username;
         const email = req.body.email;
         const message = req.body.message
-        console.log(message)
 
         let transporter = nodemailer.createTransport({
             service: 'gmail',
@@ -248,19 +247,15 @@ app.post('/send_email',(req,res) =>
             }
         });
 
-        const filePath = path.join(__dirname, '/Users/rishikesh/Desktop/personal_website/src/template.html');
-        const source = fs.readFileSync(filePath, 'utf-8').toString();
+        const source = fs.readFileSync('/Users/rishikesh/Desktop/personal_website/src/template.html', 'utf-8').toString();
         const template = handlebars.compile(source);
-        const replacements = {
-            username: "Darth Vader"
-        };
-        const htmlToSend = template(replacements);
+        console.log(template)
         
         let mailOptions = {
             from: 'rphatan@g.clemson.edu', 
             to: email, 
             subject: 'Successful Contact submission',
-            text: htmlToSend
+            html: { path: '/Users/rishikesh/Desktop/personal_website/src/template.html' }
         };
         
         transporter.sendMail(mailOptions, (err, data) => {
@@ -277,6 +272,7 @@ app.post('/send_email',(req,res) =>
     }
     catch (error) 
     {
+        console.log(error)
         res.sendStatus(404).json({message:error.message});
     }
      
