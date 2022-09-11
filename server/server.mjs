@@ -4,6 +4,8 @@ import cors from "cors";
 import dotenv from 'dotenv';
 import bodyParser from 'body-parser';
 import multer from 'multer';
+import crypto from 'crypto';
+import bycrypt from 'bcrypt'
 
 import postroutes from './routes/posts.js';
 import test from './routes/posts.js';
@@ -12,6 +14,7 @@ import test from './routes/posts.js';
 import contact from './routes/posts.js'
 import friends from './models/friends.js'
 import images from './models/image.js'
+import users from './models/user.js'
 import * as fs from 'fs';
 
 import download from 'download';
@@ -77,6 +80,31 @@ app.post('/tests',(req,res)=>
 //         res.sendStatus(500).json({message:error.message});
 //     }
 // });
+
+app.post('/register_jwt',async (req,res)=>
+{
+    try 
+    {
+        const {name,email,password} = req.body;
+        const user = new users({
+            name,
+            email,
+            password,
+            emailToken:crypto.randomBytes(64).toString('hex'),
+            isVerified:false,
+        })
+        const salt = await bycrypt.genSalt(10);
+        const hashpassword = await bycrypt.hash(user.password,salt)
+        user.password = hashpassword
+        const newUser = await user.save()
+        res.send(name);
+    } 
+    catch (error) 
+    {
+        res.sendStatus(404).json({message:error.message});
+    }
+});
+
 
 
 
