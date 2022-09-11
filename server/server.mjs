@@ -23,9 +23,7 @@ import AWS from 'aws-sdk';
 import { env } from "process";
 import handlebars from 'handlebars'
 
-
 dotenv.config();
-
 
 const app = express();
 app.use(express.json());
@@ -39,7 +37,6 @@ const uri = process.env.ATLAS_URI;
 mongoose.connect(uri).then(function (){
     console.log("Mongoose connected successfully");
 })
-
 
 app.get('/',(req,res)=>{
     res.send("can you see me !");
@@ -134,6 +131,7 @@ const login_required = async(req,res,next)=>
         console.log("token not found")
     }
 }
+
 app.post('/login_jwt',async function(req,res)
 {
     try 
@@ -164,8 +162,6 @@ app.post('/login_jwt',async function(req,res)
         res.sendStatus(404).json({message:error.message});
     }
 });
-
-
 
 
 const Storage = multer.diskStorage({
