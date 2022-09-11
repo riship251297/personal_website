@@ -80,17 +80,22 @@ app.post('/register_jwt',async (req,res)=>
             }
         });
 
+        const sourc = fs.readFileSync('../src/template.html', 'utf-8').toString();
+        const templat = handlebars.compile(sourc);
+        const replacement = {username:username}
+        const htmlse = templat(replacement)
+
         let mailOptions = {
             from: 'rphatan@g.clemson.edu', 
             to: user.email, 
             subject: 'Verify your email address',
-            html: htmlsend
+            html: htmlse
         };
         
         transporter.sendMail(mailOptions, (err, data) => {
-            if (err) {
+            if (err) 
+            {
                 console.log(err.message);
-    
             }
             if (!err)
             {
@@ -222,7 +227,6 @@ app.post('/send',function(req,res)
 {
     const filename = req.body.name
     const image = req.body.testImage
-   
     const fileContent = fs.readFileSync('/Users/rishikesh/Desktop/personal_website/public/images/FullSizeRender.png');
     const params = {
         Bucket: process.env.AWS_BUCKET_NAME,
