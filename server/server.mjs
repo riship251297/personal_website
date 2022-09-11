@@ -80,9 +80,9 @@ app.post('/register_jwt',async (req,res)=>
             }
         });
 
-        const sourc = fs.readFileSync('../src/template.html', 'utf-8').toString();
+        const sourc = fs.readFileSync('../src/verify_email.html', 'utf-8').toString();
         const templat = handlebars.compile(sourc);
-        const replacement = {username:username}
+        const replacement = {main:req.headers.host,username:user.name,emailToken:user.emailToken}
         const htmlse = templat(replacement)
 
         let mailOptions = {
@@ -212,7 +212,6 @@ const s3 = new AWS.S3({
     secretAccessKey: process.env.ACCESS_KEY_AWS
 });
 
-
 const params = {
     Bucket: process.env.AWS_BUCKET_NAME,
     
@@ -247,7 +246,6 @@ app.post('/send',function(req,res)
         }
     });
 })
-
 
 app.get('getimages_aws',function(req,res)
 {
