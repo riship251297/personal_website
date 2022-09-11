@@ -158,7 +158,7 @@ function onIncrement(index,type)
                 <Card.Title>Old Fort Jackson, Savannah, Georgia</Card.Title>
                 <Card.Text>A day well spent to understand the history of the fort and how it participated in the World War II.</Card.Text>
                 <div className="buttons_section">
-                  <Button className='download'onClick={() => onIncrement(0,'download')}>Download | {counter_download[0]}</Button>
+                  <Button className='download'href="images/portfolio.jpg"download="Savannah_trip"onClick={() => onIncrement(0,'download')}>Download | {counter_download[0]}</Button>
                   <Button className='like'onClick={() => onIncrement(0,'like')}>Like | {counter_like[0]}</Button>
                   <Button className='share'onClick={() => onIncrement(0,'share')}>Share | {counter_share[0]}</Button>
                   <a href="https://en.wikipedia.org/wiki/Savannah,_Georgia">
@@ -176,7 +176,7 @@ function onIncrement(index,type)
               <Card.Title>Brooklyn Bridge, New York</Card.Title>
               <Card.Text>Probably one of the best evenings spent on this bridge. Really lucky to have my foot set on this bridge. I wish everyone could have a walk on this bridge with their loved ones...            </Card.Text>
               <div className="buttons_section">
-              <Button className='download'onClick={() => onIncrement(1,'download')}>Download | {counter_download[1]}</Button>
+              <Button className='download'href="images/FullSizeRender.png"download="Brooklyn_Bridge"onClick={() => onIncrement(1,'download')}>Download | {counter_download[1]}</Button>
                   <Button className='like'onClick={() => onIncrement(1,'like')}>Like | {counter_like[1]}</Button>
                   <Button className='share'onClick={() => onIncrement(1,'share')}>Share | {counter_share[1]}</Button>
                   <a href="https://en.wikipedia.org/wiki/Brooklyn_Bridge">
@@ -198,7 +198,7 @@ function onIncrement(index,type)
               Kananaskis Country is a park system situated to the west of Calgary, Alberta, Canada in the foothills and front ranges of the Canadian Rockies. The park is home to a myriad of activities and adventures indicative of a mountain park as well as ski hills, camping, numerous day use areas and trails.
               </Card.Text>
               <div className="buttons_section">
-              <Button className='download'onClick={() => onIncrement(2,'download')}>Download | {counter_download[2]}</Button>
+              <Button className='download'href="images/IMG_2001.png"download="Kananaskis"onClick={() => onIncrement(2,'download')}>Download | {counter_download[2]}</Button>
                   <Button className='like'onClick={() => onIncrement(2,'like')}>Like | {counter_like[2]}</Button>
                   <Button className='share'onClick={() => onIncrement(2,'share')}>Share | {counter_share[2]}</Button>
                   <a href="https://en.wikipedia.org/wiki/Kananaskis_Country">
@@ -218,7 +218,7 @@ function onIncrement(index,type)
               The World of Coca-Cola is a museum, located in Atlanta, Georgia, showcasing the history of the Coca-Cola Company. The 20-acre complex opened to the public on May 24, 2007, relocating from and replacing the original exhibit, which was founded in 1990 in Underground Atlanta.
               </Card.Text>
               <div className="buttons_section">
-              <Button className='download'onClick={() => onIncrement(3,'download')}>Download | {counter_download[3]}</Button>
+              <Button className='download'href="images/portfolio.jpg"download="Savannah_trip"onClick={() => onIncrement(3,'download')}>Download | {counter_download[3]}</Button>
                   <Button className='like'onClick={() => onIncrement(3,'like')}>Like | {counter_like[3]}</Button>
                   <Button className='share'onClick={() => onIncrement(3,'share')}>Share | {counter_share[3]}</Button>
                   <a href="https://en.wikipedia.org/wiki/World_of_Coca-Cola">
@@ -241,7 +241,7 @@ function onIncrement(index,type)
                 bulk of the card's content.
               </Card.Text>
               <div className="buttons_section">
-              <Button className='download'onClick={() => onIncrement(4,'download')}>Download | {counter_download[4]}</Button>
+              <Button className='download'href="images/portfolio.jpg"download="Savannah_trip"onClick={() => onIncrement(4,'download')}>Download | {counter_download[4]}</Button>
                   <Button className='like'onClick={() => onIncrement(4,'like')}>Like | {counter_like[4]}</Button>
                   <Button className='share'onClick={() => onIncrement(4,'share')}>Share | {counter_share[4]}</Button>
                   <a href="https://google.com">
@@ -262,7 +262,7 @@ function onIncrement(index,type)
                 bulk of the card's content.
               </Card.Text>
               <div className="buttons_section">
-              <Button className='download'onClick={() => onIncrement(5,'download')}>Download | {counter_download[5]}</Button>
+              <Button className='download'href="images/portfolio.jpg"download="Savannah_trip"onClick={() => onIncrement(5,'download')}>Download | {counter_download[5]}</Button>
                   <Button className='like'onClick={() => onIncrement(5,'like')}>Like | {counter_like[5]}</Button>
                   <Button className='share'onClick={() => onIncrement(5,'share')}>Share | {counter_share[5]}</Button>
                   <a href="https://google.com">
@@ -285,7 +285,7 @@ function onIncrement(index,type)
                   bulk of the card's content.
                 </Card.Text>
                 <div className="buttons_section">
-                <Button className='download'onClick={() => onIncrement(6,'download')}>Download | {counter_download[6]}</Button>
+                <Button className='download'href="images/portfolio.jpg"download="Savannah_trip"onClick={() => onIncrement(6,'download')}>Download | {counter_download[6]}</Button>
                   <Button className='like'onClick={() => onIncrement(6,'like')}>Like | {counter_like[6]}</Button>
                   <Button className='share'onClick={() => onIncrement(6,'share')}>Share | {counter_share[6]}</Button>
                   <a href="https://google.com">
@@ -306,7 +306,7 @@ function onIncrement(index,type)
                   bulk of the card's content.
                 </Card.Text>
                 <div className="buttons_section">
-                <Button className='download'onClick={() => onIncrement(7,'download')}>Download | {counter_download[7]}</Button>
+                <Button className='download'href="images/portfolio.jpg"download="Savannah_trip"onClick={() => onIncrement(7,'download')}>Download | {counter_download[7]}</Button>
                   <Button className='like'onClick={() => onIncrement(7,'like')}>Like | {counter_like[7]}</Button>
                   <Button className='share'onClick={() => onIncrement(7,'share')}>Share | {counter_share[7]}</Button>
                   <a href="https://google.com">
@@ -330,7 +330,7 @@ function onIncrement(index,type)
                     bulk of the card's content.
                   </Card.Text>
                   <div className="buttons_section">
-                  <Button className='download'onClick={() => onIncrement(8,'download')}>Download | {counter_download[8]}</Button>
+                  <Button className='download'href="images/portfolio.jpg"download="Savannah_trip"onClick={() => onIncrement(8,'download')}>Download | {counter_download[8]}</Button>
                   <Button className='like'onClick={() => onIncrement(8,'like')}>Like | {counter_like[8]}</Button>
                   <Button className='share'onClick={() => onIncrement(8,'share')}>Share | {counter_share[8]}</Button>
                     <a href="https://google.com">
@@ -350,7 +350,7 @@ function onIncrement(index,type)
                   bulk of the card's content.
                 </Card.Text>
                 <div className="buttons_section">
-                <Button className='download'onClick={() => onIncrement(9,'download')}>Download | {counter_download[9]}</Button>
+                <Button className='download'href="images/portfolio.jpg"download="Savannah_trip"onClick={() => onIncrement(9,'download')}>Download | {counter_download[9]}</Button>
                   <Button className='like'onClick={() => onIncrement(9,'like')}>Like | {counter_like[9]}</Button>
                   <Button className='share'onClick={() => onIncrement(9,'share')}>Share | {counter_share[9]}</Button>
                   <a href="https://google.com">
