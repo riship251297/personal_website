@@ -106,6 +106,7 @@ function Contact()
         <h2 className='middle'>DROP ME A MESSAGE !</h2>
         <div className="form"id="formdata">
           <form action="/send_email"onSubmit={handle}>
+
             <div className="f_section">
               <label>Name:
                 <input type="text" 
@@ -114,6 +115,7 @@ function Contact()
                 onChange={(e)=> SetName(e.target.value)} />         
               </label>
             </div>
+
             <div className="s_section">
               <label>Email :
                 <input type="email" 
@@ -122,9 +124,10 @@ function Contact()
                 onChange={(e)=> SetEmail(e.target.value)}/>
               </label>
             </div>
+
             <br></br>
             <div className="area">
-              <label>Message :
+              <label className='aream'>Message :
                 <textarea id="w3review" name="w3review" rows="6" cols="40"> 
                </textarea>
               </label>

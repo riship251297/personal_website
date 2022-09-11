@@ -18,8 +18,8 @@
 {
     margin-top: 60px;
     margin-left: 550px;
-    width: 500px;
-    height: 450px;
+    width: 600px;
+    height: 550px;
     background-color: #0abd8a;
 }
 
@@ -36,6 +36,16 @@
     padding: 20px;
 } 
 
+.area
+{
+    margin-left: 20px;
+}
+
+.aream
+{
+    display: table-caption;
+    margin-top: -5px;
+}
 .submit_section
 {
     margin-top:20px;
@@ -47,3 +57,4 @@
     width: 500px;
     height:300px;
 }
+
