@@ -105,6 +105,36 @@ app.post('/register_jwt',async (req,res)=>
     }
 });
 
+app.post('/login_jwt',async function(req,res)
+{
+    try 
+    {
+        const {email,password} = req.body;
+        const finduser = await users.findOne({email:email})
+        if (finduser)
+        {
+            const match = await bycrypt.compare(password,finduser.password)
+            if (match)
+            {
+
+            }
+            else
+            {
+                res.send("Invalid password")
+            }
+        }
+        else
+        {
+            res.send("User is not registered")
+        }
+       
+    } 
+    catch (error) 
+    {
+        res.sendStatus(404).json({message:error.message});
+    }
+});
+
 
 
 
