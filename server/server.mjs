@@ -6,6 +6,9 @@ import bodyParser from 'body-parser';
 import multer from 'multer';
 import crypto from 'crypto';
 import bycrypt from 'bcrypt'
+import cookieParser from "cookie-parser";
+import cookie from 'cookie-parser';
+import jwt from "jsonwebtoken";
 
 import postroutes from './routes/posts.js';
 import test from './routes/posts.js';
@@ -34,10 +37,7 @@ app.use(express.json());
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({limit:"30mb",extended    :true}));
-
-// var urlencodedParser = bodyParser.urlencoded({ extended: true })
-
-
+app.use(cookieParser())
 app.use(cors());
 
 const uri = process.env.ATLAS_URI;
@@ -97,7 +97,33 @@ app.post('/register_jwt',async (req,res)=>
         const hashpassword = await bycrypt.hash(user.password,salt)
         user.password = hashpassword
         const newUser = await user.save()
-        res.send(name);
+
+        let transporter = nodemailer.createTransport({
+            service: 'gmail',
+            auth: {
+                user: process.env.EMAIL,
+                pass: process.env.PASSWORD 
+            }
+        });
+
+        let mailOptions = {
+            from: 'rphatan@g.clemson.edu', 
+            to: user.email, 
+            subject: 'Verify your email address',
+            html: htmlsend
+        };
+        
+        transporter.sendMail(mailOptions, (err, data) => {
+            if (err) {
+                console.log(err.message);
+    
+            }
+            if (!err)
+            {
+                res.send("Email sent !")
+            }
+        });
+
     } 
     catch (error) 
     {
@@ -105,6 +131,32 @@ app.post('/register_jwt',async (req,res)=>
     }
 });
 
+
+const createtoken =(id)=>{
+    return jwt.sign({id},process.env.JWT_SECRET)
+}
+
+const login_required = async(req,res,next)=>
+{
+    const token = req.cookies['access-token']
+    if (token)
+    {
+        const validtoken = await jwt.verify(token,process.env.JWT_SECRET)
+        if (validtoken)
+        {
+            res.user = validtoken.id
+            next()
+        }
+        else
+        {
+            console.log("token expired")
+        }
+    }
+    else
+    {
+        console.log("token not found")
+    }
+}
 app.post('/login_jwt',async function(req,res)
 {
     try 
@@ -116,7 +168,8 @@ app.post('/login_jwt',async function(req,res)
             const match = await bycrypt.compare(password,finduser.password)
             if (match)
             {
-
+                token = createtoken(finduser.id);
+                res.cookie('access-token',token)
             }
             else
             {

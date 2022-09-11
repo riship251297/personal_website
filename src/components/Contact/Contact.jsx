@@ -5,6 +5,7 @@ import Navbar from '../Navbar/Navbar'
 import '../Contact/Contact.css'
 import {EmailShareButton,WhatsappShareButton,FacebookShareButton,LinkedinShareButton, LinkedinIcon} from 'react-share'
 import {FacebookIcon} from 'react-share'
+import { Link } from 'react-router-dom'
 
 function Contact() 
 {
@@ -14,12 +15,13 @@ function Contact()
   const [message,SetMessage] = useState("");
 
 
+
+
+
   async function handle(event)
     {
       event.preventDefault();
-      
       const data = {'username':name,'email':email,'message':message}
-
       const response = await axios
       .post("http://localhost:3001/send_email", data)
       .then((res) => {
@@ -28,6 +30,11 @@ function Contact()
       .catch((err) => {
         console.log(err);
       });
+
+      window.location = '/research';
+
+
+
     }
   
 
@@ -130,6 +137,7 @@ function Contact()
   
 
             </div>
+
             <div className="submit_section">
               <input type="submit"
               value="Submit" />
