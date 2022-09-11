@@ -247,7 +247,7 @@ app.post('/send_email',(req,res) =>
             }
         });
 
-        const source = fs.readFileSync('/Users/rishikesh/Desktop/personal_website/src/template.html', 'utf-8').toString();
+        const source = fs.readFileSync('../src/template.html', 'utf-8').toString();
         const template = handlebars.compile(source);
         const replacements = {username:username}
         const htmlsend = template(replacements)
