@@ -5,11 +5,6 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import '../Gallery/Gallery.css'
 import Swal from 'sweetalert2'
-import {FacebookShareButton} from 'react-share'
-import {FacebookIcon} from 'react-share'
-
-
-
 
 function Gallery() 
 {
@@ -88,21 +83,6 @@ function Gallery()
 //   })
 // }
 
-
-
-const [counterd, setCounterd] = useState(10);
-const incrementCounterd = () => setCounterd(counterd + 1);
-let decrementCounterd = () => setCounterd(counterd - 1);
-
-const [counterl, setCounterl] = useState(5);
-const incrementCounterl = () => setCounterl(counterl + 1);
-let decrementCounterl = () => setCounterl(counterl - 1);
-
-const [counter, setCounter] = useState(3);
-const incrementCounter = () => setCounter(counter + 1);
-let decrementCounter = () => setCounter(counter - 1);
-
-
 // const [data, setData] = useState([]);
 // const getData = async () => {
 // const { data } = await axios.get(`https://localhost:3001/count`);
@@ -159,11 +139,6 @@ function onIncrement(index,type,event)
 
         <h3>Welcome to my Gallery section !!!</h3>
         <h4>Here you will find some of my collections of photographs. </h4>
-        <FacebookShareButton
-          url = "https.facebook.com"
-          >
-          <FacebookIcon logoFillColor="white"></FacebookIcon>
-        </FacebookShareButton>
         
       </div> 
 

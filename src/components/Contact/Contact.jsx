@@ -3,6 +3,8 @@ import axios from 'axios'
 import {useState,useEffect} from 'react'
 import Navbar from '../Navbar/Navbar'
 import '../Contact/Contact.css'
+import {EmailShareButton,WhatsappShareButton,FacebookShareButton,LinkedinShareButton, LinkedinIcon} from 'react-share'
+import {FacebookIcon} from 'react-share'
 
 function Contact() 
 {
@@ -120,9 +122,12 @@ function Contact()
                 onChange={(e)=> SetEmail(e.target.value)}/>
               </label>
             </div>
+            <br></br>
             <div className="area">
-              <textarea id="w3review" name="w3review" rows="5" cols="40"> 
-              </textarea>
+              <label>Message :
+                <textarea id="w3review" name="w3review" rows="6" cols="40"> 
+               </textarea>
+              </label>
   
 
             </div>
@@ -133,6 +138,15 @@ function Contact()
           </form>
         </div>
       </div>
+      <FacebookShareButton
+          url = "https://www.facebook.com">
+          <FacebookIcon logoFillColor="white" round={true}></FacebookIcon>
+        </FacebookShareButton>
+        <LinkedinShareButton
+        url="https://www.linkedin.com/in/rishi251297/">
+          <LinkedinIcon round={true}></LinkedinIcon>
+
+        </LinkedinShareButton>
     </div>
     <div className='footer'>
       
