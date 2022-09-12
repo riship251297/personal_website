@@ -55,6 +55,28 @@ app.post('/tests',(req,res)=>
     }
 });
 
+
+app.get('/verify-email',async function(req,res)
+{
+    try
+    {
+        const token = req.query.token
+        const user = await users.findOne({emailToken:token})
+        if (user)
+        {
+            user.emailToken = null
+            user.isVerified = true
+            await user.save()
+            res.redirect("/http:localhost:3001/research")
+        }
+    }
+    catch(error)
+    {
+        res.sendStatus(404).json({message:error.message});
+    }
+   
+
+})
 app.post('/register_jwt',async (req,res)=>
 {
     try 
