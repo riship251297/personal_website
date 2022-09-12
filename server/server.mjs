@@ -109,7 +109,7 @@ app.post('/register_jwt',async (req,res)=>
             from: 'rphatan@g.clemson.edu', 
             to: user.email, 
             subject: 'Verify your email address',
-            html: '<h2 style="margin-left:80px,color:red">Thank you for sharing your contact information !</h2><h3>Please verify your email : ' + user.name + ' </h3><a href="http://localhost:3001/verify-email?token=' + user.emailToken + '"><button style="color:white,font-size: 16px">Verify</button></a>'
+            html: '<h2 style="margin-left:80px,color:red">Thank you for sharing your contact information !</h2><h3>Please verify your email : ' + user.name + ' </h3><a href="http://localhost:3001/verify-email?token=' + user.emailToken + '"><button style="color:black;text-decoration:none;display:block;padding:10px 20px 12px 20px;background-color:cadetblue;font-size:20px;text-align:center">Verify</button></a>'
         };
         
         transporter.sendMail(mailOptions, (err, data) => {
