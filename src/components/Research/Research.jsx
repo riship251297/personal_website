@@ -63,7 +63,7 @@ function Research()
 
                                     <div className="first-first">
                                         <center><img src={"images/uploaded.png"} className="img-circled"width="1000px"height="400px"alt=''/></center>
-                                        <center><h4 className="shivani"> Fig : 2D projections of an MRI image</h4></center>
+                                        <center><h4 className="shiv"> Fig : 2D projections of an MRI image</h4></center>
                                     </div>
 
                                     <li>Our intuition is that these projections will provide a comprehensive representation of the MRI 
