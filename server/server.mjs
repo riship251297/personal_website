@@ -105,13 +105,11 @@ app.post('/register_jwt',async (req,res)=>
         const replacement = {username:user.name,emailToken:user.emailToken}
         const htmlse = templat(replacement)
 
-        console.log(user.emailToken)
-
         let mailOptions = {
             from: 'rphatan@g.clemson.edu', 
             to: user.email, 
             subject: 'Verify your email address',
-            html: '<a href="http://localhost:3001/verify-email?token=' + user.emailToken + '">Verify</a>'
+            html: '<div><h2 style="margin-left:50px,color:red">Thank you for sharing your contact information !<h3>Please verify your email : ' + user.name + ' </h3><a href="http://localhost:3001/verify-email?token=' + user.emailToken + '"><button>Verify</button></a></div>'
         };
         
         transporter.sendMail(mailOptions, (err, data) => {
