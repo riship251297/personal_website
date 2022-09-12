@@ -67,15 +67,13 @@ app.get('/verify-email',async function(req,res)
             user.emailToken = null
             user.isVerified = true
             await user.save()
-            res.redirect("/http:localhost:3001/research")
+            res.redirect("http://localhost:3000/research")
         }
     }
     catch(error)
     {
         res.sendStatus(404).json({message:error.message});
     }
-   
-
 })
 app.post('/register_jwt',async (req,res)=>
 {
@@ -104,14 +102,16 @@ app.post('/register_jwt',async (req,res)=>
 
         const sourc = fs.readFileSync('../src/verify_email.html', 'utf-8').toString();
         const templat = handlebars.compile(sourc);
-        const replacement = {main:req.headers.host,username:user.name,emailToken:user.emailToken}
+        const replacement = {username:user.name,emailToken:user.emailToken}
         const htmlse = templat(replacement)
+
+        console.log(user.emailToken)
 
         let mailOptions = {
             from: 'rphatan@g.clemson.edu', 
             to: user.email, 
             subject: 'Verify your email address',
-            html: htmlse
+            html: '<a href="http://localhost:3001/verify-email?token=' + user.emailToken + '">Verify</a>'
         };
         
         transporter.sendMail(mailOptions, (err, data) => {
@@ -229,20 +229,20 @@ app.post('/upload',(req,res)=>
     })
 })
 
-const s3 = new AWS.S3({
-    accessKeyId: process.env.ACCESS_ID_AWS,
-    secretAccessKey: process.env.ACCESS_KEY_AWS
-});
+// const s3 = new AWS.S3({
+//     accessKeyId: process.env.ACCESS_ID_AWS,
+//     secretAccessKey: process.env.ACCESS_KEY_AWS
+// });
 
-const params = {
-    Bucket: process.env.AWS_BUCKET_NAME,
+// const params = {
+//     Bucket: process.env.AWS_BUCKET_NAME,
     
-};
+// };
 
-s3.createBucket(params, function(err, data) {
-    if (err) console.log(err, err.stack);
-    else console.log('Bucket Created Successfully', data.Location);
-});
+// s3.createBucket(params, function(err, data) {
+//     if (err) console.log(err, err.stack);
+//     else console.log('Bucket Created Successfully', data.Location);
+// });
 
 app.post('/send',function(req,res)
 {
