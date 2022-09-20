@@ -73,7 +73,7 @@ const Projects = () => {
             </video>
           </div>
         </div>
-        <hr></hr>
+        {/* <hr></hr> */}
              
         <div className='Ds'>
           <div className='Ds_left'>
