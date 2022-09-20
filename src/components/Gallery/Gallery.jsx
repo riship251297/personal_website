@@ -361,3 +361,7 @@ function onIncrement(index,type,event)
 
 export default Gallery;
 
+
+// Hosted the website using Amazon's Amplify and Route 53 web service with S3 bucket as storage for 
+
+

@@ -1,8 +1,8 @@
 import React from 'react'
 import Navbar from '../Navbar/Navbar'
 import '../Projects/Projects.css';
-import ppovideo from '../Videos/PPO.mp4'
-import dqnvideo from '../Videos/DQN.mp4'
+// import ppovideo from '../Videos/PPO.mp4'
+// import dqnvideo from '../Videos/DQN.mp4'
 // src/Video/DQN.mp4
 const Projects = () => {
   return (
@@ -38,7 +38,7 @@ const Projects = () => {
           </div>
           <div className='Rl_right1'>
             <video width="550" height="350" autoPlay loop muted >
-              <source src={ppovideo}  type="video/mp4"/>
+              <source src={'https://personalwebsite9.s3.amazonaws.com/PPO.mp4'}  type="video/mp4"/>
             </video>
           </div>
         </div>
@@ -71,7 +71,7 @@ const Projects = () => {
           </div>
           <div className='Rl_right2'>
             <video width="550" height="350" autoPlay loop muted >
-              <source src={dqnvideo}  type="video/mp4"/>
+              <source src={'https://personalwebsite9.s3.amazonaws.com/DQN.mp4'}  type="video/mp4"/>
             </video>
           </div>
         </div>
