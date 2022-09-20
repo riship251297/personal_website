@@ -6,7 +6,6 @@ const Projects = () => {
   return (
       <>
       <Navbar/>
-      <div className='container'>
       <div className='Deep'>
         <div className='Rl'>
           <div className='Rl_left1'>
@@ -138,7 +137,6 @@ const Projects = () => {
       </div>
       <div className='footer'>
       
-      </div>
       </div>
       </>
   );
