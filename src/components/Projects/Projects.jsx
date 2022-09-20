@@ -35,7 +35,7 @@ const Projects = () => {
             </ul>
           </div>
           <div className='Rl_right1'>
-            <video width="550" height="350" autoPlay loop muted >
+            <video width="500" height="300" autoPlay loop muted >
               <source src={'https://personalwebsite9.s3.amazonaws.com/PPO.mp4'}  type="video/mp4"/>
             </video>
           </div>
