@@ -56,9 +56,10 @@ hr{
 
 }
 .Ds{
+    margin-top: -20px;
     margin-left: 30px;
     display: flex;
-    width: 1600px;
+    width: 1400px;
     height: 600px;
 }
 .Ds_left{
@@ -128,3 +129,6 @@ li{
     font-size: 18px;
   }
   
+  img{
+    margin-left: -110px;
+  }
