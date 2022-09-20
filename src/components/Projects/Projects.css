@@ -5,7 +5,8 @@
 
 .Deep{
     display: block;
-    height: auto;
+    width: auto;
+    height: 1900px;
     /* padding-left: 10px; */
 }
 
@@ -16,7 +17,7 @@ hr{
 }
 .Rl{
     display: flex;
-    width: 1400px;
+    width: 1600px;
     height: 600px;
     margin-left: 30px;
 }
@@ -95,7 +96,7 @@ hr{
 li{
     font-family: inherit;
     padding: 8px;
-    font-size: 20px;
+    font-size: 15px;
     text-align: justify;
   
   }
