@@ -102,14 +102,6 @@
     background-color: #000080;
     margin-right: 10px;
 }
-.read_mo
-{
-    margin-top: 3px;
-    color: white;
-    background-color: #000080;
-    margin-left: -25px;
-}
-
 .read
 {
     margin-top: 2px;
@@ -121,4 +113,13 @@
 .buttons_section
 {
     width: 900px;
+}
+
+.checks
+{
+    margin-top: 40px;
+    margin-left: 60px;
+    width: 1000px;
+    font-style: italic;
+    justify-content: center;
 }

@@ -137,8 +137,9 @@ function onIncrement(index,type,event)
 
       {/* <button className='btn btn-primary' onClick={gallery}>FetchNews</button> */}
 
-        <h3>Welcome to my Gallery section !!!</h3>
-        <h4>Here you will find some of my collections of photographs. </h4>
+        <h3>WELCOME TO MY GALLERY SECTION !!!</h3>
+        <h4 className='checks'>Preserving memories through photography is one of the best ways to share the past with the future. It allows you to look back on life's biggest achievements and the smallest moments all at once while stirring up stories of years gone by
+          or recent weeks. </h4>
         
       </div> 
 
