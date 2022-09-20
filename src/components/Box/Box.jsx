@@ -3,7 +3,7 @@ import '../Box/Box.css';
 
 function Box(){
     return(
-        <React.Fragment>
+        <>
         <div>
             <h1 className="name" >Hi, I'm RISHIKESH !</h1>
         </div>
@@ -13,7 +13,7 @@ function Box(){
             I also like to build interactive websites through the interaction of user data and deep learning models.
             </p>
         </div>
-        </React.Fragment>
+        </>
     );
 }
 
