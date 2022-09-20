@@ -1,3 +1,8 @@
+.container
+{
+    width: 1450px;
+}
+
 .Deep{
     display: block;
     width: auto;
@@ -106,3 +111,10 @@ li{
       width: 500px;
       height:300px;
   }
+
+  .opl
+  {
+    text-align: center;
+  }
+
+  

@@ -1,18 +1,17 @@
 import React from 'react'
 import Navbar from '../Navbar/Navbar'
 import '../Projects/Projects.css';
-// import ppovideo from '../Videos/PPO.mp4'
-// import dqnvideo from '../Videos/DQN.mp4'
-// src/Video/DQN.mp4
+
 const Projects = () => {
   return (
       <>
       <Navbar/>
+      <div className='container'>
       <div className='Deep'>
         <div className='Rl'>
           <div className='Rl_left1'>
             <ul>
-              <ul><b>DEEP REINFORCEMENT LEARNING BASED PROJECTS : </b></ul>
+              <ul className='opl'><b>DEEP REINFORCEMENT LEARNING BASED PROJECTS : </b></ul>
               <ol>
                 <ul><b>Proximal Policy Optimization</b> - 2021</ul>
                 <ul><mark>Stack :| Deep Learning | Python | Tensorflow | Open-AI Gym | PyTorch </mark></ul>
@@ -139,6 +138,7 @@ const Projects = () => {
       </div>
       <div className='footer'>
       
+      </div>
       </div>
       </>
   );

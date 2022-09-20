@@ -1,5 +1,8 @@
 
-
+.container
+{
+    width: 1450px;
+}
 .first-left
 {
     padding: 2px;
@@ -23,8 +26,9 @@ h2{
 
 .edit
 {
+    width: 600px;
     margin-top: -1px;
-    margin-left: 880px;
+    margin-left: 820px;
 }
 
 .pop
@@ -96,6 +100,7 @@ a
 
 .opo
 {
+    width:1450px;
     padding: 10px;
     margin-left: 550px;
 }
