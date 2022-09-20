@@ -12,8 +12,8 @@ const Projects = () => {
             <ul>
               <ul className='opl'><b>DEEP REINFORCEMENT LEARNING BASED PROJECTS : </b></ul>
               <ol>
-                <ul><b>Proximal Policy Optimization</b> - 2021</ul>
-                <ul><mark>Stack :| Deep Learning | Python | Tensorflow | Open-AI Gym | PyTorch </mark></ul>
+                <ul className='pollo'><b>Proximal Policy Optimization</b> - 2021</ul>
+                <ul className='pollo'><mark>Stack :| Deep Learning | Python | Tensorflow | Open-AI Gym | PyTorch </mark></ul>
               </ol>
               <ol>
                 <li>Implemented Proximal Policy Optimization algorithm, one of the recent advancements in the 
@@ -45,8 +45,8 @@ const Projects = () => {
           <div className='Rl_left2'>
             <ul>
               <ol>
-                <ul><b>Deep Q Networks</b> - 2021</ul>
-                <ul><mark>Stack :| Deep Learning | Python | Tensorflow | Open-AI Gym | PyTorch </mark></ul>
+                <ul className='pollo'><b>Deep Q Networks</b> - 2021</ul>
+                <ul className='pollo'><mark>Stack :| Deep Learning | Python | Tensorflow | Open-AI Gym | PyTorch </mark></ul>
             </ol>
             <ol>
               <li>Implemented Proximal Policy Optimization algorithm, one of the recent advancements in the 
@@ -78,10 +78,10 @@ const Projects = () => {
         <div className='Ds'>
           <div className='Ds_left'>
             <ul>
-              <ul><b>MACHINE LEARNING BASED PROJECTS : </b></ul>
+              <ul className='opl'><b>MACHINE LEARNING BASED PROJECTS : </b></ul>
               <ol>
-                <ul><b>Acceleration Prediction of Cars</b></ul>
-                <ul><mark>Stack :| Machine Learning | Python | Pandas | Matplotlib </mark></ul>
+                <ul className='pollo'><b>Acceleration Prediction of Cars</b></ul>
+                <ul className='pollo'><mark>Stack :| Machine Learning | Python | Pandas | Matplotlib </mark></ul>
               </ol>
               <ol>
                 <li>The primary focus of this project is to predict the Acceleration performance of a vehicle using the predictors 
@@ -109,8 +109,8 @@ const Projects = () => {
           <div className='speed-left'>
             <ul>
                 <ol>
-                  <ul><b>Speed Detection using Kalman Filtering </b></ul>
-                  <ul><mark>Stack :| Machine Learning | Python | Pandas | Matplotlib | Open-CV </mark></ul>
+                  <ul className='pollo'><b>Speed Detection using Kalman Filtering </b></ul>
+                  <ul className='pollo'><mark>Stack :| Machine Learning | Python | Pandas | Matplotlib | Open-CV </mark></ul>
                 </ol>
                 <ol>
                   <li>The primary focus of this project is to capture over-speeding of vehicles in accident prone areas
