@@ -92,11 +92,15 @@ hr{
 
 }
 
+.mark
+{
+    font-size: 17px;
+}
 
 li{
     font-family: inherit;
     padding: 8px;
-    font-size: 18px;
+    font-size: 17px;
     text-align: justify;
   
   }
@@ -114,6 +118,7 @@ li{
 
   .opl
   {
+    font-size: 20px;
     text-align: left;
   }
 
