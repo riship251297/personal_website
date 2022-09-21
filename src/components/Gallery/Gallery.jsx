@@ -92,9 +92,9 @@ function Gallery()
 //     getData();
 //   }, []);
 
-const [counter_download, setCounterdownload] = useState([21, 52, 73, 4, 35, 8, 4, 9, 12, 56]);
-const [counter_like, setCounterlike] = useState([10, 103, 3, 49, 35, 18, 4, 87, 90, 5]);
-const [counter_share, setCountershare] = useState([1, 29, 37, 44, 50, 82, 40, 7, 6, 59]);
+const [counter_download, setCounterdownload] = useState([21, 52, 73, 4, 35, 8, 4, 9, 12, 56,77]);
+const [counter_like, setCounterlike] = useState([10, 103, 3, 49, 35, 18, 4, 87, 90, 5,51]);
+const [counter_share, setCountershare] = useState([1, 29, 37, 44, 50, 82, 40, 7, 6, 59,65]);
 
 
 function onIncrement(index,type,event) 
@@ -138,8 +138,8 @@ function onIncrement(index,type,event)
       {/* <button className='btn btn-primary' onClick={gallery}>FetchNews</button> */}
 
         <h3>WELCOME TO MY GALLERY SECTION !!!</h3>
-        <h4 className='checks'>Preserving memories through photography is one of the best ways to share the past with the future. It allows you to look back on life's biggest achievements and the smallest moments all at once while stirring up stories of years gone by
-          or recent weeks. </h4>
+        <h5 className='checks'>Preserving memories through photography is one of the best ways to share the past with the future. It allows you to look back on life's biggest achievements and the smallest moments all at once while stirring up stories of years gone by
+          or recent weeks. </h5>
         
       </div> 
 
@@ -168,7 +168,7 @@ function onIncrement(index,type,event)
             <Card.Img variant="top" src={"images/FullSizeRender.png"} />
             <Card.Body>
               <Card.Title>Brooklyn Bridge, New York</Card.Title>
-              <Card.Text>Probably one of the best evenings spent on this bridge. Really lucky to have my foot set on this bridge. I wish everyone could have a walk on this bridge with their loved ones...            </Card.Text>
+              <Card.Text>Probably one of the best evenings spent on this bridge. Really lucky to have my foot set on this bridge. It is perhaps one of New York City's most popular attractions because it is so photogenic..The Brooklyn Bridge has arguably inspired more art than any other manmade structure in the United States.  </Card.Text>
               <div className="buttons_section">
               <Button className='download'href="images/FullSizeRender.png"download="Brooklyn_Bridge"onClick={(event) => onIncrement(1,'download',event)}>Download | {counter_download[1]}</Button>
                   <Button className='like'onClick={(event) => onIncrement(1,'like',event)}>Like | {counter_like[1]}</Button>
@@ -229,7 +229,7 @@ function onIncrement(index,type,event)
             <Card style={{ width: '35rem' }}>
             <Card.Img variant="top" src={"images/IMG_2198.png"} />
             <Card.Body>
-              <Card.Title></Card.Title>
+              <Card.Title>Banff Mountain, Calgary, Canada</Card.Title>
               <Card.Text>
                 Some quick example text to build on the card title and make up the
                 bulk of the card's content.
@@ -250,7 +250,7 @@ function onIncrement(index,type,event)
             <Card style={{ width: '35rem' }}>
             <Card.Img variant="top" src={"images/IMG_2500.jpg"} />
             <Card.Body>
-              <Card.Title></Card.Title>
+              <Card.Title>Wateron Park, US-Canada border crossing </Card.Title>
               <Card.Text>
                 Some quick example text to build on the card title and make up the
                 bulk of the card's content.
@@ -273,7 +273,7 @@ function onIncrement(index,type,event)
             <Card style={{ width: '35rem' }}>
             <Card.Img variant="top" src={"images/IMG_2619.jpg"} />
               <Card.Body>
-                <Card.Title></Card.Title>
+                <Card.Title>Cameron Falls, Wateron park, Canada</Card.Title>
                 <Card.Text>
                   Some quick example text to build on the card title and make up the
                   bulk of the card's content.
@@ -294,7 +294,7 @@ function onIncrement(index,type,event)
             <Card style={{ width: '35rem' }}>
             <Card.Img variant="top" src={"images/123.jpg"} />
               <Card.Body>
-                <Card.Title></Card.Title>
+                <Card.Title>Capitol Building, Washington DC, US</Card.Title>
                 <Card.Text>
                   Some quick example text to build on the card title and make up the
                   bulk of the card's content.
@@ -316,9 +316,9 @@ function onIncrement(index,type,event)
         <div className="fifth_section">
           <div className="card_section9">
               <Card style={{ width: '35rem' }}>
-              <Card.Img variant="top" src={"images/321.jpg"} />
+              <Card.Img variant="top" src={"https://personalwebsite9.s3.amazonaws.com/1413921b-52e5-493f-b5e6-d8b8c5c53b12.JPG"} />
                 <Card.Body>
-                  <Card.Title></Card.Title>
+                  <Card.Title>White House, Washington DC, US</Card.Title>
                   <Card.Text>
                     Some quick example text to build on the card title and make up the
                     bulk of the card's content.
@@ -338,7 +338,51 @@ function onIncrement(index,type,event)
             <Card style={{ width: '35rem' }}>
             <Card.Img variant="top" src={"images/456.jpg"} />
               <Card.Body>
-                <Card.Title></Card.Title>
+                <Card.Title>Spartanburg, South Carolina, US </Card.Title>
+                <Card.Text>
+                  Some quick example text to build on the card title and make up the
+                  bulk of the card's content.
+                </Card.Text>
+                <div className="buttons_section">
+                <Button className='download'href="images/portfolio.jpg"download="Savannah_trip"onClick={() => onIncrement(9,'download')}>Download | {counter_download[9]}</Button>
+                  <Button className='like'onClick={() => onIncrement(9,'like')}>Like | {counter_like[9]}</Button>
+                  <Button className='share'onClick={() => onIncrement(9,'share')}>Share | {counter_share[9]}</Button>
+                  <a href="https://google.com">
+                    <Button className='read' >Read more </Button>
+                  </a>
+                </div>
+              </Card.Body>
+          </Card>
+          </div>
+        </div>
+
+
+        <div className="sixth_section">
+          <div className="card_section11">
+              <Card style={{ width: '35rem' }}>
+              <Card.Img variant="top" src={"https://personalwebsite9.s3.amazonaws.com/IMG_0886.jpg"} />
+                <Card.Body>
+                  <Card.Title>Sikes Hall, Clemson, South Carolina, US</Card.Title>
+                  <Card.Text>
+                    Some quick example text to build on the card title and make up the
+                    bulk of the card's content.
+                  </Card.Text>
+                  <div className="buttons_section">
+                  <Button className='download'href="images/portfolio.jpg"download="Savannah_trip"onClick={() => onIncrement(8,'download')}>Download | {counter_download[8]}</Button>
+                  <Button className='like'onClick={() => onIncrement(8,'like')}>Like | {counter_like[8]}</Button>
+                  <Button className='share'onClick={() => onIncrement(8,'share')}>Share | {counter_share[8]}</Button>
+                    <a href="https://google.com">
+                      <Button className='read'>Read more </Button>
+                    </a>
+                  </div>
+                </Card.Body>
+            </Card>
+          </div>
+          <div className="card_section12">
+            <Card style={{ width: '35rem' }}>
+            <Card.Img variant="top" src={"https://personalwebsite9.s3.amazonaws.com/IMG_0368.jpg"} />
+              <Card.Body>
+                <Card.Title>Sangamner, India </Card.Title>
                 <Card.Text>
                   Some quick example text to build on the card title and make up the
                   bulk of the card's content.
@@ -356,6 +400,7 @@ function onIncrement(index,type,event)
           </div>
         </div>
       </div>
+      
     </>
   )
 }

@@ -5,13 +5,13 @@
     padding: 15px;
 }
 
-.card_section1,.card_section3,.card_section5,.card_section7,.card_section9
+.card_section1,.card_section3,.card_section5,.card_section7,.card_section9,.card_section11
 {
     width:750px;
     margin-left: 10px;
 }
 
-.card_section2,.card_section4,.card_section6,.card_section8,.card_section10
+.card_section2,.card_section4,.card_section6,.card_section8,.card_section10,.card_section12
 {
     
     margin-left: 170px;
@@ -80,6 +80,15 @@
     margin-left: 110px;
     width:1000px;
     height:900px;
+    display: flex;
+}
+
+.sixth_section
+{
+    margin-top: -250px;
+    margin-left: 110px;
+    width:1300px;
+    height:800px;
     display: flex;
 }
 
