@@ -146,11 +146,12 @@ function onIncrement(index,type,event)
       <div className="main">
         <div className="first_section">
           <div className="card_section1">
-            <Card style={{ width: '30rem' ,height:'20rem',textAlign:'left' }}>
+            <Card style={{ width: '30rem' ,height:'10rem',textAlign:'left' }}>
               <Card.Img variant="top" src={"images/portfolio.jpg  "} />
               <Card.Body>
                 <Card.Title>Old Fort Jackson, Savannah, Georgia</Card.Title>
-                <Card.Text>A day well spent to understand the history of the fort and how it participated in the World War II.</Card.Text>
+                <Card.Text style={{textAlign:'justify'}}>A day well spent to understand the history of the fort and how it participated in the World War II.
+                What a incredible history this fort has witnessed !</Card.Text>
                 <div className="buttons_section">
                   <Button className='download'href="images/portfolio.jpg"download="Savannah_trip"onClick={(event) => onIncrement(0,'download',event)}>Download | {counter_download[0]}</Button>
                   <Button className='like'onClick={(event) => onIncrement(0,'like',event)}>Like | {counter_like[0]}</Button>
@@ -168,7 +169,8 @@ function onIncrement(index,type,event)
             <Card.Img variant="top" src={"images/FullSizeRender.png"} />
             <Card.Body>
               <Card.Title>Brooklyn Bridge, New York</Card.Title>
-              <Card.Text>Probably one of the best evenings spent on this bridge. Really lucky to have my foot set on this bridge. It is perhaps one of New York City's most popular attractions because it is so photogenic..The Brooklyn Bridge has arguably inspired more art than any other manmade structure in the United States.  </Card.Text>
+              <Card.Text style={{textAlign:'justify'}}>Probably one of the best evenings spent on this bridge. This bridge is great to walk over and take the views of Brooklyn and Manhattan. Cute stores and places to eat. It is perhaps one of New York City's most popular attractions because it is so photogenic. The Brooklyn Bridge has arguably inspired more art than any other manmade structure in the United States.
+                The bridge has always attracted daredevils and showmen. If you have the time I highly recommend stroll across the bridge.Walk across whilst taking pics, then drop into DUMBO for lunch or ice cream at the Brooklyn Ice Cream Factory.  </Card.Text>
               <div className="buttons_section">
               <Button className='download'href="images/FullSizeRender.png"download="Brooklyn_Bridge"onClick={(event) => onIncrement(1,'download',event)}>Download | {counter_download[1]}</Button>
                   <Button className='like'onClick={(event) => onIncrement(1,'like',event)}>Like | {counter_like[1]}</Button>
@@ -188,7 +190,7 @@ function onIncrement(index,type,event)
             <Card.Img variant="top" src={"images/IMG_2001.png"} />
             <Card.Body>
               <Card.Title>Kananaskis, Calgary, Canada</Card.Title>
-              <Card.Text>
+              <Card.Text style={{textAlign:'justify'}}>
               Kananaskis Country is a park system situated to the west of Calgary, Alberta, Canada in the foothills and front ranges of the Canadian Rockies. The park is home to a myriad of activities and adventures indicative of a mountain park as well as ski hills, camping, numerous day use areas and trails.
               </Card.Text>
               <div className="buttons_section">
@@ -208,7 +210,7 @@ function onIncrement(index,type,event)
             <Card.Img variant="top" src={"images/IMG_2121.png"} />
             <Card.Body>
               <Card.Title>Coca-Cola World Factory, Atlanta </Card.Title>
-              <Card.Text>
+              <Card.Text style={{textAlign:'justify'}}>
               The World of Coca-Cola is a museum, located in Atlanta, Georgia, showcasing the history of the Coca-Cola Company. The 20-acre complex opened to the public on May 24, 2007, relocating from and replacing the original exhibit, which was founded in 1990 in Underground Atlanta.
               </Card.Text>
               <div className="buttons_section">
@@ -230,7 +232,7 @@ function onIncrement(index,type,event)
             <Card.Img variant="top" src={"images/IMG_2198.png"} />
             <Card.Body>
               <Card.Title>Banff Mountain, Calgary, Canada</Card.Title>
-              <Card.Text>
+              <Card.Text style={{textAlign:'justify'}}>
                 Some quick example text to build on the card title and make up the
                 bulk of the card's content.
               </Card.Text>
@@ -251,7 +253,7 @@ function onIncrement(index,type,event)
             <Card.Img variant="top" src={"images/IMG_2500.jpg"} />
             <Card.Body>
               <Card.Title>Wateron Park, US-Canada border crossing </Card.Title>
-              <Card.Text>
+              <Card.Text style={{textAlign:'justify'}}>
                 Some quick example text to build on the card title and make up the
                 bulk of the card's content.
               </Card.Text>
@@ -274,7 +276,7 @@ function onIncrement(index,type,event)
             <Card.Img variant="top" src={"images/IMG_2619.jpg"} />
               <Card.Body>
                 <Card.Title>Cameron Falls, Wateron park, Canada</Card.Title>
-                <Card.Text>
+                <Card.Text style={{textAlign:'justify'}}>
                   Some quick example text to build on the card title and make up the
                   bulk of the card's content.
                 </Card.Text>
@@ -295,7 +297,7 @@ function onIncrement(index,type,event)
             <Card.Img variant="top" src={"images/123.jpg"} />
               <Card.Body>
                 <Card.Title>Capitol Building, Washington DC, US</Card.Title>
-                <Card.Text>
+                <Card.Text style={{textAlign:'justify'}}>
                   Some quick example text to build on the card title and make up the
                   bulk of the card's content.
                 </Card.Text>
@@ -319,7 +321,7 @@ function onIncrement(index,type,event)
               <Card.Img variant="top" src={"https://personalwebsite9.s3.amazonaws.com/1413921b-52e5-493f-b5e6-d8b8c5c53b12.JPG"} />
                 <Card.Body>
                   <Card.Title>White House, Washington DC, US</Card.Title>
-                  <Card.Text>
+                  <Card.Text style={{textAlign:'justify'}}>
                     Some quick example text to build on the card title and make up the
                     bulk of the card's content.
                   </Card.Text>
@@ -339,7 +341,7 @@ function onIncrement(index,type,event)
             <Card.Img variant="top" src={"images/456.jpg"} />
               <Card.Body>
                 <Card.Title>Spartanburg, South Carolina, US </Card.Title>
-                <Card.Text>
+                <Card.Text style={{textAlign:'justify'}}>
                   Some quick example text to build on the card title and make up the
                   bulk of the card's content.
                 </Card.Text>
@@ -362,10 +364,12 @@ function onIncrement(index,type,event)
               <Card style={{ width: '35rem' }}>
               <Card.Img variant="top" src={"https://personalwebsite9.s3.amazonaws.com/IMG_0886.jpg"} />
                 <Card.Body>
-                  <Card.Title>Sikes Hall, Clemson, South Carolina, US</Card.Title>
-                  <Card.Text>
-                    Some quick example text to build on the card title and make up the
-                    bulk of the card's content.
+                  <Card.Title>Sikes Hall, Clemson University, South Carolina, US</Card.Title>
+                  <Card.Text style={{textAlign:'justify'}}>
+                  My first day and first picture in US. Lots of excitement for the upcoming challenges and beginning of a new family. Beautiful 
+                  spot to start the tour of campus. I am gonna miss Clemson so much. Painful to see everyone leaving this wonderful place for 
+                  their new life.
+
                   </Card.Text>
                   <div className="buttons_section">
                   <Button className='download'href="images/portfolio.jpg"download="Savannah_trip"onClick={() => onIncrement(8,'download')}>Download | {counter_download[8]}</Button>
@@ -383,9 +387,8 @@ function onIncrement(index,type,event)
             <Card.Img variant="top" src={"https://personalwebsite9.s3.amazonaws.com/IMG_0368.jpg"} />
               <Card.Body>
                 <Card.Title>Sangamner, India </Card.Title>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up the
-                  bulk of the card's content.
+                <Card.Text style={{textAlign:'justify'}}>
+                  The only picture we cousins share.
                 </Card.Text>
                 <div className="buttons_section">
                 <Button className='download'href="images/portfolio.jpg"download="Savannah_trip"onClick={() => onIncrement(9,'download')}>Download | {counter_download[9]}</Button>
