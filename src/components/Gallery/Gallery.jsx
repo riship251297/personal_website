@@ -151,7 +151,7 @@ function onIncrement(index,type,event)
               <Card.Body>
                 <Card.Title>Old Fort Jackson, Savannah, Georgia</Card.Title>
                 <Card.Text style={{textAlign:'justify'}}>A day well spent to understand the history of the fort and how it participated in the World War II.
-                What a incredible history this fort has witnessed !</Card.Text>
+                What a incredible history this fort has witnessed !. </Card.Text>
                 <div className="buttons_section">
                   <Button className='download'href="images/portfolio.jpg"download="Savannah_trip"onClick={(event) => onIncrement(0,'download',event)}>Download | {counter_download[0]}</Button>
                   <Button className='like'onClick={(event) => onIncrement(0,'like',event)}>Like | {counter_like[0]}</Button>
@@ -170,7 +170,7 @@ function onIncrement(index,type,event)
             <Card.Body>
               <Card.Title>Brooklyn Bridge, New York</Card.Title>
               <Card.Text style={{textAlign:'justify'}}>Probably one of the best evenings spent on this bridge. This bridge is great to walk over and take the views of Brooklyn and Manhattan. Cute stores and places to eat. It is perhaps one of New York City's most popular attractions because it is so photogenic. The Brooklyn Bridge has arguably inspired more art than any other manmade structure in the United States.
-                The bridge has always attracted daredevils and showmen. If you have the time I highly recommend stroll across the bridge.Walk across whilst taking pics, then drop into DUMBO for lunch or ice cream at the Brooklyn Ice Cream Factory.  </Card.Text>
+                The bridge has always attracted daredevils and showmen. If you have the time I highly recommend stroll across the bridge. Walk across whilst taking pics, then drop into DUMBO for lunch or ice cream at the Brooklyn Ice Cream Factory.  </Card.Text>
               <div className="buttons_section">
               <Button className='download'href="images/FullSizeRender.png"download="Brooklyn_Bridge"onClick={(event) => onIncrement(1,'download',event)}>Download | {counter_download[1]}</Button>
                   <Button className='like'onClick={(event) => onIncrement(1,'like',event)}>Like | {counter_like[1]}</Button>

@@ -294,6 +294,8 @@ app.post('/send_email',(req,res) =>
         const email = req.body.email;
         const message = req.body.message
 
+        console.log(username)
+
         let transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
