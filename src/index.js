@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router,Link, Route, Routes } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.css';
 
 import './index.css';
 import App from './App';
@@ -10,6 +11,7 @@ import About from './components/About/About';
 import Gallery from './components/Gallery/Gallery';
 import Main from './components/main/Main';
 import Contact from './components/Contact/Contact';
+import { Container } from 'react-bootstrap';
 
 // import {Provider} from 'react-redux';
 // import {createStore,applymiddleware,compose} from 'redux';
@@ -30,6 +32,8 @@ root.render(
       <Route path="/research" element={<Research />} />
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
+
+
 
      
     </Routes>

@@ -1,3 +1,8 @@
+.container
+{
+    width: 1450px;
+}
+
 .Deep{
     display: block;
     width: auto;
@@ -12,7 +17,7 @@ hr{
 }
 .Rl{
     display: flex;
-    width: 1600px;
+    width: 1400px;
     height: 600px;
     margin-left: 30px;
 }
@@ -30,8 +35,9 @@ hr{
 }
 
 .Rl2{
+    margin-top: -100px;
     display: flex;
-    width: 1600px;
+    width: 1400px;
     height: 600px;
     margin-left: 30px;
 
@@ -50,9 +56,10 @@ hr{
 
 }
 .Ds{
+    margin-top: -120px;
     margin-left: 30px;
     display: flex;
-    width: 1600px;
+    width: 1400px;
     height: 600px;
 }
 .Ds_left{
@@ -68,6 +75,8 @@ hr{
     padding: 10px;
 }
 .speed{
+    width: 1400px;
+    margin-top: -100px;
     margin-left: 30px;
     display: flex;
 }
@@ -87,11 +96,15 @@ hr{
 
 }
 
+.mark
+{
+    font-size: 17px;
+}
 
 li{
     font-family: inherit;
     padding: 8px;
-    font-size: 20px;
+    font-size: 17px;
     text-align: justify;
   
   }
@@ -105,4 +118,19 @@ li{
   {
       width: 500px;
       height:300px;
+  }
+
+  .opl
+  {
+    font-size: 20px;
+    text-align: left;
+  }
+
+  .pollo
+  {
+    font-size: 18px;
+  }
+  
+  img{
+    margin-left: -110px;
   }

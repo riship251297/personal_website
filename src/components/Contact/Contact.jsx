@@ -32,7 +32,7 @@ function Contact()
       });
 
       window.location = '/research';
-
+      // https://youtube.com/shorts/hREVGYpIzD0?feature=share
 
 
     }
@@ -145,7 +145,7 @@ function Contact()
           </form>
         </div>
       </div>
-      <FacebookShareButton
+      {/* <FacebookShareButton
           url = "https://www.facebook.com">
           <FacebookIcon logoFillColor="white" round={true}></FacebookIcon>
         </FacebookShareButton>
@@ -153,7 +153,7 @@ function Contact()
         url="https://www.linkedin.com/in/rishi251297/">
           <LinkedinIcon round={true}></LinkedinIcon>
 
-        </LinkedinShareButton>
+        </LinkedinShareButton> */}
     </div>
     <div className='footer'>
       
