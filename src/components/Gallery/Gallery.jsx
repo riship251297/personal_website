@@ -10,8 +10,6 @@ import Container from 'react-bootstrap/Container';
 
 function Gallery() 
 {
-  const [news, setNews] = useState([])
-  const [image_path, setImagepath] = useState([]) 
   const [counter_download, setCounterdownload] = useState([21, 52, 73, 4, 35, 8, 4, 9, 12, 56,77]);
   const [counter_like, setCounterlike] = useState([10, 103, 3, 49, 35, 18, 4, 87, 90, 5,51]);
   const [counter_share, setCountershare] = useState([1, 29, 37, 44, 50, 82, 40, 7, 6, 59,65]);
@@ -42,6 +40,7 @@ function onIncrement(index,type,event)
   }
   if (type == 'share')
   {
+
     const countersCopy = [...counter_share];
     countersCopy[index] += 1;
     setCountershare(countersCopy);
@@ -112,12 +111,21 @@ function onIncrement(index,type,event)
               <Card.Body>
                 <Card.Title>Kananaskis, Calgary, Canada</Card.Title>
                 <Card.Text style={{textAlign:'justify'}}>
-                Kananaskis Country is a park system situated to the west of Calgary, Alberta, Canada in the foothills and front ranges of the Canadian Rockies. The park is home to a myriad of activities and adventures indicative of a mountain park as well as ski hills, camping, numerous day use areas and trails.
+                Experience the best of the Canadian Rockies by treating yourself to an unforgettable getaway at Kananaskis Mountain.
+                
                 </Card.Text>
                 <div className="buttons_section">
                 <Button className='download'href="images/IMG_2001.png"download="Kananaskis"onClick={(event) => onIncrement(2,'download',event)}>Download | {counter_download[2]}</Button>
                     <Button className='like'onClick={(event) => onIncrement(2,'like',event)}>Like | {counter_like[2]}</Button>
                     <Button className='share'onClick={(event) => onIncrement(2,'share',event)}>Share | {counter_share[2]}</Button>
+                    <div id="link-box">
+                    <ul>
+                      <li><a href="#">Link 1</a></li>
+                      <li><a href="#">Link 2</a></li>
+                      <li><a href="#">Link 3</a></li>
+                      <li><a href="#">Link 4</a></li>
+                    </ul>
+                    </div>
                     <a href="https://en.wikipedia.org/wiki/Kananaskis_Country">
                       <Button className='read' >Read more </Button>
                     </a>

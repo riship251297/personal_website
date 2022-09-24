@@ -6,36 +6,65 @@ import '../Contact/Contact.css'
 import {EmailShareButton,WhatsappShareButton,FacebookShareButton,LinkedinShareButton, LinkedinIcon} from 'react-share'
 import {FacebookIcon} from 'react-share'
 import { Link } from 'react-router-dom'
-
+import  {API} from 'aws-amplify'
 function Contact() 
 {
 
+  
   const [name,SetName] = useState("");
   const [email,SetEmail] = useState("");
   const [message,SetMessage] = useState("");
 
-
-
-
-
   async function handle(event)
-    {
-      event.preventDefault();
-      const data = {'username':name,'email':email,'message':message}
-      const response = await axios
-      .post("http://localhost:3001/send_email", data)
-      .then((res) => {
-        console.log(res);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-
-      window.location = '/research';
-      // https://youtube.com/shorts/hREVGYpIzD0?feature=share
+  {
+    API.get("rphatan","/rishi",{})
+    .then((res)=>{
+      console.log(res)
+    })
+  }
 
 
-    }
+
+
+
+
+  // async function handle(event)
+  //   {
+  //     event.preventDefault();
+  //     const data = {'username':name,'email':email,'message':message}
+  //     const response = await axios
+  //     .post("http://localhost:3001/send_email", data)
+  //     .then((res) => {
+  //       console.log(res);
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //     });
+
+  //     window.location = '/research';
+  //     // https://youtube.com/shorts/hREVGYpIzD0?feature=share
+
+
+  //   }
+
+    // async function handle(event)
+    // {
+    //   event.preventDefault();
+    //   const data = {'username':name,'email':email,'message':message}
+    //   const response = API.
+    //   .post("http://localhost:3001/send_email", data)
+    //   .then((res) => {
+    //     console.log(res);
+    //   })
+    //   .catch((err) => {
+    //     console.log(err);
+    //   });
+
+    //   window.location = '/research';
+    //   // https://youtube.com/shorts/hREVGYpIzD0?feature=share
+
+
+    // }
   
 
     // async function handle(event)
