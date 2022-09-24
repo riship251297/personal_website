@@ -12,7 +12,7 @@ import Gallery from './components/Gallery/Gallery';
 import Main from './components/main/Main';
 import Contact from './components/Contact/Contact';
 import { Amplify } from 'aws-amplify';
-import awsExports from './aws-exports';
+// import awsExports from './aws-exports';
 Amplify.configure(awsExports);
 // import {Provider} from 'react-redux';
 // import {createStore,applymiddleware,compose} from 'redux';
