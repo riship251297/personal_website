@@ -1,6 +1,12 @@
 export type AmplifyDependentResourcesAttributes = {
     "function": {
-        "sendemailname": {
+        "getfunction": {
+            "Name": "string",
+            "Arn": "string",
+            "Region": "string",
+            "LambdaExecutionRole": "string"
+        },
+        "sendemailfunction": {
             "Name": "string",
             "Arn": "string",
             "Region": "string",

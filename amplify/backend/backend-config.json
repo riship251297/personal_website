@@ -1,6 +1,11 @@
 {
   "function": {
-    "sendemailname": {
+    "getfunction": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "sendemailfunction": {
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
@@ -13,7 +18,15 @@
       "dependsOn": [
         {
           "category": "function",
-          "resourceName": "sendemailname",
+          "resourceName": "getfunction",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
+        },
+        {
+          "category": "function",
+          "resourceName": "sendemailfunction",
           "attributes": [
             "Name",
             "Arn"

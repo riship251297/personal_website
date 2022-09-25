@@ -15,11 +15,12 @@ function Contact()
   const [email,SetEmail] = useState("");
   const [message,SetMessage] = useState("");
 
-  async function handle(event)
+  async function handles(event)
   {
-    API.get("rphatan","/rishi",{})
+    console.log("Rishikesh")
+    API.get('rphatan',"/rishi",{})
     .then((res)=>{
-      console.log(res)
+      console.log(res)  
     })
   }
 
@@ -47,24 +48,20 @@ function Contact()
 
   //   }
 
-    // async function handle(event)
-    // {
-    //   event.preventDefault();
-    //   const data = {'username':name,'email':email,'message':message}
-    //   const response = API.
-    //   .post("http://localhost:3001/send_email", data)
-    //   .then((res) => {
-    //     console.log(res);
-    //   })
-    //   .catch((err) => {
-    //     console.log(err);
-    //   });
-
-    //   window.location = '/research';
-    //   // https://youtube.com/shorts/hREVGYpIzD0?feature=share
-
-
-    // }
+    async function handle(event)
+    {
+      console.log("Rishikesh")
+      event.preventDefault();
+      const data = {'username':name,'email':email,'message':message}
+      API.post("rphatan",'/send_email', {})
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+      // window.location = '/research';
+    }
   
 
     // async function handle(event)
@@ -123,6 +120,8 @@ function Contact()
   return (
     <>
     <Navbar/>
+            {/* <button className='btn btn-primary' onClick={handles}>Click</button> */}
+
     <div className="heading">
       <div className="text">
         <h3>You plan to contact me ....  ?</h3>
@@ -131,7 +130,7 @@ function Contact()
       <div className="group">
         <h2 className='middle'>DROP ME A MESSAGE !</h2>
         <div className="form"id="formdata">
-          <form action="/send_email"onSubmit={handle}>
+          <form action="/rishi"onSubmit={handle}>
 
             <div className="f_section">
               <label>Name:
@@ -186,7 +185,7 @@ function Contact()
     </div>
     <div className='footer'>
       
-    </div>
+    </div> 
     </>
   )
 }

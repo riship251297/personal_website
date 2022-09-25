@@ -1,9 +1,16 @@
 {
   "version": 1,
   "paths": {
-    "/items": {
-      "name": "/items",
-      "lambdaFunction": "sendemailname",
+    "/rishi": {
+      "name": "/rishi",
+      "lambdaFunction": "getfunction",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/sendemail": {
+      "name": "/sendemail",
+      "lambdaFunction": "sendemailfunction",
       "permissions": {
         "setting": "open"
       }

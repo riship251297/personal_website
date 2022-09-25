@@ -6,6 +6,25 @@ or in the "license" file accompanying this file. This file is distributed on an 
 See the License for the specific language governing permissions and limitations under the License.
 */
 
+import express, { application } from "express";
+import mongoose from "mongoose";
+import cors from "cors";
+import dotenv from 'dotenv';
+import bodyParser from 'body-parser';
+import multer from 'multer';
+import crypto from 'crypto';
+import bycrypt from 'bcrypt'
+import cookieParser from "cookie-parser";
+import cookie from 'cookie-parser';
+import jwt from "jsonwebtoken";
+
+import * as fs from 'fs';
+import download from 'download';
+import nodemailer from 'nodemailer';
+import AWS from 'aws-sdk';
+import { env } from "process";
+import handlebars from 'handlebars'
+
 
 
 
@@ -30,17 +49,12 @@ app.use(function(req, res, next) {
  * Example get method *
  **********************/
 
- app.get('/rishi',(req,res)=>{
-  res.send("can you see me !");
-});
-
-
-app.get('/items', function(req, res) {
+app.get('/rishi', function(req, res) {
   // Add your code here
   res.json({success: 'get call succeed!', url: req.url});
 });
 
-app.get('/items/*', function(req, res) {
+app.get('/rishi/*', function(req, res) {
   // Add your code here
   res.json({success: 'get call succeed!', url: req.url});
 });
@@ -49,12 +63,12 @@ app.get('/items/*', function(req, res) {
 * Example post method *
 ****************************/
 
-app.post('/items', function(req, res) {
+app.post('/rishi', function(req, res) {
   // Add your code here
   res.json({success: 'post call succeed!', url: req.url, body: req.body})
 });
 
-app.post('/items/*', function(req, res) {
+app.post('/rishi/*', function(req, res) {
   // Add your code here
   res.json({success: 'post call succeed!', url: req.url, body: req.body})
 });
@@ -63,12 +77,12 @@ app.post('/items/*', function(req, res) {
 * Example put method *
 ****************************/
 
-app.put('/items', function(req, res) {
+app.put('/rishi', function(req, res) {
   // Add your code here
   res.json({success: 'put call succeed!', url: req.url, body: req.body})
 });
 
-app.put('/items/*', function(req, res) {
+app.put('/rishi/*', function(req, res) {
   // Add your code here
   res.json({success: 'put call succeed!', url: req.url, body: req.body})
 });
@@ -77,18 +91,70 @@ app.put('/items/*', function(req, res) {
 * Example delete method *
 ****************************/
 
-app.delete('/items', function(req, res) {
+app.delete('/rishi', function(req, res) {
   // Add your code here
   res.json({success: 'delete call succeed!', url: req.url});
 });
 
-app.delete('/items/*', function(req, res) {
+app.delete('/rishi/*', function(req, res) {
   // Add your code here
   res.json({success: 'delete call succeed!', url: req.url});
 });
 
 app.listen(3000, function() {
     console.log("App started")
+});
+
+
+
+app.post('/send_email',(req,res) =>
+{
+    try 
+    {
+        const username = req.body.username;
+        const email = req.body.email;
+        const message = req.body.message
+
+        console.log(username)
+
+        let transporter = nodemailer.createTransport({
+            service: 'gmail',
+            auth: {
+                user: process.env.EMAIL,
+                pass: process.env.PASSWORD 
+            }
+        });
+
+        const source = fs.readFileSync('../src/template.html', 'utf-8').toString();
+        const template = handlebars.compile(source);
+        const replacements = {username:username}
+        const htmlsend = template(replacements)
+        
+        let mailOptions = {
+            from: 'rphatan@g.clemson.edu', 
+            to: email, 
+            subject: 'Successful Contact submission',
+            html: htmlsend
+        };
+        
+        transporter.sendMail(mailOptions, (err, data) => {
+            if (err) {
+                console.log(err.message);
+    
+            }
+            if (!err)
+            {
+                res.send("Email sent !")
+            }
+        });
+
+    }
+    catch (error) 
+    {
+        console.log(error)
+        res.sendStatus(404).json({message:error.message});
+    }
+     
 });
 
 // Export the app object. When executing the application local this does nothing. However,
