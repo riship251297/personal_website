@@ -5,7 +5,6 @@ Licensed under the Apache License, Version 2.0 (the "License"). You may not use 
 or in the "license" file accompanying this file. This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and limitations under the License.
 */
-
 import express, { application } from "express";
 import mongoose from "mongoose";
 import cors from "cors";
@@ -18,13 +17,11 @@ import cookieParser from "cookie-parser";
 import cookie from 'cookie-parser';
 import jwt from "jsonwebtoken";
 
-import * as fs from 'fs';
 import download from 'download';
 import nodemailer from 'nodemailer';
 import AWS from 'aws-sdk';
 import { env } from "process";
 import handlebars from 'handlebars'
-
 
 
 
@@ -49,12 +46,12 @@ app.use(function(req, res, next) {
  * Example get method *
  **********************/
 
-app.get('/rishi', function(req, res) {
+app.get('/sendemail', function(req, res) {
   // Add your code here
   res.json({success: 'get call succeed!', url: req.url});
 });
 
-app.get('/rishi/*', function(req, res) {
+app.get('/sendemail/*', function(req, res) {
   // Add your code here
   res.json({success: 'get call succeed!', url: req.url});
 });
@@ -62,51 +59,6 @@ app.get('/rishi/*', function(req, res) {
 /****************************
 * Example post method *
 ****************************/
-
-app.post('/rishi', function(req, res) {
-  // Add your code here
-  res.json({success: 'post call succeed!', url: req.url, body: req.body})
-});
-
-app.post('/rishi/*', function(req, res) {
-  // Add your code here
-  res.json({success: 'post call succeed!', url: req.url, body: req.body})
-});
-
-/****************************
-* Example put method *
-****************************/
-
-app.put('/rishi', function(req, res) {
-  // Add your code here
-  res.json({success: 'put call succeed!', url: req.url, body: req.body})
-});
-
-app.put('/rishi/*', function(req, res) {
-  // Add your code here
-  res.json({success: 'put call succeed!', url: req.url, body: req.body})
-});
-
-/****************************
-* Example delete method *
-****************************/
-
-app.delete('/rishi', function(req, res) {
-  // Add your code here
-  res.json({success: 'delete call succeed!', url: req.url});
-});
-
-app.delete('/rishi/*', function(req, res) {
-  // Add your code here
-  res.json({success: 'delete call succeed!', url: req.url});
-});
-
-app.listen(3000, function() {
-    console.log("App started")
-});
-
-
-
 app.post('/send_email',(req,res) =>
 {
     try 
@@ -155,6 +107,48 @@ app.post('/send_email',(req,res) =>
         res.sendStatus(404).json({message:error.message});
     }
      
+});
+
+app.post('/sendemail', function(req, res) {
+  // Add your code here
+  res.json({success: 'post call succeed!', url: req.url, body: req.body})
+});
+
+app.post('/sendemail/*', function(req, res) {
+  // Add your code here
+  res.json({success: 'post call succeed!', url: req.url, body: req.body})
+});
+
+/****************************
+* Example put method *
+****************************/
+
+app.put('/sendemail', function(req, res) {
+  // Add your code here
+  res.json({success: 'put call succeed!', url: req.url, body: req.body})
+});
+
+app.put('/sendemail/*', function(req, res) {
+  // Add your code here
+  res.json({success: 'put call succeed!', url: req.url, body: req.body})
+});
+
+/****************************
+* Example delete method *
+****************************/
+
+app.delete('/sendemail', function(req, res) {
+  // Add your code here
+  res.json({success: 'delete call succeed!', url: req.url});
+});
+
+app.delete('/sendemail/*', function(req, res) {
+  // Add your code here
+  res.json({success: 'delete call succeed!', url: req.url});
+});
+
+app.listen(3000, function() {
+    console.log("App started")
 });
 
 // Export the app object. When executing the application local this does nothing. However,
