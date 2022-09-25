@@ -15,7 +15,7 @@
       "function": {
         "send120897email": {
           "deploymentBucketName": "amplify-personalwebsite-dev-01110-deployment",
-          "s3Key": "amplify-builds/send120897email-4c446b6e4f7856686633-build.zip"
+          "s3Key": "amplify-builds/send120897email-42366446434d6f46316d-build.zip"
         }
       }
     }

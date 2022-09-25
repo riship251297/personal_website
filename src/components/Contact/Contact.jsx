@@ -53,7 +53,7 @@ function Contact()
       console.log("Rishikesh")
       event.preventDefault();
       const data = {'username':name,'email':email,'message':message}
-      API.post("rphatan",'/send_email', {})
+      API.post("rphatan",'/sendemail', {})
       .then((res) => {
         console.log(res);
       })
@@ -130,7 +130,7 @@ function Contact()
       <div className="group">
         <h2 className='middle'>DROP ME A MESSAGE !</h2>
         <div className="form"id="formdata">
-          <form action="/rishi"onSubmit={handle}>
+          <form action="/sendemail"onSubmit={handle}>
 
             <div className="f_section">
               <label>Name:

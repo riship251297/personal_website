@@ -5,11 +5,9 @@ Licensed under the Apache License, Version 2.0 (the "License"). You may not use 
 or in the "license" file accompanying this file. This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and limitations under the License.
 */
-import express, { application } from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from 'dotenv';
-import bodyParser from 'body-parser';
 import multer from 'multer';
 import crypto from 'crypto';
 import bycrypt from 'bcrypt'
@@ -33,41 +31,46 @@ const awsServerlessExpressMiddleware = require('aws-serverless-express/middlewar
 const app = express()
 app.use(bodyParser.json())
 app.use(awsServerlessExpressMiddleware.eventContext())
+app.use(cors())
 
 // Enable CORS for all methods
-app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*")
-  res.header("Access-Control-Allow-Headers", "*")
-  next()
-});
+// app.use(function(req, res, next) {
+//   res.header("Access-Cont
+// rol-Allow-Origin", "*")
+//   res.header("Access-Control-Allow-Headers", "*")
+//   next()
+// });
 
 
 /**********************
  * Example get method *
  **********************/
 
-app.get('/sendemail', function(req, res) {
-  // Add your code here
-  res.json({success: 'get call succeed!', url: req.url});
-});
+// app.get('/sendemail', function(req, res) {
+//   // Add your code here
+//   res.json({success: 'get call succeed!', url: req.url});
+// });
 
-app.get('/sendemail/*', function(req, res) {
-  // Add your code here
-  res.json({success: 'get call succeed!', url: req.url});
-});
+// app.get('/sendemail/*', function(req, res) {
+//   // Add your code here
+//   res.json({success: 'get call succeed!', url: req.url});
+// });
 
 /****************************
 * Example post method *
 ****************************/
-app.post('/send_email',(req,res) =>
+app.post('/sendemail',(req,res) =>
 {
-    try 
+  res.setHeader("Access-Control-Allow-Origin", "*")
+  res.setHeader("Access-Control-Allow-Credentials", "true");
+  res.setHeader("Access-Control-Max-Age", "1800");
+  res.setHeader("Access-Control-Allow-Headers", "content-type");
+  res.setHeader( "Access-Control-Allow-Methods", "PUT, POST, GET, DELETE, PATCH, OPTIONS" ); 
+      try 
     {
         const username = req.body.username;
         const email = req.body.email;
         const message = req.body.message
-
-        console.log(username)
 
         let transporter = nodemailer.createTransport({
             service: 'gmail',
@@ -77,16 +80,16 @@ app.post('/send_email',(req,res) =>
             }
         });
 
-        const source = fs.readFileSync('../src/template.html', 'utf-8').toString();
-        const template = handlebars.compile(source);
-        const replacements = {username:username}
-        const htmlsend = template(replacements)
+        // const source = fs.readFileSync('../src/template.html', 'utf-8').toString();
+        // const template = handlebars.compile(source);
+        // const replacements = {username:username}
+        // const htmlsend = template(replacements)
         
         let mailOptions = {
             from: 'rphatan@g.clemson.edu', 
             to: email, 
             subject: 'Successful Contact submission',
-            html: htmlsend
+            html: '<h2>Rishikesh</h2>'
         };
         
         transporter.sendMail(mailOptions, (err, data) => {
@@ -105,33 +108,32 @@ app.post('/send_email',(req,res) =>
     {
         console.log(error)
         res.sendStatus(404).json({message:error.message});
-    }
-     
+    } 
 });
 
-app.post('/sendemail', function(req, res) {
-  // Add your code here
-  res.json({success: 'post call succeed!', url: req.url, body: req.body})
-});
+// app.post('/sendemail', function(req, res) {
+//   // Add your code here
+//   res.json({success: 'post call succeed!', url: req.url, body: req.body})
+// });
 
-app.post('/sendemail/*', function(req, res) {
-  // Add your code here
-  res.json({success: 'post call succeed!', url: req.url, body: req.body})
-});
+// app.post('/sendemail/*', function(req, res) {
+//   // Add your code here
+//   res.json({success: 'post call succeed!', url: req.url, body: req.body})
+// });
 
-/****************************
-* Example put method *
-****************************/
+// /****************************
+// * Example put method *
+// ****************************/
 
-app.put('/sendemail', function(req, res) {
-  // Add your code here
-  res.json({success: 'put call succeed!', url: req.url, body: req.body})
-});
+// app.put('/sendemail', function(req, res) {
+//   // Add your code here
+//   res.json({success: 'put call succeed!', url: req.url, body: req.body})
+// });
 
-app.put('/sendemail/*', function(req, res) {
-  // Add your code here
-  res.json({success: 'put call succeed!', url: req.url, body: req.body})
-});
+// app.put('/sendemail/*', function(req, res) {
+//   // Add your code here
+//   res.json({success: 'put call succeed!', url: req.url, body: req.body})
+// });
 
 /****************************
 * Example delete method *
