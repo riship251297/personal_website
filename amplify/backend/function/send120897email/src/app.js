@@ -37,15 +37,6 @@ app.use(bodyParser.json())
 app.use(awsServerlessExpressMiddleware.eventContext())
 app.use(cors())
 
-// Enable CORS for all methods
-// app.use(function(req, res, next) {
-//   res.header("Access-Cont
-// rol-Allow-Origin", "*")
-//   res.header("Access-Control-Allow-Headers", "*")
-//   next()
-// });
-
-
 
 app.post('/sendemail',async (event) =>
 {
