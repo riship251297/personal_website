@@ -1,126 +1,42 @@
 import React from 'react'
-import axios from 'axios'
-import {useState,useEffect} from 'react'
+// import axios from 'axios'
 import Navbar from '../Navbar/Navbar'
 import '../Contact/Contact.css'
-import {EmailShareButton,WhatsappShareButton,FacebookShareButton,LinkedinShareButton, LinkedinIcon} from 'react-share'
-import {FacebookIcon} from 'react-share'
-import { Link } from 'react-router-dom'
+// import {EmailShareButton,WhatsappShareButton,FacebookShareButton,LinkedinShareButton, LinkedinIcon} from 'react-share'
+// import {FacebookIcon} from 'react-share'
+// import { Link } from 'react-router-dom'
 import  {API} from 'aws-amplify'
+import {Container,Button,Form} from 'react-bootstrap';
+
+
+const formState = { username: '', email: '', message: '' };
+  
+  function updateFormState(key, value) {
+    formState[key] = value;
+  }
+
 function Contact() 
 {
 
+  async function addContact() {
+    const data = {
+      body: {
+        username: formState.username,
+        email: formState.email,
+        message: formState.message
+      }
+    };
   
-  const [name,SetName] = useState("");
-  const [email,SetEmail] = useState("");
-  const [message,SetMessage] = useState("");
-
-  async function handles(event)
-  {
-    console.log("Rishikesh")
-    API.get('rphatan',"/rishi",{})
-    .then((res)=>{
-      console.log(res)  
-    })
+    console.log(data);
+    const apiData = await API.post('rphatan', '/sendemail', data);
+    console.log({ apiData });
+    alert('Mail sent');
   }
 
-
-
-
-
-
-  // async function handle(event)
-  //   {
-  //     event.preventDefault();
-  //     const data = {'username':name,'email':email,'message':message}
-  //     const response = await axios
-  //     .post("http://localhost:3001/send_email", data)
-  //     .then((res) => {
-  //       console.log(res);
-  //     })
-  //     .catch((err) => {
-  //       console.log(err);
-  //     });
-
-  //     window.location = '/research';
-  //     // https://youtube.com/shorts/hREVGYpIzD0?feature=share
-
-
-  //   }
-
-    async function handle(event)
-    {
-      console.log("Rishikesh")
-      event.preventDefault();
-      const data = {'username':name,'email':email,'message':message}
-      API.post("rphatan",'/sendemail', {})
-      .then((res) => {
-        console.log(res);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-      // window.location = '/research';
-    }
-  
-
-    // async function handle(event)
-    // {
-    //   event.preventDefault();
-    //   const contact_form = new FormData();
-    //   contact_form.append("username",name)
-    //   contact_form.append("email",email)
-
-    //   fetch('http://localhost:3001/send_email', {
-    //     method: 'POST',
-    //     headers: {
-    //         'Content-Type': 'application/json'
-    //     },
-    //     body: contact_form
-    // });
-
-      // const url = localhost:4000/api/users/register;
-
-      // let sendData = () => {
-      // axios.post(url, reactData)
-      //   .then(res => console.log('Data send'))
-      //   .catch(err => console.log(err.data))
-      // }
-
-      // axios.put("http://localhost:3001/send_email", contact_form)
-      // .then(res=>console.log(res))
-      // .then(err=>console.log(err))
-
-
-      // await axios.post("http://localhost:3501/send_email/", contact_form).then((res)=>{
-      //   console.log(res)
-
-      
-
-
-      
-       
-      
-
-      // axios
-      // .post("http://localhost:3501/send_email", form_d, {
-      //   headers: {
-      //     "Content-Type": "multipart/form-data",
-      //   },
-      // })
-      // .then((res) => {
-      //   console.log(res);
-      // })
-      // .catch((err) => {
-      //   console.log(err);
-      // });
-
-      
-    
   return (
     <>
     <Navbar/>
-            {/* <button className='btn btn-primary' onClick={handles}>Click</button> */}
+            <Container>
 
     <div className="heading">
       <div className="text">
@@ -129,48 +45,42 @@ function Contact()
       </div>
       <div className="group">
         <h2 className='middle'>DROP ME A MESSAGE !</h2>
-        <div className="form"id="formdata">
-          <form action="/sendemail"onSubmit={handle}>
 
-            <div className="f_section">
-              <label>Name:
-                <input type="text" 
-                value={name} 
-                placeholder={"Enter your name"}
-                onChange={(e)=> SetName(e.target.value)} />         
-              </label>
-            </div>
+          <Form>
 
-            <div className="s_section">
-              <label>Email :
-                <input type="email" 
-                value={email} 
-                placeholder={"Enter your email"}
-                onChange={(e)=> SetEmail(e.target.value)}/>
-              </label>
-            </div>
+          <Form.Group>
+            <Form.Label>Name:</Form.Label>
+            <Form.Control
+                placeholder="Enter your name"
+                onChange={e=>  updateFormState('username', e.target.value)} /> 
+          </Form.Group>
 
-            <br></br>
-            <div className="area">
-              <label className='aream'>Message :
-                <textarea id="w3review"
-                 name="w3review" 
-                 rows="6" 
-                 cols="35"               
-                placeholder={"Enter your message !!"}
-                onChange={(e)=> SetMessage(e.target.value)} 
-                > 
-               </textarea>
-              </label>
-  
+          <Form.Group>
+            <Form.Label>Email:</Form.Label>
+            <Form.Control
+                placeholder="Enter your name"
+                onChange={e=>  updateFormState('email', e.target.value)} /> 
+          </Form.Group>
 
-            </div>
+          <Form.Group>
+            <Form.Label>Message:</Form.Label>
+            <Form.Control
+                placeholder="Enter your name"
+                onChange={e=>  updateFormState('message', e.target.value)} /> 
+          </Form.Group>
 
-            <div className="submit_section">
-              <input type="submit"
-              value="Submit" />
-             </div>
-          </form>
+          <Button onClick={addContact}>Send a message</Button>
+
+
+
+      
+            
+        
+          </Form>
+
+
+
+            
         </div>
       </div>
       {/* <FacebookShareButton
@@ -182,10 +92,11 @@ function Contact()
           <LinkedinIcon round={true}></LinkedinIcon>
 
         </LinkedinShareButton> */}
-    </div>
+    
     <div className='footer'>
       
     </div> 
+    </Container>
     </>
   )
 }

@@ -5,22 +5,26 @@ Licensed under the Apache License, Version 2.0 (the "License"). You may not use 
 or in the "license" file accompanying this file. This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and limitations under the License.
 */
-import mongoose from "mongoose";
-import cors from "cors";
-import dotenv from 'dotenv';
-import multer from 'multer';
-import crypto from 'crypto';
-import bycrypt from 'bcrypt'
-import cookieParser from "cookie-parser";
-import cookie from 'cookie-parser';
-import jwt from "jsonwebtoken";
+// import mongoose from "mongoose";
+// import cors from "cors";
+// import dotenv from 'dotenv';
+// import multer from 'multer';
+// import crypto from 'crypto';
+// import bycrypt from 'bcrypt'
+// import cookieParser from "cookie-parser";
+// import cookie from 'cookie-parser';
+// import jwt from "jsonwebtoken";
 
-import download from 'download';
-import nodemailer from 'nodemailer';
-import AWS from 'aws-sdk';
-import { env } from "process";
-import handlebars from 'handlebars'
-
+// import download from 'download';
+// import nodemailer from 'nodemailer';
+// import AWS from 'aws-sdk';
+// import { env } from "process";
+// import handlebars from 'handlebars'
+const cors = require("cors")
+const dotenv = require("dotenv")
+const nodemailer = require("nodemailer")
+const env = require("process")
+const handlebars = require("handlebars")
 
 
 const express = require('express')
@@ -42,74 +46,56 @@ app.use(cors())
 // });
 
 
-/**********************
- * Example get method *
- **********************/
 
-// app.get('/sendemail', function(req, res) {
-//   // Add your code here
-//   res.json({success: 'get call succeed!', url: req.url});
-// });
-
-// app.get('/sendemail/*', function(req, res) {
-//   // Add your code here
-//   res.json({success: 'get call succeed!', url: req.url});
-// });
-
-/****************************
-* Example post method *
-****************************/
-app.post('/sendemail',(req,res) =>
+app.post('/sendemail',async (event) =>
 {
-  res.setHeader("Access-Control-Allow-Origin", "*")
-  res.setHeader("Access-Control-Allow-Credentials", "true");
-  res.setHeader("Access-Control-Max-Age", "1800");
-  res.setHeader("Access-Control-Allow-Headers", "content-type");
-  res.setHeader( "Access-Control-Allow-Methods", "PUT, POST, GET, DELETE, PATCH, OPTIONS" ); 
-      try 
-    {
-        const username = req.body.username;
-        const email = req.body.email;
-        const message = req.body.message
-
-        let transporter = nodemailer.createTransport({
-            service: 'gmail',
-            auth: {
-                user: process.env.EMAIL,
-                pass: process.env.PASSWORD 
-            }
-        });
-
-        // const source = fs.readFileSync('../src/template.html', 'utf-8').toString();
-        // const template = handlebars.compile(source);
-        // const replacements = {username:username}
-        // const htmlsend = template(replacements)
-        
-        let mailOptions = {
-            from: 'rphatan@g.clemson.edu', 
-            to: email, 
-            subject: 'Successful Contact submission',
-            html: '<h2>Rishikesh</h2>'
-        };
-        
-        transporter.sendMail(mailOptions, (err, data) => {
-            if (err) {
-                console.log(err.message);
+  try 
+  {
+    const username = event.body.username
+    const email = event.body.email
+    const message = event.body.message
     
-            }
-            if (!err)
-            {
-                res.send("Email sent !")
-            }
-        });
+    let transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: 
+        {
+          user: 'rphatan@g.clemson.edu',
+          pass: 'Riship251297@123'
+        }
+    });
+    
+    
 
-    }
-    catch (error) 
-    {
-        console.log(error)
-        res.sendStatus(404).json({message:error.message});
-    } 
+      // const source = fs.readFileSync('../src/template.html', 'utf-8').toString();
+      // const template = handlebars.compile(source);
+      // const replacements = {username:username}
+      // const htmlsend = template(replacements)
+      
+      let mailOptions = {
+          from: 'rphatan@g.clemson.edu', 
+          to: email, 
+          subject: 'Successful Contact submission',
+          html: `<p>You got a contact message from: <b>${username}</b></p>`
+      };
+      
+      transporter.sendMail(mailOptions, (err, data) => {
+          if (err) 
+          {
+            console.log(err.message);
+          }
+          if (!err)
+          {
+            return email
+          }
+      });
+  }
+  catch (error) 
+  {
+    console.log(error)
+    // res.sendStatus(404).json({message:error.message});
+  } 
 });
+
 
 // app.post('/sendemail', function(req, res) {
 //   // Add your code here
