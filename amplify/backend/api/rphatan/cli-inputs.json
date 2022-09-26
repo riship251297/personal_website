@@ -3,7 +3,7 @@
   "paths": {
     "/sendemail": {
       "name": "/sendemail",
-      "lambdaFunction": "send120897email",
+      "lambdaFunction": "sendemailfunction",
       "permissions": {
         "setting": "open"
       }

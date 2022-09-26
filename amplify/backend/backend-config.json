@@ -1,6 +1,6 @@
 {
   "function": {
-    "send120897email": {
+    "sendemailfunction": {
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
@@ -13,7 +13,7 @@
       "dependsOn": [
         {
           "category": "function",
-          "resourceName": "send120897email",
+          "resourceName": "sendemailfunction",
           "attributes": [
             "Name",
             "Arn"
