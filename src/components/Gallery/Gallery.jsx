@@ -5,7 +5,9 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import '../Gallery/Gallery.css'
 import Swal from 'sweetalert2'
-import Container from 'react-bootstrap/Container';
+// import Container from 'react-bootstrap/Container';
+import {Container} from 'react-bootstrap';
+
 
 
 function Gallery() 
@@ -51,6 +53,7 @@ function onIncrement(index,type,event)
 
   return (
     <>
+    <Container>
       <Navbar/>
       <Container>
         <div className="title">
@@ -332,6 +335,8 @@ function onIncrement(index,type,event)
             </div>
           </div>
         </div>
+      </Container>
+
       </Container>
       
     </>
