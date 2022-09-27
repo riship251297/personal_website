@@ -66,7 +66,7 @@ app.post('/sendemail',async (event) =>
           from: 'rphatan@g.clemson.edu', 
           to: email, 
           subject: 'Successful Contact submission',
-          html: `Hi, <b>${username},</b><br></br><p><h3>Thank you for your information.&nbsp;I will contact you soon !!!. </h3></p>`
+          html: `Hi <b>${username},</b><br></br><p><h3>Thank you for your information.&nbsp;I will contact you soon !!!. </h3></p>`
       };
       
       transporter.sendMail(mailOptions, (err, data) => {

@@ -44,32 +44,40 @@ function Contact()
         <h3>I would love to hear from you ... Here is how you can reach out to me ...</h3>
       </div>
       <div className="group">
-        <h2 className='middle'>DROP ME A MESSAGE !</h2>
+        <h3 className='middle'>DROP ME A MESSAGE !</h3>
 
           <Form>
 
           <Form.Group>
             <Form.Label>Name:</Form.Label>
             <Form.Control
-                placeholder="Enter your name"
+                placeholder="Enter your Name"
                 onChange={e=>  updateFormState('username', e.target.value)} /> 
           </Form.Group>
+          <br></br>
 
           <Form.Group>
             <Form.Label>Email:</Form.Label>
             <Form.Control
-                placeholder="Enter your name"
+                placeholder="Enter your Email"
                 onChange={e=>  updateFormState('email', e.target.value)} /> 
           </Form.Group>
+          <br></br>
+
 
           <Form.Group>
             <Form.Label>Message:</Form.Label>
-            <Form.Control
-                placeholder="Enter your name"
+
+            <Form.Control as="textarea" rows={7}
+                placeholder="Enter your message"
                 onChange={e=>  updateFormState('message', e.target.value)} /> 
           </Form.Group>
+          <br></br>
+          <br></br>
 
-          <Button onClick={addContact}>Send a message</Button>
+
+
+          <Button style={{marginLeft:100}} onClick={addContact}>Send a message</Button>
 
 
 

@@ -3,10 +3,11 @@
     width: 1500px;
 }
 
-.middle
+h3
 {
+    margin-left: 20px;
     padding: 20px;
-    margin-left: 60px;
+    /* margin-left: 5px; */
 }
 
 .text
@@ -18,8 +19,8 @@
 {
     margin-top: 60px;
     margin-left: 550px;
-    width: 550px;
-    height: 550px;
+    width: 380px;
+    height: 650px;
     background-color: #0abd8a;
 }
 
@@ -58,3 +59,18 @@
     height:300px;
 }
 
+.form-control
+{
+    width:70%;
+    margin-left: 50px;
+}
+
+.form-label
+{
+    margin-left: 50px;
+}
+
+.button
+{
+    margin-left: 40px;
+}
