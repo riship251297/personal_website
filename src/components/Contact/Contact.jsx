@@ -77,7 +77,7 @@ function Contact()
 
 
 
-          <Button style={{marginLeft:100}} onClick={addContact}>Send a message</Button>
+          <Button style={{marginLeft:100}} onClick={addContact}>Send me a message</Button>
 
 
 
