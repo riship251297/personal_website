@@ -12,7 +12,7 @@ import Gallery from './components/Gallery/Gallery';
 import Main from './components/main/Main';
 import Contact from './components/Contact/Contact';
 import { Amplify } from 'aws-amplify';
-import awsExports from './aws-exports.js';
+import awsExports from '../aws-exports.js';
 Amplify.configure(awsExports);
 // import {Provider} from 'react-redux';
 // import {createStore,applymiddleware,compose} from 'redux';
@@ -42,6 +42,3 @@ root.render(
   // </Provider>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
