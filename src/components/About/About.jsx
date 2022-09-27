@@ -3,7 +3,7 @@ import Box from "../Box/Box";
 import Navbar from "../Navbar/Navbar";
 import Photo from "../Photo/Photo";
 import '../About/About.css'
-import { GoDesktopDownload } from "react-icons/go";
+// import { GoDesktopDownload } from "react-icons/go";
 import axios from "axios";
 import { FaGithub,FaLinkedin,FaJs,FaReact,FaTelegramPlane,FaTwitter,FaPython,FaHtml5,FaCss3Alt,FaNode,MdOutgoingMail } from "react-icons/fa";
 import { useState } from "react";
