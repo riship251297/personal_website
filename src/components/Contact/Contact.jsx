@@ -4,7 +4,7 @@ import Navbar from '../Navbar/Navbar'
 import '../Contact/Contact.css'
 // import {EmailShareButton,WhatsappShareButton,FacebookShareButton,LinkedinShareButton, LinkedinIcon} from 'react-share'
 // import {FacebookIcon} from 'react-share'
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import  {API} from 'aws-amplify'
 import {Container,Button,Form} from 'react-bootstrap';
 
