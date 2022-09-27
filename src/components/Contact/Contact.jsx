@@ -1,5 +1,5 @@
 import React from 'react'
-// import axios from 'axios'
+import axios from 'axios'
 import Navbar from '../Navbar/Navbar'
 import '../Contact/Contact.css'
 // import {EmailShareButton,WhatsappShareButton,FacebookShareButton,LinkedinShareButton, LinkedinIcon} from 'react-share'
