@@ -1,3 +1,7 @@
+body{
+    font-family: 'Raleway', sans-serif;
+
+}
 .heading
 {
     width: 1500px;
@@ -5,7 +9,7 @@
 
 h3
 {
-    margin-left: 20px;
+    margin-left: 11px;
     padding: 20px;
     /* margin-left: 5px; */
 }
@@ -20,7 +24,7 @@ h3
     margin-top: 60px;
     margin-left: 550px;
     width: 380px;
-    height: 650px;
+    height: 620px;
     background-color: #0abd8a;
 }
 
