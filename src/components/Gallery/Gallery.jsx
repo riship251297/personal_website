@@ -5,7 +5,6 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import '../Gallery/Gallery.css'
 import Swal from 'sweetalert2'
-// import Container from 'react-bootstrap/Container';
 import {Container} from 'react-bootstrap';
 
 
