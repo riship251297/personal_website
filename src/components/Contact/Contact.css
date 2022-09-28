@@ -1,3 +1,10 @@
+.root: {
+   
+    @media (max-width: 1920px) {
+      background: "red";
+    }
+   }
+
 body{
     font-family: 'Raleway', sans-serif;
 
@@ -74,7 +81,14 @@ h3
     margin-left: 50px;
 }
 
-.button
+.popl
 {
-    margin-left: 40px;
+    font-size: 50px;
+    font-weight: 500;
 }
+
+.lop
+{
+
+}
+

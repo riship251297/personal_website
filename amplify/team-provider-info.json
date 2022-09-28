@@ -15,7 +15,24 @@
       "function": {
         "sendemailfunction": {
           "deploymentBucketName": "amplify-personalwebsite-dev-164622-deployment",
-          "s3Key": "amplify-builds/sendemailfunction-344c77484c7168575a68-build.zip"
+          "s3Key": "amplify-builds/sendemailfunction-4936497551375477495a-build.zip"
+        },
+        "checkfunctoin": {
+          "deploymentBucketName": "amplify-personalwebsite-dev-164622-deployment",
+          "s3Key": "amplify-builds/checkfunctoin-4478377a62374556786f-build.zip"
+        },
+        "testfunction": {
+          "deploymentBucketName": "amplify-personalwebsite-dev-164622-deployment",
+          "s3Key": "amplify-builds/testfunction-6d4c622f624972597175-build.zip"
+        }
+      },
+      "storage": {
+        "message": {
+          "tableName": "message",
+          "region": "us-east-1",
+          "arn": "arn:aws:dynamodb:us-east-1:139685921969:table/message",
+          "partitionKeyName": "email",
+          "partitionKeyType": "S"
         }
       }
     }

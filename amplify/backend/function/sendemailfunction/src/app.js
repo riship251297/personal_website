@@ -31,22 +31,18 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const awsServerlessExpressMiddleware = require('aws-serverless-express/middleware')
 
-// declare a new express app
-const app = express()
-app.use(bodyParser.json())
-app.use(awsServerlessExpressMiddleware.eventContext())
-app.use(cors())
+const AWS = require('aws-sdk')
+const docClient = new AWS.DynamoDB.DocumentClient();
 
-
-app.post('/sendemail',async (event) =>
+function id ()
 {
-  try 
-  {
-    const username = event.body.username
-    const email = event.body.email
-    const message = event.body.message
-    
-    let transporter = nodemailer.createTransport({
+  return Math.random().toString(36).substring(2) + Date.now().toString(36);
+}
+
+
+function mail(username,email)
+{
+   let transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: 
         {
@@ -56,34 +52,82 @@ app.post('/sendemail',async (event) =>
     });
     
     
-
-      // const source = fs.readFileSync('../src/template.html', 'utf-8').toString();
-      // const template = handlebars.compile(source);
-      // const replacements = {username:username}
-      // const htmlsend = template(replacements)
-      
-      let mailOptions = {
+    
+    let mailOptions = {
           from: 'rphatan@g.clemson.edu', 
           to: email, 
           subject: 'Successful Contact submission',
           html: `Hi <b>${username},</b><br></br><p><h3>Thank you for your information.&nbsp;I will contact you soon !!!. </h3></p>`
       };
       
-      transporter.sendMail(mailOptions, (err, data) => {
+     transporter.sendMail(mailOptions, (err, data) => {
           if (err) 
           {
-            console.log(err.message);
+            context.json({err});
           }
-          if (!err)
+          else
           {
-            return email
+            // context.json({success:'successful'});
+            return 'mail';
+            
           }
       });
+  
+}
+
+function entrydatabase(username,email,mess)
+{
+  var params = {
+                TableName : 'message',
+                Item :
+                  {
+                  id : id(),
+                  username:username,
+                  email:email,
+                  message:mess
+                  }
+                }
+        
+  docClient.put(params,function(err,data)
+  {
+    if (err)
+    {
+      return 'great';
+    }
+    else
+    {
+      return 'database';
+    }
+  });
+}
+
+// declare a new express app
+const app = express()
+app.use(bodyParser.json())
+app.use(awsServerlessExpressMiddleware.eventContext())
+app.use(cors())
+
+
+app.post('/sendemail',async (event,context) =>
+{
+  try 
+  {
+    const username = event.body.username
+    const email = event.body.email
+    const mess = event.body.message
+    const value = mail(username,email);
+    const checks = entrydatabase(username,email,mess);
+    // context.json({success:'Sent successfully'});
+
+      // const source = fs.readFileSync('../src/template.html', 'utf-8').toString();
+      // const template = handlebars.compile(source);
+      // const replacements = {username:username}
+      // const htmlsend = template(replacements)
+
   }
   catch (error) 
   {
     console.log(error)
-    // res.sendStatus(404).json({message:error.message});
   } 
 });
 

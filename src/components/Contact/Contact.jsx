@@ -40,8 +40,8 @@ function Contact()
 
     <div className="heading">
       <div className="text">
-        <h3>You plan to contact me ....  ?</h3>
-        <h3>I would love to hear from you ... Here is how you can reach out to me ...</h3>
+        <h3 className="popl">Let's Talk ....  ?</h3>
+        <h3 className="lop">I would love to hear from you. Get in touch with me by providing<br></br> your details and I will reach out to you at the earliest.</h3>
       </div>
       <div className="group">
         <h3 className='middle'>DROP ME A MESSAGE !</h3>
