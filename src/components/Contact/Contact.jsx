@@ -27,8 +27,8 @@ function Contact()
       }
     };
   
-    console.log(data);
     const apiData = await API.post('rphatan', '/sendemail', data);
+    window.location.href = 'https://www.rphatan.info'
     console.log({ apiData });
     alert('Mail sent');
   }
