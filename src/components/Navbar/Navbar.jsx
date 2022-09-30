@@ -19,7 +19,6 @@ function Navbar(){
                     <Link to ="/contact">CONTACT</Link>
                 </nav>
             </div>
-            {/* </Media> */}
         </React.Fragment>
     );
 }
