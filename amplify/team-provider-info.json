@@ -15,7 +15,7 @@
       "function": {
         "sendemailfunction": {
           "deploymentBucketName": "amplify-personalwebsite-dev-164622-deployment",
-          "s3Key": "amplify-builds/sendemailfunction-4936497551375477495a-build.zip"
+          "s3Key": "amplify-builds/sendemailfunction-4b6d46496e6c70385279-build.zip"
         },
         "checkfunctoin": {
           "deploymentBucketName": "amplify-personalwebsite-dev-164622-deployment",
