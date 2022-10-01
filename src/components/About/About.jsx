@@ -8,6 +8,7 @@ import axios from "axios";
 import { FaGithub,FaLinkedin,FaJs,FaReact,FaTelegramPlane,FaTwitter,FaPython,FaHtml5,FaCss3Alt,FaNode,MdOutgoingMail } from "react-icons/fa";
 import { useState } from "react";
 import {Container,Button,Form} from 'react-bootstrap';
+import Topbar from "../Topbar/Topbar"
 
 
 
@@ -20,9 +21,6 @@ function About (){
     })
   }
 
-  
-
-  
     const [name,SetName] = useState("");
     const [email,SetEmail] = useState("");
 
@@ -55,7 +53,8 @@ function About (){
     return (
         <>
         <Container>
-        <Navbar/>
+        {/* <Navbar/> */}
+        <Topbar/>
 
         <Photo/>
 

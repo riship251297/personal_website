@@ -7,7 +7,7 @@ import '../Contact/Contact.css'
 import { Link } from 'react-router-dom'
 import  {API} from 'aws-amplify'
 import {Container,Button,Form} from 'react-bootstrap';
-
+import Topbar from '../Topbar/Topbar'
 
 const formState = { username: '', email: '', message: '' };
   
@@ -35,7 +35,8 @@ function Contact()
 
   return (
     <>
-    <Navbar/>
+    {/* <Navbar/> */}
+    <Topbar/>
             <Container>
 
     <div className="heading">
@@ -63,32 +64,16 @@ function Contact()
                 onChange={e=>  updateFormState('email', e.target.value)} /> 
           </Form.Group>
           <br></br>
-
-
           <Form.Group>
             <Form.Label>Message:</Form.Label>
-
             <Form.Control as="textarea" rows={7}
                 placeholder="Enter your message"
                 onChange={e=>  updateFormState('message', e.target.value)} /> 
           </Form.Group>
           <br></br>
           <br></br>
-
-
-
           <Button style={{marginLeft:95}} onClick={addContact}>Send me a message</Button>
-
-
-
-      
-            
-        
           </Form>
-
-
-
-            
         </div>
       </div>
       {/* <FacebookShareButton

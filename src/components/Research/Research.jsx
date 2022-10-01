@@ -2,13 +2,14 @@ import React from "react";
 import Navbar from "../Navbar/Navbar";
 import '../Navbar/Navbar.css';
 import '../Research/Research.css'
-
+import Topbar from "../Topbar/Topbar";
 function Research()
 {
     return(
         <>
            <div>
-               <Navbar/>
+               {/* <Navbar/> */}
+               <Topbar/>
                <h3 className="opo">DEEP LEARNING AND BIOINFORMATICS </h3>
                <br></br>
                 <h5 className="edit">Research funded by National Institute of Health Sciences, US</h5>

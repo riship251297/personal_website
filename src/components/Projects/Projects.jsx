@@ -1,11 +1,12 @@
 import React from 'react'
 import Navbar from '../Navbar/Navbar'
 import '../Projects/Projects.css';
-
+import Topbar from '../Topbar/Topbar';
 const Projects = () => {
   return (
       <>
-      <Navbar/>
+      {/* <Navbar/> */}
+      <Topbar/>
       <div className='Deep'>
         <div className='Rl'>
           <div className='Rl_left1'>

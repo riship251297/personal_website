@@ -6,7 +6,7 @@ import Card from 'react-bootstrap/Card';
 import '../Gallery/Gallery.css'
 import Swal from 'sweetalert2'
 import {Container} from 'react-bootstrap';
-
+import Topbar from '../Topbar/Topbar';
 
 
 function Gallery() 
@@ -53,7 +53,9 @@ function onIncrement(index,type,event)
   return (
     <>
     <Container>
-      <Navbar/>
+      {/* <Navbar/> */}
+      <Topbar/>
+
       <Container>
         <div className="title">
 
