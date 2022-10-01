@@ -58,8 +58,9 @@ function onIncrement(index,type,event)
         <div className="title">
 
         {/* <button className='btn btn-primary' onClick={gallery}>FetchNews</button> */}
-
+          <div className='title_sec'>
           <h3>WELCOME TO MY GALLERY SECTION !!!</h3>
+          </div>
           <h5 className='checks'>Preserving memories through photography is one of the best ways to share the past with the future. It allows you to look back on life's biggest achievements and the smallest moments all at once while stirring up stories of years gone by
             or recent weeks. </h5>
           
@@ -73,7 +74,7 @@ function onIncrement(index,type,event)
                 <Card.Body>
                   <Card.Title>Old Fort Jackson, Savannah, Georgia</Card.Title>
                   <Card.Text style={{textAlign:'justify'}}>A day well spent to understand the history of the fort and how it participated in the World War II.
-                  What a incredible history this fort has witnessed !. </Card.Text>
+                  History comes alive through live demonstrations & storytelling and displays. </Card.Text>
                   <div className="buttons_section">
                     <Button className='download'href="images/portfolio.jpg"download="Savannah_trip"onClick={(event) => onIncrement(0,'download',event)}>Download | {counter_download[0]}</Button>
                     <Button className='like'onClick={(event) => onIncrement(0,'like',event)}>Like | {counter_like[0]}</Button>
@@ -113,21 +114,22 @@ function onIncrement(index,type,event)
               <Card.Body>
                 <Card.Title>Kananaskis, Calgary, Canada</Card.Title>
                 <Card.Text style={{textAlign:'justify'}}>
-                Experience the best of the Canadian Rockies by treating yourself to an unforgettable getaway at Kananaskis Mountain.
+                Experience the best of the Canadian Rockies by treating yourself to an unforgettable getaway at Kananaskis Mountain.Kananaskis is every bit as beautiful, whether you’re after difficult or easy hikes, stunning lakes, skiing & snowshoeing in winter, paddling or camping in summer, or a pampered sauna experience. 
+                Kananaskis generally means "meeting of the waters.".My favourite mountain town and area before Banff. Great place to meet the locals, grab some java and do a few stops in the area.
                 
                 </Card.Text>
                 <div className="buttons_section">
                 <Button className='download'href="images/IMG_2001.png"download="Kananaskis"onClick={(event) => onIncrement(2,'download',event)}>Download | {counter_download[2]}</Button>
                     <Button className='like'onClick={(event) => onIncrement(2,'like',event)}>Like | {counter_like[2]}</Button>
                     <Button className='share'onClick={(event) => onIncrement(2,'share',event)}>Share | {counter_share[2]}</Button>
-                    <div id="link-box">
-                    <ul>
+                    {/* <div id="link-box"> */}
+                    {/* <ul>
                       <li><a href="#">Link 1</a></li>
                       <li><a href="#">Link 2</a></li>
                       <li><a href="#">Link 3</a></li>
                       <li><a href="#">Link 4</a></li>
-                    </ul>
-                    </div>
+                    </ul> */}
+                    {/* </div> */}
                     <a href="https://en.wikipedia.org/wiki/Kananaskis_Country">
                       <Button className='read' >Read more </Button>
                     </a>
@@ -142,7 +144,8 @@ function onIncrement(index,type,event)
               <Card.Body>
                 <Card.Title>Coca-Cola World Factory, Atlanta </Card.Title>
                 <Card.Text style={{textAlign:'justify'}}>
-                The World of Coca-Cola is a museum, located in Atlanta, Georgia, showcasing the history of the Coca-Cola Company. The 20-acre complex opened to the public on May 24, 2007, relocating from and replacing the original exhibit, which was founded in 1990 in Underground Atlanta.
+                Immerse yourself in World of Coca-Cola, the one and only place you can explore the story of the world's most popular beverage brand. 
+                It's a place where anyone can experience moments of happiness and wonder. At World of Coca-Cola, inspiration is around every corner - from the vault, to world-class art and memorabilia to more than 100 beverages to taste from around the world. With opportunities it's no wonder that the World of Coke is a must-see among the top things to do in Atlanta, Georgia.
                 </Card.Text>
                 <div className="buttons_section">
                 <Button className='download'href="images/portfolio.jpg"download="Savannah_trip"onClick={(event) => onIncrement(3,'download',event)}>Download | {counter_download[3]}</Button>
@@ -164,8 +167,11 @@ function onIncrement(index,type,event)
               <Card.Body>
                 <Card.Title>Banff Mountain, Calgary, Canada</Card.Title>
                 <Card.Text style={{textAlign:'justify'}}>
-                  Some quick example text to build on the card title and make up the
-                  bulk of the card's content.
+                  
+                Stayed in Canmore for a week, visiting Banff National Park daily, and had an absolutely incredible experience! We visited all the major sites, like Lake Louise and Moraine Lake, and did lots of hiking at places like Johnston Canyon and Sundance Canyon! The beauty and diversity of the park blew me away 
+                with its tall slot canyons, emerald glacial-fed lakes, and ultimately the towering mountains, especially being that I am from a very flat county full of vasts of patterned rectangular farms. 
+                The town of Banff in the park was also very delightful, and the Cave and Basin National Historic Sight is worth a 
+                visit with its fascinating hot springs. 
                 </Card.Text>
                 <div className="buttons_section">
                 <Button className='download'href="images/portfolio.jpg"download="Savannah_trip"onClick={(event) => onIncrement(4,'download',event)}>Download | {counter_download[4]}</Button>
@@ -184,9 +190,12 @@ function onIncrement(index,type,event)
               <Card.Img variant="top" src={"images/IMG_2500.jpg"} />
               <Card.Body>
                 <Card.Title>Wateron Park, US-Canada border crossing </Card.Title>
-                <Card.Text style={{textAlign:'justify'}}>
-                  Some quick example text to build on the card title and make up the
-                  bulk of the card's content.
+                <Card.Text style={{textAlign:'justify'}}>A compilation of eclectic and sophisticated artistry together with great restaurants, cute little souvenir shops and the best ice-cream parlour every! All located right on the water. Beautiful!
+              
+The Waterton Lake Cruise was fabulous! Over the years we have been on many day cruises on rivers, lakes, and oceans, 
+and this was absolutely one of the best!Before arriving we anticipated it may be cancelled because of high winds. 
+We were very surprised at how smooth the ride was in rough waters.The scenery all around Waterton Village was beautiful and memorable. 
+There was so much to see and do.Waterton park and village is a great spot to visit, especially if you like the outdoors. Attractive townsite and campsites. 
                 </Card.Text>
                 <div className="buttons_section">
                 <Button className='download'href="images/portfolio.jpg"download="Savannah_trip"onClick={() => onIncrement(5,'download')}>Download | {counter_download[5]}</Button>
@@ -204,12 +213,14 @@ function onIncrement(index,type,event)
           <div className="fourth_section">
             <div className="card_section7">
               <Card style={{ width: '35rem' }}>
-              <Card.Img variant="top" src={"images/IMG_2619.jpg"} />
+              <Card.Img variant="top" src={"images/IMG_2619.jpg"} style={{height:'650px'}} />
                 <Card.Body>
                   <Card.Title>Cameron Falls, Wateron park, Canada</Card.Title>
                   <Card.Text style={{textAlign:'justify'}}>
-                    Some quick example text to build on the card title and make up the
-                    bulk of the card's content.
+                  Cameron falls is one of the most beautiful and accessible sites that Waterton has to offer. It requires no hiking and is just a few short steps from the parking lot next to the Bertha Lake Trailhead
+                  Cameron falls is probably one of the most photographed spots in Waterton - and for a good reason! 
+                  The crystal blue waters crash down over 1.5 billion year old rocks into a sparkling pool of fresh mountain water. 
+                  It is a sight to behold for people of all ages and mountain experience
                   </Card.Text>
                   <div className="buttons_section">
                   <Button className='download'href="images/portfolio.jpg"download="Savannah_trip"onClick={() => onIncrement(6,'download')}>Download | {counter_download[6]}</Button>
@@ -225,12 +236,11 @@ function onIncrement(index,type,event)
 
             <div className="card_section8">
               <Card style={{ width: '35rem' }}>
-              <Card.Img variant="top" src={"images/123.jpg"} />
+              <Card.Img variant="top" src={"images/123.jpg"} style={{height:'400px'}}/>
                 <Card.Body>
                   <Card.Title>Capitol Building, Washington DC, US</Card.Title>
                   <Card.Text style={{textAlign:'justify'}}>
-                    Some quick example text to build on the card title and make up the
-                    bulk of the card's content.
+                  The Capitol is among the most architecturally impressive and symbolically important buildings in the world. The Senate and the House of Representatives have met here for more than two centuries. Begun in 1793, the Capitol has been built, burnt, rebuilt, extended, and restored; today, it stands as a monument not only to its builders but also to the American people and their government.
                   </Card.Text>
                   <div className="buttons_section">
                   <Button className='download'href="images/portfolio.jpg"download="Savannah_trip"onClick={() => onIncrement(7,'download')}>Download | {counter_download[7]}</Button>
@@ -253,8 +263,7 @@ function onIncrement(index,type,event)
                   <Card.Body>
                     <Card.Title>White House, Washington DC, US</Card.Title>
                     <Card.Text style={{textAlign:'justify'}}>
-                      Some quick example text to build on the card title and make up the
-                      bulk of the card's content.
+                    One of America's most recognizable historical and political symbols is also the home and office of the President of the United States. We enjoyed trolling the street of Washington, eating good food and free museums. We enjoyed the convenience of visiting Maryland and Virginia. Everything is within driving distance.It is of course an iconic building you'll want to at least see from outside
                     </Card.Text>
                     <div className="buttons_section">
                     <Button className='download'href="images/portfolio.jpg"download="Savannah_trip"onClick={() => onIncrement(8,'download')}>Download | {counter_download[8]}</Button>
@@ -273,8 +282,9 @@ function onIncrement(index,type,event)
                 <Card.Body>
                   <Card.Title>Spartanburg, South Carolina, US </Card.Title>
                   <Card.Text style={{textAlign:'justify'}}>
-                    Some quick example text to build on the card title and make up the
-                    bulk of the card's content.
+                    Captured this beauty from my friend's place. It houses the Spartanburg Art Museum, Spartanburg County Regional History Museum, 
+                    Science Center, Little Theatre, Ballet, Music Foundation, and other groups that were 
+                    formerly located in The Arts Center on South Spring Street.
                   </Card.Text>
                   <div className="buttons_section">
                   <Button className='download'href="images/portfolio.jpg"download="Savannah_trip"onClick={() => onIncrement(9,'download')}>Download | {counter_download[9]}</Button>
@@ -293,7 +303,7 @@ function onIncrement(index,type,event)
           <div className="sixth_section">
             <div className="card_section11">
                 <Card style={{ width: '35rem' }}>
-                <Card.Img variant="top" src={"https://personalwebsite9.s3.amazonaws.com/IMG_0886.jpg"} />
+                <Card.Img variant="top" src={"https://personalwebsite9.s3.amazonaws.com/IMG_0886.jpg"} style={{height:'650px'}}/>
                   <Card.Body>
                     <Card.Title>Sikes Hall, Clemson University, South Carolina, US</Card.Title>
                     <Card.Text style={{textAlign:'justify'}}>
@@ -315,11 +325,12 @@ function onIncrement(index,type,event)
             </div>
             <div className="card_section12">
               <Card style={{ width: '35rem' }}>
-              <Card.Img variant="top" src={"https://personalwebsite9.s3.amazonaws.com/IMG_0368.jpg"} />
+              <Card.Img variant="top" src={"https://personalwebsite9.s3.amazonaws.com/IMG_0368.jpg"} style={{height:'500px',width:'600px'}}/>
                 <Card.Body>
                   <Card.Title>Sangamner, India </Card.Title>
                   <Card.Text style={{textAlign:'justify'}}>
-                    The only picture we cousins share.
+                    The only picture we cousins share. Its been a while since we met each other. Had lots of fun that day,
+                    I wish we all could meet again and just sit and remember about our childhood memories.
                   </Card.Text>
                   <div className="buttons_section">
                   <Button className='download'href="images/portfolio.jpg"download="Savannah_trip"onClick={() => onIncrement(9,'download')}>Download | {counter_download[9]}</Button>
