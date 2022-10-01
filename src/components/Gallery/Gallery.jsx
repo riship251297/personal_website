@@ -56,7 +56,7 @@ function onIncrement(index,type,event)
       {/* <Navbar/> */}
       <Topbar/>
 
-      <Container>
+      {/* <Container> */}
         <div className="title">
 
         {/* <button className='btn btn-primary' onClick={gallery}>FetchNews</button> */}
@@ -349,7 +349,7 @@ There was so much to see and do.Waterton park and village is a great spot to vis
         </div>
       </Container>
 
-      </Container>
+      {/* </Container> */}
       
     </>
   )

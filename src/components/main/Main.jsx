@@ -3,11 +3,12 @@ import '../main/Main.css';
 import Box from "../Box/Box";
 import Navbar from "../Navbar/Navbar";
 import Photo from "../Photo/Photo";
-
+import Topbar from "../Topbar/Topbar";
 function Main() {
     return(
         <>
-        <Navbar/>
+        {/* <Navbar/> */}
+        <Topbar/>
         <Photo/>
         <Box/>
         <div className='footer'>

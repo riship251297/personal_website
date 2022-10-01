@@ -30,13 +30,16 @@ function Topbar(props) {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
+      <Typography variant="h6" sx={{ my: 2 }}
+                  onclick={()=>navigate(`/`)}
+                  >
+                                                <Link to ="/" >RISHIKESH</Link>
+
       </Typography>
       <Divider />
       <List>
         {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
+          <ListItem key={item} disablePadding onClick={()=>navigate(`/${item.toLowerCase()}`)}>
             <ListItemButton sx={{ textAlign: 'center' }}>
               <ListItemText primary={item} />
             </ListItemButton>
@@ -49,7 +52,7 @@ function Topbar(props) {
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box className = 'topbar' sx={{ display: 'flex' }}>
       <AppBar component="nav">
         <Toolbar>
           <IconButton
@@ -65,10 +68,15 @@ function Topbar(props) {
             variant="h6"
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+            // onclick={()=>navigate(`/`)}
+            
+
           >
-            RISHIKESH
+                            <Link to ="/" >RISHIKESH</Link>
+
+            {/* RISHIKESH */}
           </Typography>
-          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+          <Box className = 'topbar_buttons' sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
               // <Link to ="/projects" >PROJECTS</Link>
 

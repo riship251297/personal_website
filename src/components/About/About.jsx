@@ -52,26 +52,22 @@ function About (){
           
     return (
         <>
-        <Container>
+        {/* <Container> */}
         {/* <Navbar/> */}
         <Topbar/>
-
+        <div className="main_wrapper">
+          <div className="photo_wrapper">
         <Photo/>
-
+        </div>
+        <div className="box_wrapper">
         <Box/>
-
-
+        </div>
         {/* {/* <h4>Check out my Resume : <a href="https:youtube.com"><GoDesktopDownload/></a> </h4> */}
         {/* <h4>Find my work on  : <FaGithub size={50}/></h4>
         <h4>You can connect me on : <FaLinkedin size={50}/></h4>
         <h4>Skills : <FaJs size={50}/> <FaReact size={50}/> <FaPython size={50}/> <FaHtml5 size={50}/> <FaCss3Alt size={50}/> <FaNode size={50}/> </h4> */}
          
-        <div className="container">
-        <br></br>
-
-
-          <div className="ra">
-
+          <div className="experience_wrapper">
             <center><h2>WORK EXPERIENCE</h2></center>
             <ul>
               <li><b>Graduate Research Assistant | Bioinformatics Lab | Clemson University, US | Funded by National Institute of Health Sciences.</b></li>
@@ -95,7 +91,7 @@ function About (){
             </ul>
             </div>
             
-          <hr></hr>
+          {/* <hr></hr> */}
           {/* <br></br> */}
           {/* <div className="internship">
             <h2 className="cen">INTERNSHIPS</h2>
@@ -108,35 +104,45 @@ function About (){
             </div>
           </div>
           <hr></hr> */}
-          <div className="coursework">
+          <div className="coursework_wrapper">
             <center><h2>MS - COURSEWORK</h2></center>
             <div className="andar">
-              <br></br>
-              <li><b>Spring 2021</b></li>
-              <ol>
-                <li>Deep Reinforcement Learning </li>
-                <li>Applied Data Science </li>
-                <li>Statistical Analysis - I </li>
-              </ol>
-            <li><b>Fall 2021</b></li>
-            <ol>
-              <li>Machine Learning - Implementation and Evaluation </li>
-              <li>Data Analysis</li>
-              <li>Foundations of Software Engineering</li>
-            </ol>
-            <li><b>Spring 2022</b></li>
-            <ol>
-              <li>Artificial Intelligence </li>
-              <li>Distributed Denial Service of attacks</li>
-              <li>Statistical Analysis - II (Regression Analysis)</li>
-            </ol>
-            <li><b>Fall 2022</b></li>
-            <ol>
-              <li>Cloud Computing </li>
-            </ol>
+              {/* <br></br> */}
+              <ul>
+                <li>
+                  <b>Spring 2021</b>
+                  <ol>
+                    <li>Deep Reinforcement Learning </li>
+                    <li>Applied Data Science </li>
+                    <li>Statistical Analysis - I </li>
+                  </ol>
+                </li>
+
+                <li><b>Fall 2021</b>
+                  <ol>
+                    <li>Machine Learning - Implementation and Evaluation </li>
+                    <li>Data Analysis</li>
+                    <li>Foundations of Software Engineering</li>
+                  </ol>
+                  </li>
+
+                <li><b>Spring 2022</b>
+                <ol>
+                  <li>Artificial Intelligence </li>
+                  <li>Distributed Denial Service of attacks</li>
+                  <li>Statistical Analysis - II (Regression Analysis)</li>
+                </ol>
+                </li>
+
+                <li><b>Fall 2022</b>
+                <ol>
+                  <li>Cloud Computing </li>
+                </ol>
+                </li>
+              </ul>
             </div>
           </div>
-        </div>
+        {/* </div> */}
 
         {/* <div className="pl">
           <h1>rishikesh</h1>
@@ -155,10 +161,12 @@ function About (){
           </form>
         </div> */}
 
-      <div className='footer'>
+
+      {/* <div className='footer'>
       
+      </div> */}
       </div>
-      </Container>
+      {/* </Container/> */}
         
         </>
 

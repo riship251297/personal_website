@@ -1,4 +1,4 @@
-.box{
+/* .box{
   margin-top: 20px;
     text-align: justify;
     font-family: system-ui;
@@ -6,8 +6,8 @@
     margin-left: 410px;
     width: 800px;
     font-family: 300;
-  }
-
+  } */
+/* 
 .name{
   width: 275px;
   padding: 2px;
@@ -16,6 +16,9 @@
   font-size: 30px;
   color: black;
   font-family: system-ui;
-  }
+  } */
 
-  
+  .name 
+  {
+    text-align: center;
+  }
