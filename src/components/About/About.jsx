@@ -62,6 +62,7 @@ function About (){
         <div className="box_wrapper">
         <Box/>
         </div>
+        <br></br>
         {/* {/* <h4>Check out my Resume : <a href="https:youtube.com"><GoDesktopDownload/></a> </h4> */}
         {/* <h4>Find my work on  : <FaGithub size={50}/></h4>
         <h4>You can connect me on : <FaLinkedin size={50}/></h4>
@@ -104,6 +105,8 @@ function About (){
             </div>
           </div>
           <hr></hr> */}
+                  <br></br>
+
           <div className="coursework_wrapper">
             <center><h2>MS - COURSEWORK</h2></center>
             <div className="andar">

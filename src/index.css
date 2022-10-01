@@ -72,11 +72,14 @@ text-align: left;
   height: 12vh;
   background-color: #0abd8a;
   color: black;
+  justify-content: space-between;
+
 }
 
 .topbar > nav > div
 {
   margin-top: 20px;
+
 }
 
 .topbar_buttons button
@@ -84,6 +87,8 @@ text-align: left;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 20px;
   color: black;
+  padding: 20px;
+
 }
 
 
