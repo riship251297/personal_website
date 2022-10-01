@@ -1,148 +1,94 @@
 import React from 'react'
 import axios from 'axios'
-import {useState,useEffect} from 'react'
 import Navbar from '../Navbar/Navbar'
 import '../Contact/Contact.css'
-import {EmailShareButton,WhatsappShareButton,FacebookShareButton,LinkedinShareButton, LinkedinIcon} from 'react-share'
-import {FacebookIcon} from 'react-share'
+// import {EmailShareButton,WhatsappShareButton,FacebookShareButton,LinkedinShareButton, LinkedinIcon} from 'react-share'
+// import {FacebookIcon} from 'react-share'
 import { Link } from 'react-router-dom'
+import  {API} from 'aws-amplify'
+import {Container,Button,Form} from 'react-bootstrap';
+
+
+const formState = { username: '', email: '', message: '' };
+  
+  function updateFormState(key, value) {
+    formState[key] = value;
+  }
 
 function Contact() 
 {
 
-  const [name,SetName] = useState("");
-  const [email,SetEmail] = useState("");
-  const [message,SetMessage] = useState("");
-
-
-
-
-
-  async function handle(event)
-    {
-      event.preventDefault();
-      const data = {'username':name,'email':email,'message':message}
-      const response = await axios
-      .post("http://localhost:3001/send_email", data)
-      .then((res) => {
-        console.log(res);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-
-      window.location = '/research';
-      // https://youtube.com/shorts/hREVGYpIzD0?feature=share
-
-
-    }
+  async function addContact() {
+    const data = {
+      body: {
+        username: formState.username,
+        email: formState.email,
+        message: formState.message
+      }
+    };
   
+    const apiData = await API.post('rphatan', '/sendemail', data);
+    window.location.href = 'https://www.rphatan.info'
+    console.log({ apiData });
+    alert('Mail sent');
+  }
 
-    // async function handle(event)
-    // {
-    //   event.preventDefault();
-    //   const contact_form = new FormData();
-    //   contact_form.append("username",name)
-    //   contact_form.append("email",email)
-
-    //   fetch('http://localhost:3001/send_email', {
-    //     method: 'POST',
-    //     headers: {
-    //         'Content-Type': 'application/json'
-    //     },
-    //     body: contact_form
-    // });
-
-      // const url = localhost:4000/api/users/register;
-
-      // let sendData = () => {
-      // axios.post(url, reactData)
-      //   .then(res => console.log('Data send'))
-      //   .catch(err => console.log(err.data))
-      // }
-
-      // axios.put("http://localhost:3001/send_email", contact_form)
-      // .then(res=>console.log(res))
-      // .then(err=>console.log(err))
-
-
-      // await axios.post("http://localhost:3501/send_email/", contact_form).then((res)=>{
-      //   console.log(res)
-
-      
-
-
-      
-       
-      
-
-      // axios
-      // .post("http://localhost:3501/send_email", form_d, {
-      //   headers: {
-      //     "Content-Type": "multipart/form-data",
-      //   },
-      // })
-      // .then((res) => {
-      //   console.log(res);
-      // })
-      // .catch((err) => {
-      //   console.log(err);
-      // });
-
-      
-    
   return (
     <>
     <Navbar/>
+            <Container>
+
     <div className="heading">
       <div className="text">
-        <h3>You plan to contact me ....  ?</h3>
-        <h3>I would love to hear from you ... Here is how you can reach out to me ...</h3>
+        <h3 className="popl">Let's Talk ....  ?</h3>
+        <h3 className="lop">I would love to hear from you. Get in touch with me by providing<br></br> your details and I will reach out to you at the earliest.</h3>
       </div>
       <div className="group">
-        <h2 className='middle'>DROP ME A MESSAGE !</h2>
-        <div className="form"id="formdata">
-          <form action="/send_email"onSubmit={handle}>
+        <h3 className='middle'>DROP ME A MESSAGE !</h3>
 
-            <div className="f_section">
-              <label>Name:
-                <input type="text" 
-                value={name} 
-                placeholder={"Enter your name"}
-                onChange={(e)=> SetName(e.target.value)} />         
-              </label>
-            </div>
+          <Form>
 
-            <div className="s_section">
-              <label>Email :
-                <input type="email" 
-                value={email} 
-                placeholder={"Enter your email"}
-                onChange={(e)=> SetEmail(e.target.value)}/>
-              </label>
-            </div>
+          <Form.Group>
+            <Form.Label>Name:</Form.Label>
+            <Form.Control
+                placeholder="Enter your Name"
+                onChange={e=>  updateFormState('username', e.target.value)} /> 
+          </Form.Group>
+          <br></br>
 
-            <br></br>
-            <div className="area">
-              <label className='aream'>Message :
-                <textarea id="w3review"
-                 name="w3review" 
-                 rows="6" 
-                 cols="35"               
-                placeholder={"Enter your message !!"}
-                onChange={(e)=> SetMessage(e.target.value)} 
-                > 
-               </textarea>
-              </label>
-  
+          <Form.Group>
+            <Form.Label>Email:</Form.Label>
+            <Form.Control
+                placeholder="Enter your Email"
+                onChange={e=>  updateFormState('email', e.target.value)} /> 
+          </Form.Group>
+          <br></br>
 
-            </div>
 
-            <div className="submit_section">
-              <input type="submit"
-              value="Submit" />
-             </div>
-          </form>
+          <Form.Group>
+            <Form.Label>Message:</Form.Label>
+
+            <Form.Control as="textarea" rows={7}
+                placeholder="Enter your message"
+                onChange={e=>  updateFormState('message', e.target.value)} /> 
+          </Form.Group>
+          <br></br>
+          <br></br>
+
+
+
+          <Button style={{marginLeft:95}} onClick={addContact}>Send me a message</Button>
+
+
+
+      
+            
+        
+          </Form>
+
+
+
+            
         </div>
       </div>
       {/* <FacebookShareButton
@@ -154,10 +100,11 @@ function Contact()
           <LinkedinIcon round={true}></LinkedinIcon>
 
         </LinkedinShareButton> */}
-    </div>
+    
     <div className='footer'>
       
-    </div>
+    </div> 
+    </Container>
     </>
   )
 }

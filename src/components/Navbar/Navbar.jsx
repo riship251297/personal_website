@@ -1,10 +1,14 @@
 import React from "react";
 import {Link} from 'react-router-dom';
+import Media from 'react-media';
 
 import '../Navbar/Navbar.css';
 function Navbar(){
     return (
         <React.Fragment>
+            {/* <Media query="(min-width:400px,max-width:1670px)"> */}
+
+
             <div className="upperboard">
                 <div className="names"><a href="/">RISHIKESH</a></div>
                 <nav>

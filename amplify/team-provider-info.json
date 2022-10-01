@@ -1,0 +1,40 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-personalwebsite-dev-164622-authRole",
+      "UnauthRoleArn": "arn:aws:iam::139685921969:role/amplify-personalwebsite-dev-164622-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::139685921969:role/amplify-personalwebsite-dev-164622-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-personalwebsite-dev-164622-deployment",
+      "UnauthRoleName": "amplify-personalwebsite-dev-164622-unauthRole",
+      "StackName": "amplify-personalwebsite-dev-164622",
+      "StackId": "arn:aws:cloudformation:us-east-1:139685921969:stack/amplify-personalwebsite-dev-164622/48431a10-3ddc-11ed-9d23-0ec07ab1c2b3",
+      "AmplifyAppId": "d1a83syc8kqzke"
+    },
+    "categories": {
+      "function": {
+        "sendemailfunction": {
+          "deploymentBucketName": "amplify-personalwebsite-dev-164622-deployment",
+          "s3Key": "amplify-builds/sendemailfunction-4b6d46496e6c70385279-build.zip"
+        },
+        "checkfunctoin": {
+          "deploymentBucketName": "amplify-personalwebsite-dev-164622-deployment",
+          "s3Key": "amplify-builds/checkfunctoin-4478377a62374556786f-build.zip"
+        },
+        "testfunction": {
+          "deploymentBucketName": "amplify-personalwebsite-dev-164622-deployment",
+          "s3Key": "amplify-builds/testfunction-6d4c622f624972597175-build.zip"
+        }
+      },
+      "storage": {
+        "message": {
+          "tableName": "message",
+          "region": "us-east-1",
+          "arn": "arn:aws:dynamodb:us-east-1:139685921969:table/message",
+          "partitionKeyName": "email",
+          "partitionKeyType": "S"
+        }
+      }
+    }
+  }
+}

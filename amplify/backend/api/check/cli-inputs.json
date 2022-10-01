@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/checko": {
+      "name": "/checko",
+      "lambdaFunction": "checkfunctoin",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}
