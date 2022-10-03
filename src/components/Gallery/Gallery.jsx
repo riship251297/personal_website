@@ -55,26 +55,25 @@ function onIncrement(index,type,event)
   
       <Topbar/>
 
-        {/* <div className="title"> */}
+       
 
         {/* <button className='btn btn-primary' onClick={gallery}>FetchNews</button> */}
-          {/* <div className='title_sec'> */}
+ 
           <h3>WELCOME TO MY GALLERY SECTION !!!</h3>
-          {/* </div> */}
+       
           <h5 className='checks'>Preserving memories through photography is one of the best ways to share the past with the future. It allows you to look back on life's biggest achievements and the smallest moments all at once while stirring up stories of years gone by
             or recent weeks. </h5>
           
-        {/* </div>  */}
 
-        {/* <div className="main"> */}
           <div className="first_section_wrapper">
-            <div className="card_section1">
-              <Card style={{ width: '30rem' ,height:'10rem',textAlign:'left' }}>
-                <Card.Img variant="top" src={"images/portfolio.jpg  "} />
+            <div className="card_section1" style={{width:'60%'}}>
+              <Card>
+                <Card.Img variant="top" src={"images/portfolio.jpg "} style={{width:'500px',alignItems: 'center',margin:'auto',display:'block'}}/>
                 <Card.Body>
                   <Card.Title>Old Fort Jackson, Savannah, Georgia</Card.Title>
                   <Card.Text style={{textAlign:'justify'}}>A day well spent to understand the history of the fort and how it participated in the World War II.
-                  History comes alive through live demonstrations & storytelling and displays. </Card.Text>
+                    History comes alive through live demonstrations & storytelling and displays. 
+                  </Card.Text>
                   <div className="buttons_section">
                     <Button className='download'href="images/portfolio.jpg"download="Savannah_trip"onClick={(event) => onIncrement(0,'download',event)}>Download | {counter_download[0]}</Button>
                     <Button className='like'onClick={(event) => onIncrement(0,'like',event)}>Like | {counter_like[0]}</Button>
@@ -84,32 +83,32 @@ function onIncrement(index,type,event)
                     </a>
                   </div>
                 </Card.Body>
-            </Card>
-          {/* </div> */}
+              </Card>
+              </div>
 
-            <div className="card_section2">
-              <Card style={{ width: '35rem' ,height:'20rem',textAlign:'left'}}>
-              <Card.Img variant="top" src={"images/FullSizeRender.png"} />
-              <Card.Body>
-                <Card.Title>Brooklyn Bridge, New York</Card.Title>
-                <Card.Text style={{textAlign:'justify'}}>Probably one of the best evenings spent on this bridge. This bridge is great to walk over and take the views of Brooklyn and Manhattan. Cute stores and places to eat. It is perhaps one of New York City's most popular attractions because it is so photogenic. The Brooklyn Bridge has arguably inspired more art than any other manmade structure in the United States.
-                  The bridge has always attracted daredevils and showmen. If you have the time I highly recommend stroll across the bridge. Walk across whilst taking pics, then drop into DUMBO for lunch or ice cream at the Brooklyn Ice Cream Factory.  </Card.Text>
-                <div className="buttons_section">
-                <Button className='download'href="images/FullSizeRender.png"download="Brooklyn_Bridge"onClick={(event) => onIncrement(1,'download',event)}>Download | {counter_download[1]}</Button>
-                    <Button className='like'onClick={(event) => onIncrement(1,'like',event)}>Like | {counter_like[1]}</Button>
-                    <Button className='share'onClick={(event) => onIncrement(1,'share',event)}>Share | {counter_share[1]}</Button>
-                    <a href="https://en.wikipedia.org/wiki/Brooklyn_Bridge">
-                      <Button className='read' >Read more </Button>
-                    </a>
-                  </div>
-              </Card.Body>
-            </Card>
+            <div className="card_section2" style={{width:'60%'}}>
+              <Card>
+             `   <Card.Img variant="top" src={"images/FullSizeRender.png"}style={{width:'500px',alignItems: 'center',margin:'auto',display:'block'}} />
+                  <Card.Body>
+                    <Card.Title>Brooklyn Bridge, New York</Card.Title>
+                    <Card.Text style={{textAlign:'justify'}}>Probably one of the best evenings spent on this bridge. This bridge is great to walk over and take the views of Brooklyn and Manhattan. Cute stores and places to eat. It is perhaps one of New York City's most popular attractions because it is so photogenic. The Brooklyn Bridge has arguably inspired more art than any other manmade structure in the United States.
+                      The bridge has always attracted daredevils and showmen. If you have the time I highly recommend stroll across the bridge. Walk across whilst taking pics, then drop into DUMBO for lunch or ice cream at the Brooklyn Ice Cream Factory.  </Card.Text>
+                    <div className="buttons_section">
+                    <Button className='download'href="images/FullSizeRender.png"download="Brooklyn_Bridge"onClick={(event) => onIncrement(1,'download',event)}>Download | {counter_download[1]}</Button>
+                        <Button className='like'onClick={(event) => onIncrement(1,'like',event)}>Like | {counter_like[1]}</Button>
+                        <Button className='share'onClick={(event) => onIncrement(1,'share',event)}>Share | {counter_share[1]}</Button>
+                        <a href="https://en.wikipedia.org/wiki/Brooklyn_Bridge">
+                          <Button className='read' >Read more </Button>
+                        </a>
+                      </div>
+                  </Card.Body>`
+              </Card>
             </div>
           </div>
         
-          <div className="second_section">
+          <div className="second_section_wrapper">
             <div className="card_section3">
-              <Card style={{ width: '35rem',textAlign:'left' }}>
+              <Card>
               <Card.Img variant="top" src={"images/IMG_2001.png"} />
               <Card.Body>
                 <Card.Title>Kananaskis, Calgary, Canada</Card.Title>
@@ -121,15 +120,7 @@ function onIncrement(index,type,event)
                 <div className="buttons_section">
                 <Button className='download'href="images/IMG_2001.png"download="Kananaskis"onClick={(event) => onIncrement(2,'download',event)}>Download | {counter_download[2]}</Button>
                     <Button className='like'onClick={(event) => onIncrement(2,'like',event)}>Like | {counter_like[2]}</Button>
-                    <Button className='share'onClick={(event) => onIncrement(2,'share',event)}>Share | {counter_share[2]}</Button>
-                    {/* <div id="link-box"> */}
-                    {/* <ul>
-                      <li><a href="#">Link 1</a></li>
-                      <li><a href="#">Link 2</a></li>
-                      <li><a href="#">Link 3</a></li>
-                      <li><a href="#">Link 4</a></li>
-                    </ul> */}
-                    {/* </div> */}
+                    <Button className='share'onClick={(event) => onIncrement(2,'share',event)}>Share | {counter_share[2]}</Button> 
                     <a href="https://en.wikipedia.org/wiki/Kananaskis_Country">
                       <Button className='read' >Read more </Button>
                     </a>
@@ -138,15 +129,15 @@ function onIncrement(index,type,event)
             </Card>
             </div>
 
-            <div className="card_section4">
-              <Card style={{ width: '35rem' }}>
+             <div className="card_section4">
+              <Card>
               <Card.Img variant="top" src={"images/IMG_2121.png"} />
               <Card.Body>
                 <Card.Title>Coca-Cola World Factory, Atlanta </Card.Title>
                 <Card.Text style={{textAlign:'justify'}}>
                 Immerse yourself in World of Coca-Cola, the one and only place you can explore the story of the world's most popular beverage brand. 
                 It's a place where anyone can experience moments of happiness and wonder. At World of Coca-Cola, inspiration is around every corner - from the vault, to world-class art and memorabilia to more than 100 beverages to taste from around the world. With opportunities it's no wonder that the World of Coke is a must-see among the top things to do in Atlanta, Georgia.
-                </Card.Text>
+                </Card.Text> 
                 <div className="buttons_section">
                 <Button className='download'href="images/portfolio.jpg"download="Savannah_trip"onClick={(event) => onIncrement(3,'download',event)}>Download | {counter_download[3]}</Button>
                     <Button className='like'onClick={() => onIncrement(3,'like')}>Like | {counter_like[3]}</Button>
@@ -160,9 +151,9 @@ function onIncrement(index,type,event)
             </div>
           </div>
           
-          <div className="third_section">
+          <div className="third_section_wrapper">
             <div className="card_section5">
-              <Card style={{ width: '35rem' }}>
+              <Card>
               <Card.Img variant="top" src={"images/IMG_2198.png"} />
               <Card.Body>
                 <Card.Title>Banff Mountain, Calgary, Canada</Card.Title>
@@ -181,12 +172,12 @@ function onIncrement(index,type,event)
                       <Button className='read' >Read more </Button>
                     </a>
                   </div>
-              </Card.Body>
-            </Card>
+              </Card.Body> 
+            </Card> 
             </div>
 
             <div className="card_section6">
-              <Card style={{ width: '35rem' }}>
+              <Card>
               <Card.Img variant="top" src={"images/IMG_2500.jpg"} />
               <Card.Body>
                 <Card.Title>Wateron Park, US-Canada border crossing </Card.Title>
@@ -208,11 +199,11 @@ There was so much to see and do.Waterton park and village is a great spot to vis
               </Card.Body>
             </Card>
             </div>
-          </div>
+          </div> 
         
-          <div className="fourth_section">
+          <div className="fourth_section_wrapper">
             <div className="card_section7">
-              <Card style={{ width: '35rem' }}>
+              <Card>
               <Card.Img variant="top" src={"images/IMG_2619.jpg"} style={{height:'650px'}} />
                 <Card.Body>
                   <Card.Title>Cameron Falls, Wateron park, Canada</Card.Title>
@@ -232,10 +223,10 @@ There was so much to see and do.Waterton park and village is a great spot to vis
                   </div>
                 </Card.Body>
             </Card>
-            </div>
+            </div> 
 
             <div className="card_section8">
-              <Card style={{ width: '35rem' }}>
+              <Card>
               <Card.Img variant="top" src={"images/123.jpg"} style={{height:'400px'}}/>
                 <Card.Body>
                   <Card.Title>Capitol Building, Washington DC, US</Card.Title>
@@ -256,9 +247,9 @@ There was so much to see and do.Waterton park and village is a great spot to vis
 
           </div>
 
-          <div className="fifth_section">
+          <div className="fifth_section_wrapper">
             <div className="card_section9">
-                <Card style={{ width: '35rem' }}>
+                <Card>
                 <Card.Img variant="top" src={"https://personalwebsite9.s3.amazonaws.com/1413921b-52e5-493f-b5e6-d8b8c5c53b12.JPG"} />
                   <Card.Body>
                     <Card.Title>White House, Washington DC, US</Card.Title>
@@ -277,7 +268,7 @@ There was so much to see and do.Waterton park and village is a great spot to vis
               </Card>
             </div>
             <div className="card_section10">
-              <Card style={{ width: '35rem' }}>
+              <Card>
               <Card.Img variant="top" src={"https://personalwebsite9.s3.amazonaws.com/008005f3-4187-4b41-9a90-8660511bb346.JPG"} />
                 <Card.Body>
                   <Card.Title>Spartanburg, South Carolina, US </Card.Title>
@@ -297,12 +288,12 @@ There was so much to see and do.Waterton park and village is a great spot to vis
                 </Card.Body>
             </Card>
             </div>
-          </div>
+          </div> 
 
 
-          <div className="sixth_section">
+          <div className="sixth_section_wrapper">
             <div className="card_section11">
-                <Card style={{ width: '35rem' }}>
+                <Card>
                 <Card.Img variant="top" src={"https://personalwebsite9.s3.amazonaws.com/IMG_0886.jpg"} style={{height:'650px'}}/>
                   <Card.Body>
                     <Card.Title>Sikes Hall, Clemson University, South Carolina, US</Card.Title>
@@ -324,7 +315,7 @@ There was so much to see and do.Waterton park and village is a great spot to vis
               </Card>
             </div>
             <div className="card_section12">
-              <Card style={{ width: '35rem' }}>
+              <Card>
               <Card.Img variant="top" src={"https://personalwebsite9.s3.amazonaws.com/IMG_0368.jpg"} style={{height:'500px',width:'600px'}}/>
                 <Card.Body>
                   <Card.Title>Sangamner, India </Card.Title>
@@ -342,13 +333,9 @@ There was so much to see and do.Waterton park and village is a great spot to vis
                   </div>
                 </Card.Body>
             </Card>
-            </div>
+            </div>  
           </div>
-        </div>
-      {/* </Container> */}
-
-      {/* </Container> */}
-      
+        {/* </div>  */}
     </>
   )
 }

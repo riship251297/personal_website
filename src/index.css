@@ -93,13 +93,22 @@ text-align: left;
   }
 }
 
-.first_section_wrapper
+.first_section_wrapper,.second_section_wrapper,.third_section_wrapper,.fourth_section_wrapper,.fifth_section_wrapper
 {
-  width: 70%;
-  border: 1px solid black;
+  display: flex;
+  width: 80% !important;
+  height: 70vh;
+  font-size: 20px;
+  border: 2px solid black;
+  margin: 9%;
+  border: 0ch;
+  background-clip: none;
 }
 
-.middle_wrapper
+.card
 {
-  
+  background-clip: none;
+  border: 0ch;
+  padding: 0%;
+  width: 75%;
 }

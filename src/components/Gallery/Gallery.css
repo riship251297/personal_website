@@ -3,9 +3,9 @@
     margin-left: 250px;
     width: 1300px;
     padding: 15px;
-}
+} */
 
-.card_section1,.card_section3,.card_section5,.card_section7,.card_section9,.card_section11
+/* .card_section1,.card_section3,.card_section5,.card_section7,.card_section9,.card_section11
 {
     width:750px;
     margin-left: 10px;
@@ -20,10 +20,10 @@
 {
     background-clip: none;
     border: 0ch;
-}
+} */
 
 
-.footer
+/* .footer
 {
     width: 500px;
     height:300px;
@@ -39,10 +39,10 @@
 .rt 
 {
     width: 500px;
-}
+} */
 
 
-.first_section
+/* .first_section
 {
     margin-left: 110px;
     width:1300px;
@@ -73,9 +73,9 @@
     width:1000px;
     height:1000px;
     display: flex;
-}
+} */
 
-.fifth_section
+/* .fifth_section
 {
     margin-left: 110px;
     width:1000px;
@@ -90,7 +90,7 @@
     width:1300px;
     height:800px;
     display: flex;
-}
+} */
 
 .download
 {
@@ -102,11 +102,12 @@
 .share
 {
     color: white;
-    background-color: #000080;
     margin-right: 10px;
-}
-.like
-{
+    background-color: #000080;
+
+} 
+.like 
+{ 
     color: white;
     background-color: #000080;
     margin-right: 10px;
@@ -117,14 +118,14 @@
     color: white;
     background-color: #000080;
     margin-left: -18px;
-}
+} 
 
 .buttons_section
 {
     
     width: 950px;
 }
-
+/* 
 .checks
 {
     margin-top: 40px;
@@ -132,11 +133,12 @@
     width: 1000px;
     font-style: italic;
     justify-content: center;
-}
-
+} */
+/* 
 .title_sec
 {
     display: flex;
     width: 600px;
     margin-left:150px;
-} */
+}  */
+
