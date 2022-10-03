@@ -52,24 +52,22 @@ function onIncrement(index,type,event)
 
   return (
     <>
-    <Container>
-      {/* <Navbar/> */}
+  
       <Topbar/>
 
-      {/* <Container> */}
-        <div className="title">
+        {/* <div className="title"> */}
 
         {/* <button className='btn btn-primary' onClick={gallery}>FetchNews</button> */}
-          <div className='title_sec'>
+          {/* <div className='title_sec'> */}
           <h3>WELCOME TO MY GALLERY SECTION !!!</h3>
-          </div>
+          {/* </div> */}
           <h5 className='checks'>Preserving memories through photography is one of the best ways to share the past with the future. It allows you to look back on life's biggest achievements and the smallest moments all at once while stirring up stories of years gone by
             or recent weeks. </h5>
           
-        </div> 
+        {/* </div>  */}
 
-        <div className="main">
-          <div className="first_section">
+        {/* <div className="main"> */}
+          <div className="first_section_wrapper">
             <div className="card_section1">
               <Card style={{ width: '30rem' ,height:'10rem',textAlign:'left' }}>
                 <Card.Img variant="top" src={"images/portfolio.jpg  "} />
@@ -87,7 +85,7 @@ function onIncrement(index,type,event)
                   </div>
                 </Card.Body>
             </Card>
-          </div>
+          {/* </div> */}
 
             <div className="card_section2">
               <Card style={{ width: '35rem' ,height:'20rem',textAlign:'left'}}>
@@ -347,7 +345,7 @@ There was so much to see and do.Waterton park and village is a great spot to vis
             </div>
           </div>
         </div>
-      </Container>
+      {/* </Container> */}
 
       {/* </Container> */}
       
