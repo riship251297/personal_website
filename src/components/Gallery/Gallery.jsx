@@ -94,7 +94,7 @@ function onIncrement(index,type,event)
                   <Card.Body>
                     <Card.Title>Brooklyn Bridge, New York</Card.Title>
                     <Card.Text style={{textAlign:'justify'}}>Probably one of the best evenings spent on this bridge. This bridge is great to walk over and take the views of Brooklyn and Manhattan. Cute stores and places to eat. It is perhaps one of New York City's most popular attractions because it is so photogenic. The Brooklyn Bridge has arguably inspired more art than any other manmade structure in the United States.
-                      The bridge has always attracted daredevils and showmen. If you have the time I highly recommend stroll across the bridge. Walk across whilst taking pics, then drop into DUMBO for lunch or ice cream at the Brooklyn Ice Cream Factory.  </Card.Text>
+                      The bridge has always attracted daredevils and showmen. Walk across whilst taking pics, then drop into DUMBO for lunch or ice cream at the Brooklyn Ice Cream Factory.  </Card.Text>
                     <div className="buttons_section">
                     <Button className='download'href="images/FullSizeRender.png"download="Brooklyn_Bridge"onClick={(event) => onIncrement(1,'download',event)}>Download | {counter_download[1]}</Button>
                         <Button className='like'onClick={(event) => onIncrement(1,'like',event)}>Like | {counter_like[1]}</Button>
@@ -107,9 +107,13 @@ function onIncrement(index,type,event)
               </Card>
             </div>
           </div>
+          <br></br>
+          
+         
+
         
-          <div className="second_section_wrapper">
-            <div className="card_section3">
+          <div className="second_section_wrapper" >
+            <div className="card_section3" style={{width:'60%'}}>
               <Card>
               <Card.Img variant="top" src={"images/IMG_2001.png"} />
               <Card.Body>
@@ -131,7 +135,7 @@ function onIncrement(index,type,event)
             </Card>
             </div>
 
-             <div className="card_section4">
+             <div className="card_section4" style={{width:'60%'}}>
               <Card>
               <Card.Img variant="top" src={"images/IMG_2121.png"} />
               <Card.Body>
@@ -152,9 +156,17 @@ function onIncrement(index,type,event)
             </Card>
             </div>
           </div>
+
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+         
+
+
           
           <div className="third_section_wrapper">
-            <div className="card_section5">
+            <div className="card_section5" style={{width:'60%'}}>
               <Card>
               <Card.Img variant="top" src={"images/IMG_2198.png"} />
               <Card.Body>
@@ -178,7 +190,7 @@ function onIncrement(index,type,event)
             </Card> 
             </div>
 
-            <div className="card_section6">
+            <div className="card_section6" style={{width:'60%'}}>
               <Card>
               <Card.Img variant="top" src={"images/IMG_2500.jpg"} />
               <Card.Body>
@@ -202,9 +214,11 @@ There was so much to see and do.Waterton park and village is a great spot to vis
             </Card>
             </div>
           </div> 
+          <br></br>
+
         
           <div className="fourth_section_wrapper">
-            <div className="card_section7">
+            <div className="card_section7" style={{width:'60%'}}>
               <Card>
               <Card.Img variant="top" src={"images/IMG_2619.jpg"} style={{height:'650px'}} />
                 <Card.Body>
@@ -227,7 +241,7 @@ There was so much to see and do.Waterton park and village is a great spot to vis
             </Card>
             </div> 
 
-            <div className="card_section8">
+            <div className="card_section8" style={{width:'60%'}}>
               <Card>
               <Card.Img variant="top" src={"images/123.jpg"} style={{height:'400px'}}/>
                 <Card.Body>
@@ -248,9 +262,11 @@ There was so much to see and do.Waterton park and village is a great spot to vis
             </div>
 
           </div>
+          <br></br>
+
 
           <div className="fifth_section_wrapper">
-            <div className="card_section9">
+            <div className="card_section9" style={{width:'60%'}}>
                 <Card>
                 <Card.Img variant="top" src={"https://personalwebsite9.s3.amazonaws.com/1413921b-52e5-493f-b5e6-d8b8c5c53b12.JPG"} />
                   <Card.Body>
@@ -269,7 +285,7 @@ There was so much to see and do.Waterton park and village is a great spot to vis
                   </Card.Body>
               </Card>
             </div>
-            <div className="card_section10">
+            <div className="card_section10" style={{width:'60%'}}>
               <Card>
               <Card.Img variant="top" src={"https://personalwebsite9.s3.amazonaws.com/008005f3-4187-4b41-9a90-8660511bb346.JPG"} />
                 <Card.Body>
@@ -291,10 +307,12 @@ There was so much to see and do.Waterton park and village is a great spot to vis
             </Card>
             </div>
           </div> 
+          <br></br>
+
 
 
           <div className="sixth_section_wrapper">
-            <div className="card_section11">
+            <div className="card_section11" style={{width:'60%'}}>
                 <Card>
                 <Card.Img variant="top" src={"https://personalwebsite9.s3.amazonaws.com/IMG_0886.jpg"} style={{height:'650px'}}/>
                   <Card.Body>
@@ -316,7 +334,7 @@ There was so much to see and do.Waterton park and village is a great spot to vis
                   </Card.Body>
               </Card>
             </div>
-            <div className="card_section12">
+            <div className="card_section12" style={{width:'60%'}}>
               <Card>
               <Card.Img variant="top" src={"https://personalwebsite9.s3.amazonaws.com/IMG_0368.jpg"} style={{height:'500px',width:'600px'}}/>
                 <Card.Body>
