@@ -93,7 +93,7 @@ text-align: left;
   }
 }
 
-.first_section_wrapper,.second_section_wrapper,.third_section_wrapper,.fourth_section_wrapper,.fifth_section_wrapper
+.first_section_wrapper,.second_section_wrapper
 {
   display: flex;
   width: 80% !important;
@@ -111,4 +111,23 @@ text-align: left;
   border: 0ch;
   padding: 0%;
   width: 75%;
+}
+
+.section_title_wrapper
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.quote_wrapper
+{
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  text-align: justify;
 }

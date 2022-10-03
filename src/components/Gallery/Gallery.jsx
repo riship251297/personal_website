@@ -58,11 +58,13 @@ function onIncrement(index,type,event)
        
 
         {/* <button className='btn btn-primary' onClick={gallery}>FetchNews</button> */}
- 
-          <h3>WELCOME TO MY GALLERY SECTION !!!</h3>
-       
-          <h5 className='checks'>Preserving memories through photography is one of the best ways to share the past with the future. It allows you to look back on life's biggest achievements and the smallest moments all at once while stirring up stories of years gone by
+          <div className='section_title_wrapper'>
+            <h3>WELCOME TO MY GALLERY SECTION !!!</h3>
+          </div>
+          <div className='quote_wrapper'>
+          <h5>Preserving memories through photography is one of the best ways to share the past with the future. It allows you to look back on life's biggest achievements and the smallest moments all at once while stirring up stories of years gone by
             or recent weeks. </h5>
+            </div>
           
 
           <div className="first_section_wrapper">
