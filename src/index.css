@@ -221,3 +221,29 @@ text-align: left;
   width: 60% !important;
   /* font-size: 25px; */
 }
+
+.Rl,.Rl2,.Ds,.speed{
+  width: 80%;
+  display: flex;
+}
+.Rl_left1,.Rl_left2,.Ds_left,.speed-left
+{
+  display: flex;
+  flex-direction: column;
+  width: 60% !important;
+  font-size: 20px;
+  text-align: justify;
+  align-content: center;
+  justify-content: center;
+}
+
+.Rl_right1,.Rl_right2,.Ds_right,.speed-right
+{
+  margin-left: 10%;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  text-align: justify;
+  align-content: center;
+  justify-content: center;
+}

@@ -6,11 +6,13 @@ const Projects = () => {
   return (
       <>
       <Topbar/>
+      <br></br>
+      <br></br>
       <div className='Deep'>
         <div className='Rl'>
           <div className='Rl_left1'>
             <ul>
-              <ul className='opl'><b>DEEP REINFORCEMENT LEARNING BASED PROJECTS : </b></ul>
+              <ul className='opl' style={{marginBottom:'10px'}}><b>DEEP REINFORCEMENT LEARNING BASED PROJECTS : </b></ul>
               <ol>
                 <ul className='pollo'><b>Proximal Policy Optimization</b> - 2021</ul>
                 <ul className='pollo'><mark>Stack :| Deep Learning | Python | Tensorflow | Open-AI Gym | PyTorch </mark></ul>
@@ -40,7 +42,8 @@ const Projects = () => {
             </video>
           </div>
         </div>
-
+        <br></br>
+        <br></br>
         <div className='Rl2'>
           <div className='Rl_left2'>
             <ul>
@@ -74,7 +77,8 @@ const Projects = () => {
           </div>
         </div>
         {/* <hr></hr> */}
-             
+        <br></br>
+        <br></br>
         <div className='Ds'>
           <div className='Ds_left'>
             <ul>
@@ -105,6 +109,8 @@ const Projects = () => {
             <img src={"images/table.png"} width="450px"height="350px"alt=''/>
           </div>
         </div>
+        <br></br>
+        <br></br>
         <div className='speed'>
           <div className='speed-left'>
             <ul>
