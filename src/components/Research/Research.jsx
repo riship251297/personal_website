@@ -71,21 +71,18 @@ function Research()
                                     </li>
 
                                     <div className="lll">
-                                        <div className="ll">
-                                            {/* <h4 className="plp"> FSL BET generated images </h4>
-                                            <h4 className="opol"> Face and brain tissue probability</h4> */}
-                                        </div>
+                                        
                                         <div className="io">
                                             <img src={"images/rishi_0.2.png"} className="img-circled"width="850px"height="400px"alt=''/>
-                                            <h4 style={{marginLeft:'-85px'}}> Face and Brain cut probabilities : 0.8 and 0.3</h4>
+                                            <h4 style={{marginLeft:'195px'}}> Face and Brain cut probabilities : 0.8 and 0.3</h4>
                                         </div>
                                         <div className="uo">
                                             <img src={"images/rishi_0.3.png"} className="img-circled"width="850px"height="400px"alt=''/>
-                                            <h4 style={{marginLeft:'-85px'}}> Face and Brain cut probabilities : 0.35 and 0.2</h4>
+                                            <h4 style={{marginLeft:'195px'}}> Face and Brain cut probabilities : 0.35 and 0.2</h4>
                                         </div>
                                         <div className="yo">
                                             <img src={"images/rishi_0.4.png"} className="img-circled"width="850px"height="400px"alt=''/>   
-                                            <h4 style={{marginLeft:'-85px'}}> Face and Brain cut probabilities : 0.17 and 0.12</h4>
+                                            <h4 style={{marginLeft:'195px'}}> Face and Brain cut probabilities : 0.17 and 0.12</h4>
                                         </div>
                                     
                                     </div>

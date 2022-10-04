@@ -213,15 +213,19 @@ text-align: left;
 
 .research_wrapper
 {
+  text-align: justify;
   margin: auto;
   flex-direction: column;
-  text-align: center;
   align-content: center;
   justify-content: center;
   width: 60% !important;
-  /* font-size: 25px; */
+  font-size: 20px;
 }
 
+.Deep
+{
+  margin-left: 5%;
+}
 .Rl,.Rl2,.Ds,.speed{
   width: 80%;
   display: flex;
@@ -246,4 +250,9 @@ text-align: left;
   text-align: justify;
   align-content: center;
   justify-content: center;
+}
+
+.lll
+{
+  margin-left: 15%;
 }
