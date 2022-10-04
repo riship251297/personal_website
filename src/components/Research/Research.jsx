@@ -8,21 +8,17 @@ function Research()
     return(
         <>
            <div>
-               {/* <Navbar/> */}
                <Topbar/>
-               <h3 className="opo">DEEP LEARNING AND BIOINFORMATICS </h3>
+               <h3 className="research_title_wrapper">DEEP LEARNING AND BIOINFORMATICS </h3>
                <br></br>
-                <h5 className="edit">Research funded by National Institute of Health Sciences, US</h5>
-
-
-               <div className="main">
-
-                    <div className="first">
+                <h5 className="research_funding_wrapper">Research funded by National Institute of Health Sciences, US</h5>
+                <div className="research_wrapper">
+                    <div className="research_first_section_wrapper">
                         <ul>
                             <br></br>
-                            <h3 className="pop">Quality Evaluation of Shared Datasets :</h3>
+                            <h3 className="research_first_section_title">Quality Evaluation of Shared Datasets :</h3>
                             <ol>
-                                <div className="first-second">
+                                <div className="research_first_content_wrapper">
                                     <li>This research project is supervised by Dr. James Wang, and is in collaboration with neuroscience experts  Dr. Mark Eckert and Dr. Kenny Vaden, 
                                     from Medical University of South Carolina.&nbsp;When a participant's data is collected and stored, &nbsp;protecting their personal privacy 
                                     is critical because protecting such individuals' interests is important. This data is an essential component of academic research and 
@@ -76,67 +72,67 @@ function Research()
 
                                     <div className="lll">
                                         <div className="ll">
-                                            <h4 className="plp"> FSL BET generated images </h4>
-                                            <h4 className="opol"> Face and brain tissue probability</h4>
+                                            {/* <h4 className="plp"> FSL BET generated images </h4>
+                                            <h4 className="opol"> Face and brain tissue probability</h4> */}
                                         </div>
                                         <div className="io">
                                             <img src={"images/rishi_0.2.png"} className="img-circled"width="850px"height="400px"alt=''/>
-                                            <h4>0.8 and 0.3</h4>
+                                            <h4 style={{marginLeft:'-85px'}}> Face and Brain cut probabilities : 0.8 and 0.3</h4>
                                         </div>
                                         <div className="uo">
                                             <img src={"images/rishi_0.3.png"} className="img-circled"width="850px"height="400px"alt=''/>
-                                            <h4>0.35 and 0.2</h4>
+                                            <h4 style={{marginLeft:'-85px'}}> Face and Brain cut probabilities : 0.35 and 0.2</h4>
                                         </div>
                                         <div className="yo">
                                             <img src={"images/rishi_0.4.png"} className="img-circled"width="850px"height="400px"alt=''/>   
-                                            <h4>0.17 and 0.12</h4>
+                                            <h4 style={{marginLeft:'-85px'}}> Face and Brain cut probabilities : 0.17 and 0.12</h4>
                                         </div>
-                                      
+                                    
                                     </div>
                                 </div>
-                            </ol>
-                        </ul>
-                    </div>
-                    <hr></hr>
-                    <br>
-                    </br>
-                <div className="dysl">
-                    <h3 className="pop">Dyslexia Data Consortium : <a href="https://dyslexia.computing.clemson.edu/dashboard/">Link to the Consortium</a></h3>
-                    <ol>
-                        <div className="first-second">
-                            <li>Dyslexia Data Consortium, is a web-based platform for dyslexia data sharing and research collaboration. 
-                                With this platform, researchers can share dyslexia datasets and research methods to address 
-                                fundamental questions about dyslexia, replicate research findings, disseminate new ideas to process and 
-                                analyze dyslexia datasets, and educate the next generation of dyslexia researchers.
-                            </li>
-                            <li>
-                            This platform also establishes new methods to compute and provide researchers with brain morphology measures, 
-                            such as gray matter images, white matter images, brain volumes, etc., by exploiting massive parallel computation
-                             with Clemson University's Palmetto supercomputer, and stores these datasets and computed morphological metrics 
-                             in BIDS compliant format, resolving the issues related to the data heterogeneity.One of the primary purposes of 
-                             developing a Dyslexia Data Consortium is to promote data sharing and research collaboration.
-                            </li>
-                            
-                            <li>Different types of secondary datasets generated include :  <br></br>a) Native Space Gray/White Matter Image <br></br>b) Forward and Inverse Warped Image
-                            <br></br>c) Modulated and Normalized Gray/White Matter Image <br></br>d) Normalized Bias Field Corrected Image and Surface data. <br></br>
-
-                            </li>
-                            <li>Native space image is the image in original space, i.e., not transformed by some registration or normalization function. Native Space analysis gives an 
-                            alternative to spatial normalization and smoothing steps in studies to analyze the white matter and the gray matter. 
-                            Warped images are manipulated images such that structures or shapes in an image are distorted to fit similar but different-sized 
-                            shapes in a template image.</li>
-
-                            <li>Spatial normalized images are deformed images that makes it possible for a location in the brain image of 
-                            a subject map to the exact location in the brain image of a different subject. Bias field corrected images are images that remove bias 
-                            field and correction of data corruption due to bias field using technique called bias field correction is used.
-                            Dyslexia data consortium also provides data such as left central thickness, left spherical thickness, etc.,
-                            for all the uploaded MRI images. All these datasets are available for users to download.
-                            </li>
+                                </ol>
+                            </ul>
                         </div>
-                    </ol>
+                        <hr></hr>
+                        <br>
+                        </br>
+                    <div className="dysl">
+                        <h3 className="pop">Dyslexia Data Consortium : <a href="https://dyslexia.computing.clemson.edu/dashboard/">Link to the Consortium</a></h3>
+                        <ol>
+                            <div className="first-second">
+                                <li>Dyslexia Data Consortium, is a web-based platform for dyslexia data sharing and research collaboration. 
+                                    With this platform, researchers can share dyslexia datasets and research methods to address 
+                                    fundamental questions about dyslexia, replicate research findings, disseminate new ideas to process and 
+                                    analyze dyslexia datasets, and educate the next generation of dyslexia researchers.
+                                </li>
+                                <li>
+                                This platform also establishes new methods to compute and provide researchers with brain morphology measures, 
+                                such as gray matter images, white matter images, brain volumes, etc., by exploiting massive parallel computation
+                                with Clemson University's Palmetto supercomputer, and stores these datasets and computed morphological metrics 
+                                in BIDS compliant format, resolving the issues related to the data heterogeneity.One of the primary purposes of 
+                                developing a Dyslexia Data Consortium is to promote data sharing and research collaboration.
+                                </li>
+                                
+                                <li>Different types of secondary datasets generated include :  <br></br>a) Native Space Gray/White Matter Image <br></br>b) Forward and Inverse Warped Image
+                                <br></br>c) Modulated and Normalized Gray/White Matter Image <br></br>d) Normalized Bias Field Corrected Image and Surface data. <br></br>
+
+                                </li>
+                                <li>Native space image is the image in original space, i.e., not transformed by some registration or normalization function. Native Space analysis gives an 
+                                alternative to spatial normalization and smoothing steps in studies to analyze the white matter and the gray matter. 
+                                Warped images are manipulated images such that structures or shapes in an image are distorted to fit similar but different-sized 
+                                shapes in a template image.</li>
+
+                                <li>Spatial normalized images are deformed images that makes it possible for a location in the brain image of 
+                                a subject map to the exact location in the brain image of a different subject. Bias field corrected images are images that remove bias 
+                                field and correction of data corruption due to bias field using technique called bias field correction is used.
+                                Dyslexia data consortium also provides data such as left central thickness, left spherical thickness, etc.,
+                                for all the uploaded MRI images. All these datasets are available for users to download.
+                                </li>
+                            </div>
+                        </ol>
+                    </div>
                 </div>
-               </div>
-           </div>
+            </div>
            <div className='footer'>
       
       </div>

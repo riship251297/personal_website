@@ -188,3 +188,36 @@ text-align: left;
  margin-left: 75%;
  
 }
+
+.research_title_wrapper
+{
+  display: flex;
+  flex-direction: column;
+  width: 100% !important;
+  font-size: 30px;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.research_funding_wrapper
+{
+  display: flex;
+  flex-direction: column;
+  width: 97% !important;
+  font-size: 20px;
+  text-align: right;
+  align-content: right;
+  justify-content: right;
+}
+
+.research_wrapper
+{
+  margin: auto;
+  flex-direction: column;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  width: 60% !important;
+  /* font-size: 25px; */
+}

@@ -5,7 +5,6 @@ import Topbar from '../Topbar/Topbar';
 const Projects = () => {
   return (
       <>
-      {/* <Navbar/> */}
       <Topbar/>
       <div className='Deep'>
         <div className='Rl'>
