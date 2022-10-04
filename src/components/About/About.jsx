@@ -52,6 +52,7 @@ function About (){
           
     return (
         <>
+
   
         <Topbar/>
         <div className="main_wrapper">

@@ -100,9 +100,6 @@ text-align: left;
   width: 80% !important;
   height: 120vh;
   font-size: 19px;
-  /* border: 2px solid black; */
-  /* margin: 9%; */
-  /* border: 0ch; */
   background-clip: none;
 }
 
@@ -183,4 +180,11 @@ text-align: left;
   align-items: center;
   width: 50%;
   text-align: justify;
+}
+
+.resume-wrapper
+{
+ margin-top: 30px;
+ margin-left: 75%;
+ 
 }
