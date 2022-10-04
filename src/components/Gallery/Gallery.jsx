@@ -41,9 +41,10 @@ function onIncrement(index,type,event)
   }
   if (type == 'share')
   {
-
+    event.target.style.backgroundColor = "red"
+    event.currentTarget.disabled = true;
     const countersCopy = [...counter_share];
-    countersCopy[index] += 1;
+    countersCopy[index] -= 1;
     setCountershare(countersCopy);
   }
 
@@ -52,11 +53,7 @@ function onIncrement(index,type,event)
 
   return (
     <>
-  
       <Topbar/>
-
-       
-
         {/* <button className='btn btn-primary' onClick={gallery}>FetchNews</button> */}
           <div className='section_title_wrapper'>
             <h3>WELCOME TO MY GALLERY SECTION !!!</h3>
@@ -79,7 +76,7 @@ function onIncrement(index,type,event)
                   <div className="buttons_section">
                     <Button className='download'href="images/portfolio.jpg"download="Savannah_trip"onClick={(event) => onIncrement(0,'download',event)}>Download | {counter_download[0]}</Button>
                     <Button className='like'onClick={(event) => onIncrement(0,'like',event)}>Like | {counter_like[0]}</Button>
-                    <Button className='share'onClick={() => onIncrement(0,'share')}>Share | {counter_share[0]}</Button>
+                    <Button className='share'onClick={(event) => onIncrement(0,'share',event)}>Dislike | {counter_share[0]}</Button>
                     <a href="https://en.wikipedia.org/wiki/Savannah,_Georgia">
                       <Button className='read' >Read more </Button>
                     </a>
@@ -98,7 +95,7 @@ function onIncrement(index,type,event)
                     <div className="buttons_section">
                     <Button className='download'href="images/FullSizeRender.png"download="Brooklyn_Bridge"onClick={(event) => onIncrement(1,'download',event)}>Download | {counter_download[1]}</Button>
                         <Button className='like'onClick={(event) => onIncrement(1,'like',event)}>Like | {counter_like[1]}</Button>
-                        <Button className='share'onClick={(event) => onIncrement(1,'share',event)}>Share | {counter_share[1]}</Button>
+                        <Button className='share'onClick={(event) => onIncrement(1,'share',event)}>Dislike | {counter_share[1]}</Button>
                         <a href="https://en.wikipedia.org/wiki/Brooklyn_Bridge">
                           <Button className='read' >Read more </Button>
                         </a>
@@ -126,7 +123,7 @@ function onIncrement(index,type,event)
                 <div className="buttons_section">
                 <Button className='download'href="images/IMG_2001.png"download="Kananaskis"onClick={(event) => onIncrement(2,'download',event)}>Download | {counter_download[2]}</Button>
                     <Button className='like'onClick={(event) => onIncrement(2,'like',event)}>Like | {counter_like[2]}</Button>
-                    <Button className='share'onClick={(event) => onIncrement(2,'share',event)}>Share | {counter_share[2]}</Button> 
+                    <Button className='share'onClick={(event) => onIncrement(2,'share',event)}>Dislike | {counter_share[2]}</Button> 
                     <a href="https://en.wikipedia.org/wiki/Kananaskis_Country">
                       <Button className='read' >Read more </Button>
                     </a>
@@ -146,8 +143,8 @@ function onIncrement(index,type,event)
                 </Card.Text> 
                 <div className="buttons_section">
                 <Button className='download'href="images/portfolio.jpg"download="Savannah_trip"onClick={(event) => onIncrement(3,'download',event)}>Download | {counter_download[3]}</Button>
-                    <Button className='like'onClick={() => onIncrement(3,'like')}>Like | {counter_like[3]}</Button>
-                    <Button className='share'onClick={() => onIncrement(3,'share')}>Share | {counter_share[3]}</Button>
+                    <Button className='like'onClick={(event) => onIncrement(3,'like',event)}>Like | {counter_like[3]}</Button>
+                    <Button className='share'onClick={(event) => onIncrement(3,'share',event)}>Dislike | {counter_share[3]}</Button>
                     <a href="https://en.wikipedia.org/wiki/World_of_Coca-Cola">
                       <Button className='read' >Read more </Button>
                     </a>
@@ -180,8 +177,8 @@ function onIncrement(index,type,event)
                 </Card.Text>
                 <div className="buttons_section">
                 <Button className='download'href="images/portfolio.jpg"download="Savannah_trip"onClick={(event) => onIncrement(4,'download',event)}>Download | {counter_download[4]}</Button>
-                    <Button className='like'onClick={() => onIncrement(4,'like')}>Like | {counter_like[4]}</Button>
-                    <Button className='share'onClick={() => onIncrement(4,'share')}>Share | {counter_share[4]}</Button>
+                    <Button className='like'onClick={(event) => onIncrement(4,'like',event)}>Like | {counter_like[4]}</Button>
+                    <Button className='share'onClick={(event) => onIncrement(4,'share',event)}>Dislike | {counter_share[4]}</Button>
                     <a href="https://google.com">
                       <Button className='read' >Read more </Button>
                     </a>
@@ -205,7 +202,7 @@ There was so much to see and do.Waterton park and village is a great spot to vis
                 <div className="buttons_section">
                 <Button className='download'href="images/portfolio.jpg"download="Savannah_trip"onClick={() => onIncrement(5,'download')}>Download | {counter_download[5]}</Button>
                     <Button className='like'onClick={() => onIncrement(5,'like')}>Like | {counter_like[5]}</Button>
-                    <Button className='share'onClick={() => onIncrement(5,'share')}>Share | {counter_share[5]}</Button>
+                    <Button className='share'onClick={() => onIncrement(5,'share')}>Dislike| {counter_share[5]}</Button>
                     <a href="https://google.com">
                       <Button className='read' >Read more </Button>
                     </a>
@@ -215,6 +212,10 @@ There was so much to see and do.Waterton park and village is a great spot to vis
             </div>
           </div> 
           <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+
 
         
           <div className="fourth_section_wrapper">
@@ -231,8 +232,8 @@ There was so much to see and do.Waterton park and village is a great spot to vis
                   </Card.Text>
                   <div className="buttons_section">
                   <Button className='download'href="images/portfolio.jpg"download="Savannah_trip"onClick={() => onIncrement(6,'download')}>Download | {counter_download[6]}</Button>
-                    <Button className='like'onClick={() => onIncrement(6,'like')}>Like | {counter_like[6]}</Button>
-                    <Button className='share'onClick={() => onIncrement(6,'share')}>Share | {counter_share[6]}</Button>
+                    <Button className='like'onClick={(event) => onIncrement(6,'like',event)}>Like | {counter_like[6]}</Button>
+                    <Button className='share'onClick={(event) => onIncrement(6,'share',event)}>Dislike | {counter_share[6]}</Button>
                     <a href="https://google.com">
                       <Button className='read' >Read more </Button>
                     </a>
@@ -251,8 +252,8 @@ There was so much to see and do.Waterton park and village is a great spot to vis
                   </Card.Text>
                   <div className="buttons_section">
                   <Button className='download'href="images/portfolio.jpg"download="Savannah_trip"onClick={() => onIncrement(7,'download')}>Download | {counter_download[7]}</Button>
-                    <Button className='like'onClick={() => onIncrement(7,'like')}>Like | {counter_like[7]}</Button>
-                    <Button className='share'onClick={() => onIncrement(7,'share')}>Share | {counter_share[7]}</Button>
+                    <Button className='like'onClick={(event) => onIncrement(7,'like',event)}>Like | {counter_like[7]}</Button>
+                    <Button className='share'onClick={(event) => onIncrement(7,'share',event)}>Dislike | {counter_share[7]}</Button>
                     <a href="https://google.com">
                       <Button className='read' >Read more </Button>
                     </a>
@@ -263,6 +264,10 @@ There was so much to see and do.Waterton park and village is a great spot to vis
 
           </div>
           <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+
 
 
           <div className="fifth_section_wrapper">
@@ -276,8 +281,8 @@ There was so much to see and do.Waterton park and village is a great spot to vis
                     </Card.Text>
                     <div className="buttons_section">
                     <Button className='download'href="images/portfolio.jpg"download="Savannah_trip"onClick={() => onIncrement(8,'download')}>Download | {counter_download[8]}</Button>
-                    <Button className='like'onClick={() => onIncrement(8,'like')}>Like | {counter_like[8]}</Button>
-                    <Button className='share'onClick={() => onIncrement(8,'share')}>Share | {counter_share[8]}</Button>
+                    <Button className='like'onClick={(event) => onIncrement(8,'like',event)}>Like | {counter_like[8]}</Button>
+                    <Button className='share'onClick={(event) => onIncrement(8,'share',event)}>Dislike | {counter_share[8]}</Button>
                       <a href="https://google.com">
                         <Button className='read'>Read more </Button>
                       </a>
@@ -297,8 +302,8 @@ There was so much to see and do.Waterton park and village is a great spot to vis
                   </Card.Text>
                   <div className="buttons_section">
                   <Button className='download'href="images/portfolio.jpg"download="Savannah_trip"onClick={() => onIncrement(9,'download')}>Download | {counter_download[9]}</Button>
-                    <Button className='like'onClick={() => onIncrement(9,'like')}>Like | {counter_like[9]}</Button>
-                    <Button className='share'onClick={() => onIncrement(9,'share')}>Share | {counter_share[9]}</Button>
+                    <Button className='like'onClick={(event) => onIncrement(9,'like',event)}>Like | {counter_like[9]}</Button>
+                    <Button className='share'onClick={(event) => onIncrement(9,'share',event)}>Dislike | {counter_share[9]}</Button>
                     <a href="https://google.com">
                       <Button className='read' >Read more </Button>
                     </a>
@@ -308,6 +313,10 @@ There was so much to see and do.Waterton park and village is a great spot to vis
             </div>
           </div> 
           <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+
 
 
 
@@ -325,8 +334,8 @@ There was so much to see and do.Waterton park and village is a great spot to vis
                     </Card.Text>
                     <div className="buttons_section">
                     <Button className='download'href="images/portfolio.jpg"download="Savannah_trip"onClick={() => onIncrement(8,'download')}>Download | {counter_download[8]}</Button>
-                    <Button className='like'onClick={() => onIncrement(8,'like')}>Like | {counter_like[8]}</Button>
-                    <Button className='share'onClick={() => onIncrement(8,'share')}>Share | {counter_share[8]}</Button>
+                    <Button className='like'onClick={(event) => onIncrement(8,'like',event)}>Like | {counter_like[8]}</Button>
+                    <Button className='share'onClick={(event) => onIncrement(8,'share',event)}>Dislike| {counter_share[8]}</Button>
                       <a href="https://google.com">
                         <Button className='read'>Read more </Button>
                       </a>
@@ -345,8 +354,8 @@ There was so much to see and do.Waterton park and village is a great spot to vis
                   </Card.Text>
                   <div className="buttons_section">
                   <Button className='download'href="images/portfolio.jpg"download="Savannah_trip"onClick={() => onIncrement(9,'download')}>Download | {counter_download[9]}</Button>
-                    <Button className='like'onClick={() => onIncrement(9,'like')}>Like | {counter_like[9]}</Button>
-                    <Button className='share'onClick={() => onIncrement(9,'share')}>Share | {counter_share[9]}</Button>
+                    <Button className='like'onClick={(event) => onIncrement(9,'like',event)}>Like | {counter_like[9]}</Button>
+                    <Button className='share'onClick={(event) => onIncrement(9,'share',event)}>Dislike | {counter_share[9]}</Button>
                     <a href="https://google.com">
                       <Button className='read' >Read more </Button>
                     </a>
@@ -363,6 +372,5 @@ There was so much to see and do.Waterton park and village is a great spot to vis
 export default Gallery;
 
 
-// Hosted the website using Amazon's Amplify and Route 53 web service with S3 bucket as storage for 
 
 
