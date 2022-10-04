@@ -82,7 +82,7 @@ const Projects = () => {
         <div className='Ds'>
           <div className='Ds_left'>
             <ul>
-              <ul className='opl'><b>MACHINE LEARNING BASED PROJECTS : </b></ul>
+              <ul className='opl' style={{marginBottom:'10px'}}><b>MACHINE LEARNING BASED PROJECTS : </b></ul>
               <ol>
                 <ul className='pollo'><b>Acceleration Prediction of Cars</b></ul>
                 <ul className='pollo'><mark>Stack :| Machine Learning | Python | Pandas | Matplotlib </mark></ul>

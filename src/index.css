@@ -40,15 +40,16 @@ code {
 {
   display: flex;
   flex-direction: column;
-  width: 50% !important;
-  /* text-align: justify; */
+  width: 60% !important;
+  font-size: 20px;
+  text-align: justify;
 }
 
 .coursework_wrapper
 {
   width: 50% !important;
   text-align: left !important;
-
+  font-size: 20px;
 }
 .coursework_wrapper .andar
 {
