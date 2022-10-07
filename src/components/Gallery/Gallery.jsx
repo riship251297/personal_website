@@ -124,10 +124,7 @@ function Gallery() {
                   and Manhattan. Cute stores and places to eat. It is perhaps
                   one of New York City's most popular attractions because it is
                   so photogenic. The Brooklyn Bridge has arguably inspired more
-                  art than any other manmade structure in the United States. The
-                  bridge has always attracted daredevils and showmen. Walk
-                  across whilst taking pics, then drop into DUMBO for lunch or
-                  ice cream at the Brooklyn Ice Cream Factory.{" "}
+                  art than any other manmade structure in the United States. {" "}
                 </Card.Text>
                 <div className="buttons_section">
                   <Button
