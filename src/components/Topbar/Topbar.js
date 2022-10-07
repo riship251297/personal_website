@@ -31,9 +31,9 @@ function Topbar(props) {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <Typography variant="h6" sx={{ my: 2 }}
-                  onclick={()=>navigate(`/`)}
+                  onClick={()=>navigate(`/`)}
                   >
-                                                <Link to ="/" >RISHIKESH</Link>
+      <Link to ="/" >RISHIKESH</Link>
 
       </Typography>
       <Divider />

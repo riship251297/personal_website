@@ -8,6 +8,8 @@ import { Link } from 'react-router-dom'
 import  {API} from 'aws-amplify'
 import {Container,Button,Form} from 'react-bootstrap';
 import Topbar from '../Topbar/Topbar'
+import Swal from 'sweetalert2'
+
 
 const formState = { username: '', email: '', message: '' };
   
@@ -18,7 +20,7 @@ const formState = { username: '', email: '', message: '' };
 function Contact() 
 {
 
-  async function addContact() {
+  function addContact() {
     const data = {
       body: {
         username: formState.username,
@@ -27,10 +29,36 @@ function Contact()
       }
     };
   
-    const apiData = await API.post('rphatan', '/sendemail', data);
-    window.location.href = 'https://www.rphatan.info'
-    console.log({ apiData });
-    alert('Mail sent');
+    API.post('rphatan', '/sendemail', data);
+    // Swal.fire({
+    //   'Thanks for providing your details !!!',
+    //   'I really appreciate it !!',
+    //   'success'})
+
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Your work has been saved',
+        showConfirmButton: false,
+        timer: 1500
+      })
+
+    // setTimeout(function () {
+    //   window.location.href = '/'
+
+       
+    // }, 5000);
+  
+    
+    window.location.href = '/'
+    // console.log({ apiData });
+    // alert('Mail sent');
+
+  //   Swal.fire(
+  //     'Thanks for !!!',
+  //     'I really appreciate it !!',
+  //     'success')
+  // }
   }
 
   return (

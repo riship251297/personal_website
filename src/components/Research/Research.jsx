@@ -9,14 +9,18 @@ function Research()
         <>
            <div>
                <Topbar/>
-               <h3 className="research_title_wrapper">DEEP LEARNING AND BIOINFORMATICS </h3>
-               <br></br>
-                <h5 className="research_funding_wrapper">Research funded by National Institute of Health Sciences, US</h5>
+               <div className="research_title_wrapper"><h3>DEEP LEARNING AND BIOINFORMATICS</h3></div>
+               {/* <h3 className="research_title_wrapper">DEEP LEARNING AND BIOINFORMATICS </h3> */}
+               {/* <br></br> */}
+               <div className="research_funding_wrapper">
+                <p>Research funded by National Institute of Health Sciences, US</p>
+                </div>
                 <div className="research_wrapper">
                     <div className="research_first_section_wrapper">
                         <ul>
                             <br></br>
                             <h3 className="research_first_section_title">Quality Evaluation of Shared Datasets :</h3>
+                            
                             <ol>
                                 <div className="research_first_content_wrapper">
                                     <li>This research project is supervised by Dr. James Wang, and is in collaboration with neuroscience experts  Dr. Mark Eckert and Dr. Kenny Vaden, 

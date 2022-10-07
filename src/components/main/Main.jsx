@@ -8,8 +8,8 @@ function Main() {
         <>
         <Topbar/>
         <div className="resume-wrapper">
-            <a href="https://personalwebsite9.s3.amazonaws.com/resume_rishikesh_251297.pdf" download='Rishikesh_resume'>
-                <button type="button" class="btn btn-dark">Download Resume</button>
+            <a href="https://personalwebsite9.s3.amazonaws.com/resume_rishikesh_251297.pdf"download='Rishikesh_resume'>
+                <button type="button" className="btn btn-dark">Download Resume</button>
             </a>
         </div>
 
