@@ -6,7 +6,7 @@ import Topbar from "../Topbar/Topbar";
 function Research() {
   return (
     <>
-      <div>
+      {/* <div> */}
         <Topbar />
         <div className="research_title_wrapper">
           <h3>DEEP LEARNING AND BIOINFORMATICS</h3>
@@ -15,6 +15,7 @@ function Research() {
         <div className="research_funding_wrapper">
           <p>Research funded by National Institute of Health Sciences, US</p>
         </div>
+
         <div className="research_wrapper">
           <div className="research_first_section_wrapper">
             <ul>
@@ -247,8 +248,8 @@ function Research() {
             </ol>
           </div>
         </div>
-      </div>
-      <div className="footer"></div>
+
+      {/* </div> */}
     </>
   );
 }
