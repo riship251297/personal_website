@@ -314,7 +314,7 @@ function Gallery() {
               />
               <Card.Body>
                 <Card.Title>
-                  Wateron Park, US-Canada border crossing{" "}
+                  Waterton Park, US-Canada border crossing{" "}
                 </Card.Title>
                 <Card.Text className="card_text">
                   A compilation of eclectic and sophisticated artistry together
