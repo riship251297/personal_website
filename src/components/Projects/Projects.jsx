@@ -6,9 +6,6 @@ const Projects = () => {
   return (
     <>
       <Topbar />
-      <br></br>
-      <br></br>
-
       <div className="Deep">
         <div className="Rl">
           <div className="Rl_left1">
@@ -24,7 +21,13 @@ const Projects = () => {
                   className="pollo"
                   style={{ marginLeft: "-50px", marginBottom: "10px" }}
                 >
-                  <b>Portfolio Website</b> - Current <a href="www.rphatan.info" style={{"fontSize":'20px'}}>Portfolio Website </a>
+                  <b>Portfolio Website</b> - Current{" "}
+                  <a
+                    href="www.rphatan.info"
+                    style={{ fontSize: "20px", fontStyle: "arial" }}
+                  >
+                    Portfolio Website{" "}
+                  </a>
                 </ul>
                 <ul
                   className="pollo"
@@ -39,11 +42,11 @@ const Projects = () => {
               <ol>
                 <li>
                   <p>
-                    This website itself is the portfolio project. It was Designed
-                    and Developed using Bootstrap that includes briefing
-                    regarding all projects and research activities, with a photo
-                    gallery utility that lets users like, dis-like, download
-                    image with previous user activity counts.
+                    This website itself is the portfolio project. It was
+                    Designed and Developed using Bootstrap that includes
+                    briefing regarding all projects and research activities,
+                    with a photo gallery utility that lets users like, dis-like,
+                    download image with previous user activity counts.
                   </p>
                 </li>
                 <li>
@@ -68,7 +71,7 @@ const Projects = () => {
             </ul>
           </div>
           <div className="Rl_right1">
-          <img src={"images/popl.png"} width="450px" height="530px" alt="" />
+            <img src={"images/popl.png"} width="450px" height="530px" alt="" />
           </div>
         </div>
       </div>
