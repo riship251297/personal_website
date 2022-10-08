@@ -176,6 +176,13 @@ text-align: left;
  
 }
 
+.social_wrapper
+{
+  float: right;
+  display: flex;
+  width: 30%;
+}
+
 .research_title_wrapper
 {
   display: flex;
