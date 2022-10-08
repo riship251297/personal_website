@@ -12,10 +12,10 @@ const Projects = () => {
         <div className='Rl'>
           <div className='Rl_left1'>
             <ul>
-              <ul className='opl' style={{marginBottom:'10px'}}><b>DEEP REINFORCEMENT LEARNING BASED PROJECTS : </b></ul>
+              <ul className='opl' style={{marginBottom:'10px',marginLeft:'-40px'}}><b>DEEP REINFORCEMENT LEARNING BASED PROJECTS : </b></ul>
               <ol>
-                <ul className='pollo'><b>Proximal Policy Optimization</b> - 2021</ul>
-                <ul className='pollo'><mark>Stack :| Deep Learning | Python | Tensorflow | Open-AI Gym | PyTorch </mark></ul>
+                <ul className='pollo' style={{marginLeft:'-50px' ,marginBottom:'10px'}}><b>Proximal Policy Optimization</b> - 2021</ul>
+                <ul className='pollo' style={{marginLeft:'-50px',marginBottom:'10px'}}><mark>Stack :| Deep Learning | Python | Tensorflow | Open-AI Gym | PyTorch </mark></ul>
               </ol>
               <ol>
                 <li><p>Implemented Proximal Policy Optimization algorithm, one of the recent advancements in the 
@@ -43,13 +43,12 @@ const Projects = () => {
           </div>
         </div>
         <br></br>
-        <br></br>
         <div className='Rl2'>
           <div className='Rl_left2'>
             <ul>
               <ol>
-                <ul className='pollo'><b>Deep Q Networks</b> - 2021</ul>
-                <ul className='pollo'><mark>Stack :| Deep Learning | Python | Tensorflow | Open-AI Gym | PyTorch </mark></ul>
+                <ul className='pollo'style={{marginLeft:'-50px' ,marginBottom:'10px'}} ><b>Deep Q Networks</b> - 2021</ul>
+                <ul className='pollo' style={{marginLeft:'-50px',marginBottom:'10px'}}><mark>Stack :| Deep Learning | Python | Tensorflow | Open-AI Gym | PyTorch </mark></ul>
             </ol>
             <ol>
               <li><p>Implemented Proximal Policy Optimization algorithm, one of the recent advancements in the 
@@ -76,16 +75,15 @@ const Projects = () => {
             </video>
           </div>
         </div>
-        {/* <hr></hr> */}
-        <br></br>
+   
         <br></br>
         <div className='Ds'>
           <div className='Ds_left'>
             <ul>
-              <ul className='opl' style={{marginBottom:'10px'}}><b>MACHINE LEARNING BASED PROJECTS : </b></ul>
+              <ul className='opl' style={{marginBottom:'10px' ,marginLeft:'-15px'}}><b>MACHINE LEARNING BASED PROJECTS : </b></ul>
               <ol>
-                <ul className='pollo'><b>Acceleration Prediction of Cars</b></ul>
-                <ul className='pollo'><mark>Stack :| Machine Learning | Python | Pandas | Matplotlib </mark></ul>
+                <ul className='pollo' style={{marginLeft:'-50px' ,marginBottom:'10px'}}><b>Acceleration Prediction of Cars</b></ul>
+                <ul className='pollo' style={{marginLeft:'-50px',marginBottom:'10px'}}><mark>Stack :| Machine Learning | Python | Pandas | Matplotlib </mark></ul>
               </ol>
               <ol>
                 <li><p>The primary focus of this project is to predict the Acceleration performance of a vehicle using the predictors 
@@ -110,13 +108,12 @@ const Projects = () => {
           </div>
         </div>
         <br></br>
-        <br></br>
         <div className='speed'>
           <div className='speed-left'>
             <ul>
                 <ol>
-                  <ul className='pollo'><b>Speed Detection using Kalman Filtering </b></ul>
-                  <ul className='pollo'><mark>Stack :| Machine Learning | Python | Pandas | Matplotlib | Open-CV </mark></ul>
+                  <ul className='pollo' style={{marginLeft:'-50px' ,marginBottom:'10px'}}><b>Speed Detection using Kalman Filtering </b></ul>
+                  <ul className='pollo' style={{marginLeft:'-50px',marginBottom:'10px'}}><mark>Stack :| Machine Learning | Python | Pandas | Matplotlib | Open-CV </mark></ul>
                 </ol>
                 <ol>
                   <li><p>The primary focus of this project is to capture over-speeding of vehicles in accident prone areas
