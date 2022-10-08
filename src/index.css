@@ -180,7 +180,7 @@ text-align: left;
 {
   float: right;
   display: flex;
-  width: 30%;
+  margin: auto;
 }
 
 .research_title_wrapper
