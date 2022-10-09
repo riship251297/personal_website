@@ -148,22 +148,21 @@ function Research() {
                     <img
                       src={"images/rishi_0.2.png"}
                       className="img-circled"
-                      width="850px"
+                      width="950px"
                       height="400px"
                       alt=""
                     />
                     <h4 style={{ marginLeft: "195px" }}>
-                      {" "}
                       Face and Brain cut probabilities : 0.8 and 0.3
                     </h4>
                   </div>
-                  </div>
-                  <div className="lll">
+                </div>
+                <div className="lll">
                   <div className="uo">
                     <img
                       src={"images/rishi_0.3.png"}
                       className="img-circled"
-                      width="850px"
+                      width="950px"
                       height="400px"
                       alt=""
                     />
@@ -172,13 +171,13 @@ function Research() {
                       Face and Brain cut probabilities : 0.35 and 0.2
                     </h4>
                   </div>
-                  </div>
-                  <div className="lll">
+                </div>
+                <div className="lll">
                   <div className="yo">
                     <img
                       src={"images/rishi_0.4.png"}
                       className="img-circled"
-                      width="850px"
+                      width="950px"
                       height="400px"
                       alt=""
                     />
