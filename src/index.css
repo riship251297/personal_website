@@ -248,7 +248,24 @@ text-align: left;
 
 .lll
 {
-  margin-left: 15%;
+  width: auto;
+  display: flex;
+  margin: auto;
+}
+
+.uploaded_image 
+{
+  width: auto;
+  display: flex;
+  margin: auto;
+}
+
+.title_uploaded_image
+{
+  width: auto;
+  display: flex;
+  margin:auto;
+  justify-content: center;
 }
 
 @media screen and (max-width: 480px) {
