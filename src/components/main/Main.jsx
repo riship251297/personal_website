@@ -46,7 +46,7 @@ function Main() {
         <div className="photo_wrapper">
           <Photo />
         </div>
-        <div className="box_wrapper">
+        <div className="box_wrapper" style={{marginTop:"10%"}}>
           <Box />
         </div>
       </div>
