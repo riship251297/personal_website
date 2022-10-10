@@ -35,6 +35,7 @@ code {
   width: 50% !important;
   text-align: justify;
   font-size: 20px;
+  margin-top: 9%;
 }
 .experience_wrapper
 {
@@ -106,6 +107,9 @@ text-align: left;
 @media screen and (max-width: 480px) {
   .box_wrapper,.experience_wrapper,.coursework_wrapper {
     width: 65% !important;
+  }
+  .box_wrapper{
+    margin-top: 35%;
   }
 }
 
