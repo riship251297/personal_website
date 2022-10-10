@@ -47,7 +47,6 @@ function Contact() {
 
   return (
     <>
-      {/* <Navbar/> */}
       <Topbar />
       <Container>
         <div className="heading">
@@ -97,15 +96,6 @@ function Contact() {
             </Form>
           </div>
         </div>
-        {/* <FacebookShareButton
-          url = "https://www.facebook.com">
-          <FacebookIcon logoFillColor="white" round={true}></FacebookIcon>
-        </FacebookShareButton>
-        <LinkedinShareButton
-        url="https://www.linkedin.com/in/rishi251297/">
-          <LinkedinIcon round={true}></LinkedinIcon>
-
-        </LinkedinShareButton> */}
 
         <div className="footer"></div>
       </Container>

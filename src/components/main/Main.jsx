@@ -12,7 +12,7 @@ function Main() {
         <div>
           <h4>
             <a
-              href="https://personalwebsite9.s3.amazonaws.com/resume_rishikesh_251297.pdf"
+              href="https://personalwebsite9.s3.amazonaws.com/updated_resume.pdf"
               download="Rishikesh_resume"
             >
               <button type="button" className="btn btn-success">
