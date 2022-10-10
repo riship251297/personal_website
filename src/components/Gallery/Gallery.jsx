@@ -229,7 +229,7 @@ function Gallery() {
                   <Button
                     className="download"
                     href="images/portfolio.jpg"
-                    download="Savannah_trip"
+                    download="coca-cola"
                     onClick={(event) => onIncrement(3, "download", event)}
                   >
                     Download | {counter_download[3]}
@@ -280,7 +280,7 @@ function Gallery() {
                   <Button
                     className="download"
                     href="images/portfolio.jpg"
-                    download="Savannah_trip"
+                    download="banff_trip"
                     onClick={(event) => onIncrement(4, "download", event)}
                   >
                     Download | {counter_download[4]}
@@ -297,7 +297,7 @@ function Gallery() {
                   >
                     Dislike | {counter_share[4]}
                   </Button>
-                  <a href="https://google.com">
+                  <a href="https://en.wikipedia.org/wiki/Banff_National_Park">
                     <Button className="read">Read more </Button>
                   </a>
                 </div>
@@ -335,7 +335,7 @@ function Gallery() {
                   <Button
                     className="download"
                     href="images/portfolio.jpg"
-                    download="Savannah_trip"
+                    download="waterton_trip"
                     onClick={() => onIncrement(5, "download")}
                   >
                     Download | {counter_download[5]}
@@ -352,7 +352,7 @@ function Gallery() {
                   >
                     Dislike| {counter_share[5]}
                   </Button>
-                  <a href="https://google.com">
+                  <a href="https://en.wikipedia.org/wiki/Waterton_Park">
                     <Button className="read">Read more </Button>
                   </a>
                 </div>
@@ -384,7 +384,7 @@ function Gallery() {
                   <Button
                     className="download"
                     href="images/portfolio.jpg"
-                    download="Savannah_trip"
+                    download="cameron_falls"
                     onClick={() => onIncrement(6, "download")}
                   >
                     Download | {counter_download[6]}
@@ -401,7 +401,7 @@ function Gallery() {
                   >
                     Dislike | {counter_share[6]}
                   </Button>
-                  <a href="https://google.com">
+                  <a href="https://en.wikipedia.org/wiki/Cameron_Lake_(Alberta)">
                     <Button className="read">Read more </Button>
                   </a>
                 </div>
@@ -432,7 +432,7 @@ function Gallery() {
                   <Button
                     className="download"
                     href="images/portfolio.jpg"
-                    download="Savannah_trip"
+                    download="capitolbuilding"
                     onClick={() => onIncrement(7, "download")}
                   >
                     Download | {counter_download[7]}
@@ -449,7 +449,7 @@ function Gallery() {
                   >
                     Dislike | {counter_share[7]}
                   </Button>
-                  <a href="https://google.com">
+                  <a href="https://en.wikipedia.org/wiki/United_States_Capitol">
                     <Button className="read">Read more </Button>
                   </a>
                 </div>
@@ -481,7 +481,7 @@ function Gallery() {
                   <Button
                     className="download"
                     href="images/portfolio.jpg"
-                    download="Savannah_trip"
+                    download="whitehouse"
                     onClick={() => onIncrement(8, "download")}
                   >
                     Download | {counter_download[8]}
@@ -498,7 +498,7 @@ function Gallery() {
                   >
                     Dislike | {counter_share[8]}
                   </Button>
-                  <a href="https://google.com">
+                  <a href="https://en.wikipedia.org/wiki/White_House">
                     <Button className="read">Read more </Button>
                   </a>
                 </div>
@@ -528,7 +528,7 @@ function Gallery() {
                   <Button
                     className="download"
                     href="images/portfolio.jpg"
-                    download="Savannah_trip"
+                    download="Spartanburg"
                     onClick={() => onIncrement(9, "download")}
                   >
                     Download | {counter_download[9]}
@@ -545,7 +545,7 @@ function Gallery() {
                   >
                     Dislike | {counter_share[9]}
                   </Button>
-                  <a href="https://google.com">
+                  <a href="https://en.wikipedia.org/wiki/Spartanburg,_South_Carolina">
                     <Button className="read">Read more </Button>
                   </a>
                 </div>
@@ -576,7 +576,7 @@ function Gallery() {
                   <Button
                     className="download"
                     href="images/portfolio.jpg"
-                    download="Savannah_trip"
+                    download="Clemson"
                     onClick={() => onIncrement(8, "download")}
                   >
                     Download | {counter_download[8]}
@@ -593,7 +593,7 @@ function Gallery() {
                   >
                     Dislike| {counter_share[8]}
                   </Button>
-                  <a href="https://google.com">
+                  <a href="https://en.wikipedia.org/wiki/Clemson_University">
                     <Button className="read">Read more </Button>
                   </a>
                 </div>
@@ -621,7 +621,7 @@ function Gallery() {
                   <Button
                     className="download"
                     href="images/portfolio.jpg"
-                    download="Savannah_trip"
+                    download="Sangamner"
                     onClick={() => onIncrement(9, "download")}
                   >
                     Download | {counter_download[9]}
@@ -638,7 +638,7 @@ function Gallery() {
                   >
                     Dislike | {counter_share[9]}
                   </Button>
-                  <a href="https://google.com">
+                  <a href="https://en.wikipedia.org/wiki/Sangamner">
                     <Button className="read">Read more </Button>
                   </a>
                 </div>

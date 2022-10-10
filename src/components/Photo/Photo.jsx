@@ -8,6 +8,5 @@ function Photo() {
         </div>
     );
 }
-
 export default Photo;
 
