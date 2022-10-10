@@ -24,7 +24,7 @@ const Projects = () => {
                 >
                   <b>Portfolio Website</b> - Current{" "}
                   <a
-                    href="www.rphatan.info"
+                    href="/"
                     style={{ fontSize: "20px", fontStyle: "arial" }}
                   >
                     Portfolio Website{" "}
