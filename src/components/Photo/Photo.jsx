@@ -4,10 +4,10 @@ function Photo() {
   return (
     <div className="photo">
       <img
-        src={"images/IMG_2500.jpg"}
+        src={"images/IMG_4122.jpg"}
         className="img-circled"
         width="500px"
-        height="600px"
+        height="610px"
         padding="1px"
         marginBottom="20px"
         alt=""
