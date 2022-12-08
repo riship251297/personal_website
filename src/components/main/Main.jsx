@@ -9,6 +9,17 @@ function Main() {
       <Topbar />
       <br></br>
       <div className="social_wrapper">
+      <div className="aws">
+        <img
+        src={"images/aws.png"}
+        className="img-circled"
+        width="210px"
+        height="210px"
+        // marginTop="-75px"
+        alt=""
+      />
+        </div>
+      
         <div>
           <h4>
             <a
@@ -31,6 +42,7 @@ function Main() {
             </a>
           </h4>
         </div>
+        <div>
         <h4>
           <a
             href="https://www.linkedin.com/in/rishi251297/"
@@ -41,6 +53,8 @@ function Main() {
             </button>
           </a>
         </h4>
+        </div>
+        
       </div>
       <div className="main_wrapper">
         <div className="photo_wrapper">

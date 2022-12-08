@@ -28,6 +28,11 @@ code {
 
 }
 
+.aws
+{
+  margin-right: 780px;
+  margin-top: -60px;
+}
 .box_wrapper
 {
   display: flex;

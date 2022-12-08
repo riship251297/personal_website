@@ -10,11 +10,7 @@ import { Container, Button, Form } from "react-bootstrap";
 import Topbar from "../Topbar/Topbar";
 
 function About() {
-  const data = () => {
-    axios.get("http://localhost:3001/dat").then((response) => {
-      console.log(response);
-    });
-  };
+
 
   const [name, SetName] = useState("");
   const [email, SetEmail] = useState("");
