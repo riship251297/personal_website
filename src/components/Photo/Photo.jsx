@@ -1,13 +1,18 @@
 import React from "react";
-import '../Photo/Photo.css'
+import "../Photo/Photo.css";
 function Photo() {
-    return(
-        <div className="photo">
-        <img src={"images/rishi.png"} className="img-circled"width="360px"height="450px"padding="2px"alt=''/>
-        
-        </div>
-    );
+  return (
+    <div className="photo">
+      <img
+        src={"images/IMG_4122.jpg"}
+        className="img-circled"
+        width="500px"
+        height="610px"
+        padding="1px"
+        marginBottom="20px"
+        alt=""
+      />
+    </div>
+  );
 }
-
 export default Photo;
-

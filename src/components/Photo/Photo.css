@@ -1,13 +1,19 @@
 .photo{
-  margin-left: 620px;
+  /* margin-left: 620px; */
+
+
   margin-top: 20px;
   display: flex;
-  width:900px;
+  /* width:900px; */
   height: 420px;
-  }
+
+  align-content: center;
+  justify-content: center;
+  /* align-items: center; */
+  } 
 
 
-img{
+ img{
   padding: 50px;
-  
+   
 }

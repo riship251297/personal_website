@@ -1,147 +1,348 @@
-import React from 'react'
-import Navbar from '../Navbar/Navbar'
-import '../Projects/Projects.css';
-
+import React from "react";
+import Navbar from "../Navbar/Navbar";
+import "../Projects/Projects.css";
+import Topbar from "../Topbar/Topbar";
 const Projects = () => {
   return (
-      <>
-      <Navbar/>
-      <div className='Deep'>
-        <div className='Rl'>
-          <div className='Rl_left1'>
+    <>
+      <Topbar />
+      
+      <div className="Deep" style={{marginTop:'2%'}}>
+        <div className="Rl">
+          <div className="Rl_left1">
             <ul>
-              <ul className='opl'><b>DEEP REINFORCEMENT LEARNING BASED PROJECTS : </b></ul>
+              <ul
+                className="opl"
+                style={{ marginBottom: "10px", marginLeft: "-40px" }}
+              >
+                <b>SOFTWARE ENGINEERING BASED PROJECTS : </b>
+              </ul>
               <ol>
-                <ul className='pollo'><b>Proximal Policy Optimization</b> - 2021</ul>
-                <ul className='pollo'><mark>Stack :| Deep Learning | Python | Tensorflow | Open-AI Gym | PyTorch </mark></ul>
+                <ul
+                  className="pollo"
+                  style={{ marginLeft: "-50px", marginBottom: "10px" }}
+                >
+                  <b>Portfolio Website</b> - Current{" "}
+                  <a
+                    href="/"
+                    style={{ fontSize: "20px", fontStyle: "arial" }}
+                  >
+                    Portfolio Website{" "}
+                  </a>
+                </ul>
+                <ul
+                  className="pollo"
+                  style={{ marginLeft: "-50px", marginBottom: "10px" }}
+                >
+                  <mark>
+                    Stack : | HTML | CSS | React | Amplify | Lambda | DynamoDB |
+                    NodeJS | S3 | Route 53
+                  </mark>
+                </ul>
               </ol>
               <ol>
-                <li>Implemented Proximal Policy Optimization algorithm, one of the recent advancements in the 
-                  field of Reinforcement Learning.&nbsp;Proximal Policy Optimization is a policy gradient method
-                  for Reinforcement Learning.
-                </li>
-                <li>The whole idea of this algorithm in this environment in layman terms is to train the agent to make the maximum use of trajectories to learn hopping on the tiles.
-                  It uses Actor-Critic Neural Network and is used in environments with either discrete or continuous 
-                  action spaces.&nbsp;This algorithm is trained for many epochs until the environment is solved.
+                <li>
+                  <p>
+                    This website itself is the portfolio project. It was
+                    Designed and Developed using Bootstrap that includes
+                    briefing regarding all projects and research activities,
+                    with a photo gallery utility that lets users like, dis-like,
+                    download image with previous user activity counts.
+                  </p>
                 </li>
                 <li>
-                  Initially the agent takes 100 to 150 trajectories to take one proper hop on the tile, but after almost 500 iterations the agent takes only 
-                  six to seven trajectories for a sequence of successful hops.
-                  This algorithm is implemented from scratch and tested on the Hopper Bullet Environment (MUJUCO)
-                  using Generalized Advantage Estimator with a capacity of batch size of 5000 samples 
-                  of trajectories.
+                  <p>
+                    Extensively used React fundamentals and Web Hooks to promote
+                    better component lifecycle practices with react-router to
+                    navigate through various react components, with API calls
+                    made using Axios HTTP client utility.Hosted website using
+                    AWS amplify service with AWS Route 53 for Domain management
+                    and S3 for storage purposes.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Performed email verification using nodemailer with API
+                    creation and testing using Postman platform including
+                    backend API servicing using AWS lambda alongwith database
+                    interaction using AWS DynamoDB, with Git version control.
+                  </p>
                 </li>
               </ol>
             </ul>
           </div>
-          <div className='Rl_right1'>
-            <video width="470" height="260" autoPlay loop muted >
-              <source src={'https://personalwebsite9.s3.amazonaws.com/PPO.mp4'}  type="video/mp4"/>
+          <div className="Rl_right1">
+            <img src={"images/popl.png"} width="450px" height="530px" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div className="Deep">
+        <div className="Rl">
+          <div className="Rl_left1">
+            <ul>
+              <ul
+                className="opl"
+                style={{ marginBottom: "10px", marginLeft: "-40px" }}
+              >
+                <b>DEEP REINFORCEMENT LEARNING BASED PROJECTS : </b>
+              </ul>
+              <ol>
+                <ul
+                  className="pollo"
+                  style={{ marginLeft: "-50px", marginBottom: "10px" }}
+                >
+                  <b>Proximal Policy Optimization</b> - 2021
+                </ul>
+                <ul
+                  className="pollo"
+                  style={{ marginLeft: "-50px", marginBottom: "10px" }}
+                >
+                  <mark>
+                    Stack : | Deep Learning | Python | Tensorflow | Open-AI Gym
+                    | PyTorch{" "}
+                  </mark>
+                </ul>
+              </ol>
+              <ol>
+                <li>
+                  <p>
+                    Implemented Proximal Policy Optimization algorithm, one of
+                    the recent advancements in the field of Reinforcement
+                    Learning.&nbsp;Proximal Policy Optimization is a policy
+                    gradient method for Reinforcement Learning.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    The whole idea of this algorithm in this environment in
+                    layman terms is to train the agent to make the maximum use
+                    of trajectories to learn hopping on the tiles. It uses
+                    Actor-Critic Neural Network and is used in environments with
+                    either discrete or continuous action spaces.&nbsp;This
+                    algorithm is trained for many epochs until the environment
+                    is solved.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Initially the agent takes 100 to 150 trajectories to take
+                    one proper hop on the tile, but after almost 500 iterations
+                    the agent takes only six to seven trajectories for a
+                    sequence of successful hops. This algorithm is implemented
+                    from scratch and tested on the Hopper Bullet Environment
+                    (MUJUCO) using Generalized Advantage Estimator with a
+                    capacity of batch size of 5000 samples of trajectories.
+                  </p>
+                </li>
+              </ol>
+            </ul>
+          </div>
+          <div className="Rl_right1">
+            <video width="470" height="260" autoPlay loop muted>
+              <source
+                src={"https://personalwebsite9.s3.amazonaws.com/PPO.mp4"}
+                type="video/mp4"
+              />
+            </video>
+          </div>
+        </div>
+        <br></br>
+        <div className="Rl2">
+          <div className="Rl_left2">
+            <ul>
+              <ol>
+                <ul
+                  className="pollo"
+                  style={{ marginLeft: "-50px", marginBottom: "10px" }}
+                >
+                  <b>Deep Q Networks</b> - 2021
+                </ul>
+                <ul
+                  className="pollo"
+                  style={{ marginLeft: "-50px", marginBottom: "10px" }}
+                >
+                  <mark>
+                    Stack :| Deep Learning | Python | Tensorflow | Open-AI Gym |
+                    PyTorch{" "}
+                  </mark>
+                </ul>
+              </ol>
+              <ol>
+                <li>
+                  <p>
+                    Implemented Deep Q learning, one of the state of the art
+                    Reinforcement Learning based algorithm.&nbsp;The DQN
+                    architecture has two neural nets, the Q network and the
+                    Target networks, and a component called Experience Replay.
+                    The Q network is the agent that is trained to produce the
+                    Optimal State-Action value.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    The whole idea of this algorithm in this environment in
+                    layman terms is to gather and store samples in a replay
+                    buffer with current policy and randomly sample batches of
+                    experiences from the replay buffer.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    We now take a random batch of samples from this training
+                    data, so that it contains a mix of older and more recent
+                    samples. This batch of training data is then inputted to
+                    both networks. The Q network takes the current state and
+                    action from each data sample and predicts the Q value for
+                    that particular action. This is the ‘Predicted Q Value’..
+                  </p>
+                </li>
+              </ol>
+            </ul>
+          </div>
+          <div className="Rl_right2">
+            <video width="470" height="350" autoPlay loop muted>
+              <source
+                src={"https://personalwebsite9.s3.amazonaws.com/DQN.mp4"}
+                type="video/mp4"
+              />
             </video>
           </div>
         </div>
 
-        <div className='Rl2'>
-          <div className='Rl_left2'>
+        <br></br>
+        <div className="Ds">
+          <div className="Ds_left">
             <ul>
+              <ul
+                className="opl"
+                style={{ marginBottom: "10px", marginLeft: "-15px" }}
+              >
+                <b>MACHINE LEARNING BASED PROJECTS : </b>
+              </ul>
               <ol>
-                <ul className='pollo'><b>Deep Q Networks</b> - 2021</ul>
-                <ul className='pollo'><mark>Stack :| Deep Learning | Python | Tensorflow | Open-AI Gym | PyTorch </mark></ul>
-            </ol>
-            <ol>
-              <li>Implemented Proximal Policy Optimization algorithm, one of the recent advancements in the 
-                field of Reinforcement Learning.&nbsp;Proximal Policy Optimization is a policy gradient method
-                for Reinforcement Learning.
-              </li>
-              <li>The whole idea of this algorithm in this environment in layman terms is to train the agent to make the maximum use of trajectories to learn hopping on the tiles.
-                It uses Actor-Critic Neural Network and is used in environments with either discrete or continuous 
-                action spaces.&nbsp;This algorithm is trained for many epochs until the environment is solved.
-              </li>
-              <li>
-                Initially the agent takes 100 to 150 trajectories to take one proper hop on the tile, but after almost 500 iterations the agent takes only 
-                six to seven trajectories for a sequence of successful hops.
-                This algorithm is implemented from scratch and tested on the Hopper Bullet Environment (MUJUCO)
-                using Generalized Advantage Estimator with a capacity of batch size of 5000 samples 
-                of trajectories.
-              </li>
-            </ol>
-            </ul>
-          </div>
-          <div className='Rl_right2'>
-            <video width="470" height="350" autoPlay loop muted >
-              <source src={'https://personalwebsite9.s3.amazonaws.com/DQN.mp4'}  type="video/mp4"/>
-            </video>
-          </div>
-        </div>
-        {/* <hr></hr> */}
-             
-        <div className='Ds'>
-          <div className='Ds_left'>
-            <ul>
-              <ul className='opl'><b>MACHINE LEARNING BASED PROJECTS : </b></ul>
-              <ol>
-                <ul className='pollo'><b>Acceleration Prediction of Cars</b></ul>
-                <ul className='pollo'><mark>Stack :| Machine Learning | Python | Pandas | Matplotlib </mark></ul>
+                <ul
+                  className="pollo"
+                  style={{ marginLeft: "-50px", marginBottom: "10px" }}
+                >
+                  <b>Acceleration Prediction of Cars</b>
+                </ul>
+                <ul
+                  className="pollo"
+                  style={{ marginLeft: "-50px", marginBottom: "10px" }}
+                >
+                  <mark>
+                    Stack :| Machine Learning | Python | Pandas | Matplotlib{" "}
+                  </mark>
+                </ul>
               </ol>
               <ol>
-                <li>The primary focus of this project is to predict the Acceleration performance of a vehicle using the predictors 
-                  available to the car manufacturer at the vehicle development or target definition stage.
-                </li>
-                <li>The project aims to determine key performance parameter of the vehicle using data science models at a stage 
-                  where the intrinsic vehicle parameters are being finalized and can be altered to get the understanding and visualize the difference without much additional 
-                  cost when the vehicle development is in its initial phase.
+                <li>
+                  <p>
+                    The primary focus of this project is to predict the
+                    Acceleration performance of a vehicle using the predictors
+                    available to the car manufacturer at the vehicle development
+                    or target definition stage.
+                  </p>
                 </li>
                 <li>
-                This is an important task, as it determines the performance based on the estimates for the vehicle parameters at the earliest stage when the cost to change these parameters is minimal, 
-                and increases exponentially as we move to larger stages.
+                  <p>
+                    The project aims to determine key performance parameter of
+                    the vehicle using data science models at a stage where the
+                    intrinsic vehicle parameters are being finalized and can be
+                    altered to get the understanding and visualize the
+                    difference without much additional cost when the vehicle
+                    development is in its initial phase.
+                  </p>
                 </li>
                 <li>
-                  The intent to use all these seven models is to ensure an application driven understanding of the entire regression arsenal developed in the course.
+                  <p>
+                    This is an important task, as it determines the performance
+                    based on the estimates for the vehicle parameters at the
+                    earliest stage when the cost to change these parameters is
+                    minimal, and increases exponentially as we move to larger
+                    stages.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    The intent to use all these seven models is to ensure an
+                    application driven understanding of the entire regression
+                    arsenal developed in the course.
+                  </p>
                 </li>
               </ol>
             </ul>
           </div>
-          <div className='Ds_right'>
-            <img src={"images/table.png"} width="450px"height="350px"alt=''/>
+          <div className="Ds_right">
+            <img src={"images/table.png"} width="450px" height="350px" alt="" />
           </div>
         </div>
-        <div className='speed'>
-          <div className='speed-left'>
+        <br></br>
+        <div className="speed">
+          <div className="speed-left">
             <ul>
-                <ol>
-                  <ul className='pollo'><b>Speed Detection using Kalman Filtering </b></ul>
-                  <ul className='pollo'><mark>Stack :| Machine Learning | Python | Pandas | Matplotlib | Open-CV </mark></ul>
-                </ol>
-                <ol>
-                  <li>The primary focus of this project is to capture over-speeding of vehicles in accident prone areas
-                    available to the car manufacturer at the vehicle development or target definition stage.
-                  </li>
-                  <li>The project aims to determine key performance parameter of the vehicle using data science models at a stage 
-                    where the intrinsic vehicle parameters are being finalizede and can be altered to get the understanding and visualize the difference without much additional 
-                    cost when the vehicle development is in its initial phase.
-                  </li>
-                  <li>
-                  This is an important task, as it determines the performance based on the estimates for the vehicle parameters at the earliest stage when the cost to change these parameters is minimal, 
-                  and increases exponentially as we move to larger stages.
-                  </li>
-                  <li>
-                    The intent to use all these seven models is to ensure an application driven understanding of the entire regression arsenal developed in the course.
-                  </li>
-                </ol>
+              <ol>
+                <ul
+                  className="pollo"
+                  style={{ marginLeft: "-50px", marginBottom: "10px" }}
+                >
+                  <b>Speed Detection using Kalman Filtering </b>
+                </ul>
+                <ul
+                  className="pollo"
+                  style={{ marginLeft: "-50px", marginBottom: "10px" }}
+                >
+                  <mark>
+                    Stack :| Machine Learning | Python | Pandas | Matplotlib |
+                    Open-CV{" "}
+                  </mark>
+                </ul>
+              </ol>
+              <ol>
+                <li>
+                  <p>
+                    The primary focus of this project is to capture
+                    over-speeding of vehicles in accident prone areas available
+                    to the car manufacturer at the vehicle development or target
+                    definition stage.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Implemented a Speed Detection System that uses Image
+                    processing and object tracking algorithms making it capable
+                    of calculating the speed of moving objects in a video stream
+                    avoiding traditional radar speed gun problems.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Calculated the Euclidean Distance between two trigger events
+                    to capture the time stamp of the vehicle at the start and
+                    end of events, while to capture the frame rate of the
+                    stream, Cap-Prop-Fps API provided by OpenCV is used.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Incorporated Data Frame module from Pandas library to store
+                    the centroids of all the vehicles as previous data points
+                    for feedback control for the functioning of the Kalman
+                    Filter algorithm, also tested on different enviornmental
+                    conditions.
+                  </p>
+                </li>
+              </ol>
             </ul>
           </div>
-          <div className='speed-right'>
-            <img src={"images/car.png"} width="450px"height="350px"alt=''/>
+          <div className="speed-right">
+            <img src={"images/car.png"} width="450px" height="350px" alt="" />
           </div>
         </div>
       </div>
-      <div className='footer'>
-      
-      </div>
-      </>
+    </>
   );
-}
+};
 
 export default Projects;
-
-
