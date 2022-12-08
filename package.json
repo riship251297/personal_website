@@ -30,6 +30,12 @@
     "sweetalert2": "^11.4.32",
     "web-vitals": "^2.1.4"
   },
+  "overrides": {
+    "react-share": { 
+      "react": "18.1.0",
+      "react-dom": "18.1.0"
+    }
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
