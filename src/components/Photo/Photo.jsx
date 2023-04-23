@@ -6,7 +6,7 @@ function Photo() {
       <img
         src={"images/IMG_4122.jpg"}
         className="img-circled"
-        width="500px"
+        width="5000px"
         height="500px"
         padding="1px"
         marginBottom="20px"
