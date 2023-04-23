@@ -9,7 +9,7 @@ function Photo() {
         width="5000px"
         height="500px"
         padding="1px"
-        marginBottom="20px"
+        marginBottom="30px"
         alt=""
       />
     </div>
