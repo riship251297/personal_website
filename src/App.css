@@ -1,15 +1,16 @@
-body{
-  padding: 0%;
-}
+/* body{
+  /* padding: 0%; */
+  /* width: 90px; */
+/* }  */
 
-.main_container{
+/* .main_container{
   display: block;
-  max-width: 1550px;
+  width: 1260px;
   height: 1000%;
 }
 
 .middleboard{
-  width: 1500px;
+  width: 1260px;
   height: 750px;
   background-color: #e9e2e1;
   display: block;
@@ -19,7 +20,7 @@ body{
 
 .upperboard{
   display: flex;
-  width: 1550px;
+  width: 1600px;
   height: 120px;
   background-color:#0abd8a;
   align-items: center;
@@ -33,4 +34,4 @@ body{
   height: 1000px;
   border-style: inherit;
   border-color: #050505;
-}
+} */

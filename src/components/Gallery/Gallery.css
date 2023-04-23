@@ -1,0 +1,35 @@
+
+
+.download
+{
+    letter-spacing: normal;
+    color: white;
+    background-color: #000080;
+    margin-right: 10px;
+}
+.share
+{
+    color: white;
+    margin-right: 10px;
+    background-color: #000080;
+
+} 
+.like 
+{ 
+    color: white;
+    background-color: #000080;
+    margin-right: 10px;
+}
+.read
+{
+    margin-top: 2px;
+    color: white;
+    background-color: #000080;
+    margin-left: -18px;
+} 
+
+.buttons_section
+{
+    width: 950px;
+}
+

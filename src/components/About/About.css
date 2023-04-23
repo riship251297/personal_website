@@ -1,4 +1,9 @@
-.main
+/* .main_wrapper
+{
+    width: 100%;
+} */
+
+/* .main
 {
     width: 900px;
 }
@@ -14,9 +19,9 @@
     margin-top: 100px;
     margin-left: 320px;
     width: 900px;
-}
+} */
 
-.andar
+/* .andar
 {
     margin-left: 70px;
 }
@@ -27,7 +32,7 @@
     width: 500px;
     height: 500px;
     background-color: red;
-}
+} */
 /* .mal
 {
     margin-left: 350px;
@@ -37,12 +42,6 @@
 {
     margin-left: 680px;
 } */
-
-.internship
-{
-    margin-left: 320px;
-    width: 900px;
-}
 
 
 
@@ -124,3 +123,10 @@ mark
     border-left: 6px solid rgb(192, 212, 192);
     height: 1500px;
   } */
+
+
+  /* .footer
+{
+    width: 500px;
+    height:300px;
+} */
